@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>삼국 히어로 · 제품 스펙</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#">
+        <span class="brand-seal">三</span>
+        <span><strong>삼국 히어로</strong><small>PRODUCT SPEC</small></span>
+      </a>
+      <div class="source-state"><span></span><div><strong>main 기준</strong><small>승인 문서의 최신 배포본</small></div></div>
+      <nav id="category-nav" aria-label="스펙 카테고리"></nav>
+      <div class="sidebar-foot">
+        <div class="scope-note">확정·현행 문서를 기본 표시합니다. 검토 중 문서는 분리되며 제안 작성에는 비공개 저장소 접근 권한이 필요합니다.</div>
+        <a href="https://github.com/hyeonQ/ThreeKingdomHero/issues/new?template=spec-proposal.yml" target="_blank" rel="noreferrer">제안 남기기 <span>↗</span></a>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="메뉴 열기">☰</button>
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="스킬, 스테이지, 상점, 영지 검색" autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </div>
+        <button class="review-toggle" id="review-toggle" aria-pressed="false"><span></span> 검토 중 포함</button>
+      </header>
+
+      <section id="home-view" class="home-view">
+        <div class="hero">
+          <div><span class="kicker">SINGLE SOURCE OF TRUTH</span><h1>게임의 현재를<br>한곳에서 읽습니다.</h1></div>
+          <p>확정된 제품 규칙과 실제 적용 경계를 카테고리별로 탐색합니다. 제안은 원문과 섞이지 않으며, 승인 후에만 스펙이 됩니다.</p>
+        </div>
+        <div class="summary-row">
+          <div><strong id="doc-count">—</strong><span>현재 문서</span></div>
+          <div><strong id="category-count">—</strong><span>카테고리</span></div>
+          <div><strong>main</strong><span>기준 브랜치</span></div>
+        </div>
+        <div id="category-grid" class="category-grid"></div>
+        <section class="recent-section"><div class="section-heading"><div><span>QUICK START</span><h2>먼저 읽을 문서</h2></div><p>전체 방향과 지금 구현된 경계를 빠르게 파악합니다.</p></div><div id="featured-list" class="featured-list"></div></section>
+      </section>
+
+      <section id="listing-view" class="listing-view" hidden>
+        <div class="listing-head"><button id="listing-back">← 전체 스펙</button><span id="listing-eyebrow"></span><h1 id="listing-title"></h1><p id="listing-description"></p></div>
+        <div id="document-list" class="document-list"></div>
+      </section>
+
+      <section id="document-view" class="document-layout" hidden>
+        <article>
+          <button class="back-button" id="document-back">← 목록으로</button>
+          <div class="document-meta"><span id="document-status"></span><span id="document-path"></span></div>
+          <div id="document-content" class="markdown-body"></div>
+        </article>
+        <aside class="outline"><span>이 문서에서</span><nav id="outline-nav"></nav><a id="source-link" target="_blank" rel="noreferrer">GitHub 원문 보기 ↗</a></aside>
+      </section>
+
+      <section id="search-view" class="listing-view" hidden>
+        <div class="listing-head"><span>SEARCH</span><h1>검색 결과</h1><p id="search-summary"></p></div>
+        <div id="search-list" class="document-list"></div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

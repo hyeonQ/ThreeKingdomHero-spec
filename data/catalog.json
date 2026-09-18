@@ -1,0 +1,335 @@
+{
+  "categories": [
+    {
+      "id": "overview",
+      "name": "전체 개요",
+      "eyebrow": "PROJECT",
+      "description": "게임의 확정 사실과 현재 제품 경계"
+    },
+    {
+      "id": "combat",
+      "name": "전투·스킬",
+      "eyebrow": "COMBAT",
+      "description": "전투 규칙, 계열 스킬과 판정 표현"
+    },
+    {
+      "id": "campaign",
+      "name": "연대기·스테이지",
+      "eyebrow": "CAMPAIGN",
+      "description": "장 구성, 한 판의 흐름과 보상"
+    },
+    {
+      "id": "collection",
+      "name": "상점·모집·카드",
+      "eyebrow": "COLLECTION",
+      "description": "카드 버전, 모집과 성장 경제"
+    },
+    {
+      "id": "territory",
+      "name": "영지",
+      "eyebrow": "TERRITORY",
+      "description": "도시 성장, 지도 조작과 일일 의뢰"
+    }
+  ],
+  "documents": [
+    {
+      "id": "spec-map",
+      "category": "overview",
+      "title": "제품 스펙 지도",
+      "path": "docs/product/spec/README.md",
+      "status": "탐색 기준",
+      "tone": "approved",
+      "summary": "카테고리, 문서 상태와 제품 권위의 읽는 순서"
+    },
+    {
+      "id": "proposal-guide",
+      "category": "overview",
+      "title": "스펙 제안과 반영 절차",
+      "path": "docs/product/spec/PROPOSALS.md",
+      "status": "운영 기준",
+      "tone": "approved",
+      "summary": "GitHub 제안 등록, Codex 요약, 사용자 승인과 원본 반영의 경계"
+    },
+    {
+      "id": "game",
+      "category": "overview",
+      "title": "삼국 히어로 제품 정의",
+      "path": "docs/product/GAME.md",
+      "status": "제품 기준",
+      "tone": "approved",
+      "summary": "확정 사실, 미정 영역, 전투·메타·영지의 최상위 제품 정의"
+    },
+    {
+      "id": "skills-overview",
+      "category": "combat",
+      "title": "9개 스킬 계열 개요",
+      "path": "docs/product/spec/skills/README.md",
+      "status": "카테고리 개요",
+      "tone": "approved",
+      "summary": "위·촉·오 9계열과 계열별 9개 장수 스킬을 찾는 입구"
+    },
+    {
+      "id": "skill-thorn",
+      "category": "combat",
+      "title": "위 · 가시",
+      "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+      "section": "위 · 가시",
+      "anchor": "3-위--가시",
+      "status": "제품 확정",
+      "tone": "approved",
+      "summary": "적 공격 이후 반응하는 가시 계열 9개 스킬"
+    },
+    {
+      "id": "skill-lightning",
+      "category": "combat",
+      "title": "위 · 벼락",
+      "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+      "section": "위 · 벼락",
+      "anchor": "4-위--벼락",
+      "status": "제품 확정",
+      "tone": "approved",
+      "summary": "라운드 시작에 작동하는 위나라 벼락 계열 9개 스킬"
+    },
+    {
+      "id": "skill-iron-wall",
+      "category": "combat",
+      "title": "위 · 철벽",
+      "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+      "section": "위 · 철벽",
+      "anchor": "5-위--철벽",
+      "status": "제품 확정",
+      "tone": "approved",
+      "summary": "적 공격 이전에 방어를 구성하는 철벽 계열 9개 스킬"
+    },
+    {
+      "id": "skill-thunder",
+      "category": "combat",
+      "title": "촉 · 벼락",
+      "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+      "section": "촉 · 벼락",
+      "anchor": "6-촉--벼락",
+      "status": "제품 확정",
+      "tone": "approved",
+      "summary": "군주 공격 이후 연쇄되는 촉나라 벼락 계열 9개 스킬"
+    },
+    {
+      "id": "skill-dragon",
+      "category": "combat",
+      "title": "촉 · 용술",
+      "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+      "section": "촉 · 용술",
+      "anchor": "7-촉--용술",
+      "status": "제품 확정",
+      "tone": "approved",
+      "summary": "용의 형상과 군주 행동을 연결하는 용술 계열 9개 스킬"
+    },
+    {
+      "id": "skill-celestial",
+      "category": "combat",
+      "title": "촉 · 천체",
+      "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+      "section": "촉 · 천체",
+      "anchor": "8-촉--천체",
+      "status": "제품 확정",
+      "tone": "approved",
+      "summary": "태양과 세 위성을 운용하는 천체 계열 9개 스킬"
+    },
+    {
+      "id": "skill-fire",
+      "category": "combat",
+      "title": "오 · 화공",
+      "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+      "section": "오 · 화공",
+      "anchor": "9-오--화공",
+      "status": "제품 확정",
+      "tone": "approved",
+      "summary": "화상과 연소를 누적하는 화공 계열 9개 스킬"
+    },
+    {
+      "id": "skill-wave",
+      "category": "combat",
+      "title": "오 · 파도",
+      "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+      "section": "오 · 파도",
+      "anchor": "10-오--파도",
+      "status": "제품 확정",
+      "tone": "approved",
+      "summary": "군주 공격과 파형 효과를 연결하는 파도 계열 9개 스킬"
+    },
+    {
+      "id": "skill-gale",
+      "category": "combat",
+      "title": "오 · 질풍",
+      "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+      "section": "오 · 질풍",
+      "anchor": "11-오--질풍",
+      "status": "제품 확정",
+      "tone": "approved",
+      "summary": "적 공격 이전에 바람 효과를 만드는 질풍 계열 9개 스킬"
+    },
+    {
+      "id": "celestial",
+      "category": "combat",
+      "title": "천체 계열",
+      "path": "docs/product/CELESTIAL_SKILLS.md",
+      "status": "적용 중",
+      "tone": "active",
+      "summary": "태양·공격·수호·파편 위성의 현재 적용 계약"
+    },
+    {
+      "id": "campaign-overview",
+      "category": "campaign",
+      "title": "연대기·스테이지 개요",
+      "path": "docs/product/spec/campaign/README.md",
+      "status": "카테고리 개요",
+      "tone": "approved",
+      "summary": "장·스테이지·보상·복원 문서의 읽는 순서"
+    },
+    {
+      "id": "campaign-baseline",
+      "category": "campaign",
+      "title": "Easy 8장·30스테이지",
+      "path": "docs/product/EASY_CAMPAIGN_30_STAGE_BASELINE.md",
+      "status": "사용자 확정",
+      "tone": "approved",
+      "summary": "연대기 8장과 총 30개 스테이지의 현재 기준선"
+    },
+    {
+      "id": "chapter-one",
+      "category": "campaign",
+      "title": "제1장 황건적의 난",
+      "path": "docs/product/CHAPTER_ONE_TUTORIAL.md",
+      "status": "현행 기준선",
+      "tone": "active",
+      "summary": "첫 실행부터 장각전까지 이어지는 통합 튜토리얼"
+    },
+    {
+      "id": "stage-rewards",
+      "category": "campaign",
+      "title": "스테이지 첫 완료 보상",
+      "path": "docs/product/STAGE_REWARD_CATALOG.md",
+      "status": "데이터 반영",
+      "tone": "approved",
+      "summary": "Easy 스테이지별 첫 완료 보상과 지급 경계"
+    },
+    {
+      "id": "campaign-recovery",
+      "category": "campaign",
+      "title": "원정 선택·복원",
+      "path": "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md",
+      "status": "구현 계약",
+      "tone": "active",
+      "summary": "출정, 체크포인트, 복원과 정산의 연결 규칙"
+    },
+    {
+      "id": "collection-overview",
+      "category": "collection",
+      "title": "상점·모집·카드 개요",
+      "path": "docs/product/spec/collection/README.md",
+      "status": "카테고리 개요",
+      "tone": "approved",
+      "summary": "카드 버전, 소유·편성, 모집과 중복 성장의 읽는 순서"
+    },
+    {
+      "id": "card-versions",
+      "category": "collection",
+      "title": "소프트런칭 카드 22종",
+      "path": "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md",
+      "status": "로컬 구현",
+      "tone": "active",
+      "summary": "R·SR·SSR 카드 버전과 개체·성장 적용 범위"
+    },
+    {
+      "id": "collection-contract",
+      "category": "collection",
+      "title": "장수 소유·편성",
+      "path": "docs/product/GENERAL_CARD_COLLECTION_CONTRACT.md",
+      "status": "통합 계약",
+      "tone": "active",
+      "summary": "스타터팩, 소유권, 편성과 카드 등급 분리"
+    },
+    {
+      "id": "duplicate-economy",
+      "category": "collection",
+      "title": "중복 카드 강화",
+      "path": "docs/product/CARD_DUPLICATE_ECONOMY_IMPLEMENTATION.md",
+      "status": "적용 완료",
+      "tone": "approved",
+      "summary": "N 카드 수동 강화의 중복 수량과 비용"
+    },
+    {
+      "id": "shop",
+      "category": "collection",
+      "title": "팩·성장·시나리오 상점",
+      "path": "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md",
+      "status": "일부 확정",
+      "tone": "review",
+      "summary": "확정 구조와 아직 제안 상태인 경제·IAP 경계를 함께 표시",
+      "review": true
+    },
+    {
+      "id": "territory-overview",
+      "category": "territory",
+      "title": "영지 개요",
+      "path": "docs/product/spec/territory/README.md",
+      "status": "카테고리 개요",
+      "tone": "approved",
+      "summary": "도시 성장, 지도 조작, 확장·도로와 일일 의뢰의 읽는 순서"
+    },
+    {
+      "id": "territory-city",
+      "category": "territory",
+      "title": "영지 도시 기획",
+      "path": "docs/product/TERRITORY_CITY_DESIGN.md",
+      "status": "부분 승인",
+      "tone": "active",
+      "summary": "내 도시와 세력을 함께 키우는 핵심 방향과 경제 초기값"
+    },
+    {
+      "id": "territory-quests",
+      "category": "territory",
+      "title": "영지 일일 의뢰",
+      "path": "docs/product/TERRITORY_DAILY_QUESTS.md",
+      "status": "승인·적용",
+      "tone": "approved",
+      "summary": "주민·객잔 의뢰의 수령, 진행, 갱신과 보상"
+    },
+    {
+      "id": "territory-map",
+      "category": "territory",
+      "title": "영지 지도 직접 조작",
+      "path": "docs/product/TERRITORY_MAP_INTERACTIONS.md",
+      "status": "본편 적용",
+      "tone": "approved",
+      "summary": "건물 선택·이동·수확·보관의 지도 상호작용"
+    },
+    {
+      "id": "territory-roads",
+      "category": "territory",
+      "title": "관아·확장·도로",
+      "path": "docs/product/TERRITORY_ROADS_AND_EXPANSION.md",
+      "status": "방향 확정",
+      "tone": "active",
+      "summary": "중앙 관아, 정사각 확장과 도로 연결의 경계"
+    },
+    {
+      "id": "territory-tech",
+      "category": "territory",
+      "title": "영지 기술 구성",
+      "path": "docs/product/TERRITORY_TECH_ARCHITECTURE.md",
+      "status": "개발 기준",
+      "tone": "active",
+      "summary": "Godot 기반 영지 제작 구조와 품질 기준"
+    },
+    {
+      "id": "territory-buildings",
+      "category": "territory",
+      "title": "영지 건물 24종 후보",
+      "path": "docs/product/TERRITORY_BUILDING_CATALOG.md",
+      "status": "검토 중",
+      "tone": "review",
+      "summary": "아직 확정 명단이 아닌 생활 도시 건물 확장안",
+      "review": true
+    }
+  ]
+}
