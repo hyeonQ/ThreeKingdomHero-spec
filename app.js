@@ -87,7 +87,7 @@ async function openDocument(documentId) {
   status.className = `status ${doc.tone}`;
   status.textContent = doc.status;
   document.getElementById("document-path").textContent = doc.path;
-  document.getElementById("source-link").href = `https://github.com/hyeonQ/ThreeKingdomHero/blob/main/${doc.path}${doc.anchor ? `#${doc.anchor}` : ""}`;
+  document.getElementById("source-link").href = `https://github.com/dOFFamin-Corp/ThreeKingdomHero/blob/main/${doc.path}${doc.anchor ? `#${doc.anchor}` : ""}`;
   document.getElementById("outline-nav").innerHTML = doc.outline.filter(item => item.level > 1).slice(0, 16).map(item => `<a class="${item.level === 3 ? "sub" : ""}" href="#${item.anchor}">${item.title}</a>`).join("");
   document.querySelectorAll("#outline-nav a").forEach(link => link.addEventListener("click", event => {
     event.preventDefault();
