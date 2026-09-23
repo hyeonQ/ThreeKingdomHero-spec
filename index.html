@@ -6,7 +6,8 @@
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="noindex,nofollow,noarchive">
   <title>삼국 히어로 · 제품 스펙</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=development-status">
+  <link rel="stylesheet" href="progress.css">
 </head>
 <body>
   <div class="app-shell">
@@ -15,7 +16,7 @@
         <span class="brand-seal">三</span>
         <span><strong>삼국 히어로</strong><small>PRODUCT SPEC</small></span>
       </a>
-      <div class="source-state"><span></span><div><strong>main 기준</strong><small>승인 문서의 최신 배포본</small></div></div>
+      <div class="source-state"><span></span><div><strong>제품 문서 · 개발 현황</strong><small>규칙과 구현 상태를 구분합니다</small></div></div>
       <nav id="category-nav" aria-label="스펙 카테고리"></nav>
       <div class="sidebar-foot">
         <div class="scope-note">확정·현행 문서를 기본 표시합니다. 검토 중 문서는 분리되며 제안 작성에는 비공개 저장소 접근 권한이 필요합니다.</div>
@@ -35,6 +36,7 @@
       </header>
 
       <section id="home-view" class="home-view">
+        <a class="progress-entry" href="#progress"><span>개발 현황 한눈에 보기</span><small>서버 · 보드 · 배틀 · 메타 · 영지 · 출시 →</small></a>
         <div class="hero">
           <div><span class="kicker">SINGLE SOURCE OF TRUTH</span><h1>게임의 현재를<br>한곳에서 읽습니다.</h1></div>
           <p>확정된 제품 규칙과 실제 적용 경계를 카테고리별로 탐색합니다. 제안은 원문과 섞이지 않으며, 승인 후에만 스펙이 됩니다.</p>
@@ -66,8 +68,26 @@
         <div class="listing-head"><span>SEARCH</span><h1>검색 결과</h1><p id="search-summary"></p></div>
         <div id="search-list" class="document-list"></div>
       </section>
+
+      <section id="progress-view" class="progress-view" aria-labelledby="progress-title" hidden>
+        <div class="progress-heading"><div><span class="kicker">DEVELOPMENT OVERVIEW</span><h1 id="progress-title">지금, 어디까지 왔나.</h1><p>돌아가는 기능과 다듬어야 할 품질을 나눠 봅니다.</p></div><div class="progress-date"><span>점검 기준</span><strong id="progress-date">—</strong><small id="progress-version"></small></div></div>
+        <div id="progress-error" class="progress-error" role="alert" hidden><p>개발 현황을 불러오지 못했습니다. 상태를 완료로 추정하지 않습니다.</p><button id="progress-retry" type="button">다시 불러오기</button></div>
+        <div id="progress-content" hidden>
+          <div id="progress-summary" class="progress-summary"></div>
+          <p class="progress-scope" id="progress-scope"></p>
+          <div id="progress-drift" class="progress-drift" hidden></div>
+          <div id="progress-areas" class="progress-areas" aria-label="개발 영역 선택"></div>
+          <div class="progress-toolbar"><div id="progress-filters" class="progress-filters" aria-label="상태 필터"><button data-filter="all" aria-pressed="true">전체</button><button data-filter="attention" aria-pressed="false">손볼 곳</button><button data-filter="unfinished" aria-pressed="false">본편 미연결</button><button data-filter="approved" aria-pressed="false">표현 승인</button><button data-filter="stale" aria-pressed="false">근거 변경</button></div><label class="progress-search"><span class="sr-only">개발 항목 검색</span><input id="progress-search" type="search" placeholder="항목 검색 · 상점, 혈전, 저장…" autocomplete="off"></label></div>
+          <div class="progress-list-heading"><h2 id="progress-list-title">전체 영역</h2><span id="progress-count" aria-live="polite"></span><button id="progress-reset" type="button">필터 초기화</button></div>
+          <div id="progress-list"></div>
+          <section class="progress-focus"><span class="kicker">NEXT TO CHECK</span><h2>놓치기 쉬운 경계</h2><div id="progress-focus"></div></section>
+          <details class="progress-method"><summary>상태를 읽는 기준 · 갱신 방법</summary><p id="progress-basis"></p><div id="progress-legend"></div><p>상태는 수동 점검값입니다. 근거 파일이 바뀌면 사이트 빌드 때 ‘재점검’으로 표시하며, 테스트 파일이 있다는 이유로 자동 완료 처리하지 않습니다. 새 구현·검수·승인 후 원본 현황표를 갱신해야 합니다.</p></details>
+        </div>
+      </section>
     </main>
   </div>
-  <script src="app.js"></script>
+  <script src="progress-model.js"></script>
+  <script src="progress.js"></script>
+  <script src="app.js?v=development-status"></script>
 </body>
 </html>
