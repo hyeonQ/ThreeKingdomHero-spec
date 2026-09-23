@@ -1,5 +1,213 @@
 {
   "version": 1,
+  "screenshots": [
+    {
+      "id": "home",
+      "title": "홈 · 원정 계속하기",
+      "path": "captures/home-8f33692073b7.png",
+      "sha256": "8f33692073b7a3662a976970a5d0d6386709a89b4aa952ff07e734ca76d77b4c",
+      "saved_at": "2026-09-17",
+      "context": "기존 Galaxy 화면",
+      "note": "실기기에서 확인했던 홈입니다. 최신 통합 빌드의 재검수는 아닙니다.",
+      "items": [
+        "home",
+        "mobile"
+      ]
+    },
+    {
+      "id": "board",
+      "title": "보드 · 사건 후 복귀",
+      "path": "captures/board-d9c56fb4dc3a.png",
+      "sha256": "d9c56fb4dc3ac7334fc60e885ce2fb078f5bf28e4a7bdd81ada0628bdde01754",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "일반 셀 놀이를 마치고 보드로 돌아온 장면입니다.",
+      "items": [
+        "board-loop"
+      ]
+    },
+    {
+      "id": "battle",
+      "title": "전투 · 관도 보스",
+      "path": "captures/battle-ce9f721aff47.png",
+      "sha256": "ce9f721aff478ac1d5d3d97586c8e39faa0d30cd4d8f32796e09db6885ab9d8d",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 검수",
+      "note": "보스 위치·전투 구도 검수 장면입니다. 수치와 편성은 검수용입니다.",
+      "items": [
+        "battle-ui",
+        "battle-art"
+      ]
+    },
+    {
+      "id": "shop",
+      "title": "상점 · 장수 모집",
+      "path": "captures/shop-392c1d7bc52e.png",
+      "sha256": "392c1d7bc52e5bf4df8e62fc08b5555e72c58519ba5cb3b163b5c6adff1ee2d1",
+      "saved_at": "2026-09-09",
+      "context": "기존 Godot 화면",
+      "note": "상점 재설계 당시 화면입니다. 최신 공용 네비게이션과 차이가 있을 수 있습니다.",
+      "items": [
+        "shop"
+      ]
+    },
+    {
+      "id": "territory",
+      "title": "영지 · 마을 전경",
+      "path": "captures/territory-3e66aceb3b53.png",
+      "sha256": "3e66aceb3b5312f635c95b3e3c31520c1db7c41c6767ef2bb5735e580da98f99",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 화면",
+      "note": "생산·예약 UI 검수 때의 영지입니다.",
+      "items": [
+        "territory-map"
+      ]
+    },
+    {
+      "id": "seal",
+      "title": "봉인된 상자",
+      "path": "captures/seal-f6f85ff1a79c.png",
+      "sha256": "f6f85ff1a79cb22e02a573aabd040ea91f1a2215bc858181cace4d9ef60487c5",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "승인된 일반 셀 본편 적용 검수 화면입니다.",
+      "items": [
+        "cell-games"
+      ]
+    },
+    {
+      "id": "exchange",
+      "title": "상점 · 지정 교환",
+      "path": "captures/exchange-16d23041031a.png",
+      "sha256": "16d23041031a21073d3f4235b7b810d88c5e5e80c453c77f3a9a50da9bb21d27",
+      "saved_at": "2026-09-09",
+      "context": "기존 Godot 화면",
+      "note": "상점 재설계 당시 지정 교환입니다. 최신 공용 네비게이션과 차이가 있을 수 있습니다.",
+      "items": [
+        "shop"
+      ]
+    },
+    {
+      "id": "hero",
+      "title": "장수 · 상세",
+      "path": "captures/hero-cd3f4c76ce50.png",
+      "sha256": "cd3f4c76ce507ebb42a5070605ec2396452185b420afdb0419c512618b6bc12d",
+      "saved_at": "2026-09-09",
+      "context": "기존 Godot 화면",
+      "note": "상세 UI 검수 기록입니다. 이후 카드 외형·계열명 변경이 모두 반영된 사진은 아닙니다.",
+      "items": [
+        "roster"
+      ]
+    },
+    {
+      "id": "growth",
+      "title": "카드 비교 · 성장 전승",
+      "path": "captures/growth-32cfb7ff2c26.png",
+      "sha256": "32cfb7ff2c269c543b11e4ce76949452c5764bb20a5075229dffb135755dec0e",
+      "saved_at": "2026-09-10",
+      "context": "기존 Godot 화면",
+      "note": "카드 비교와 전승 검수 때의 화면입니다.",
+      "items": [
+        "growth"
+      ]
+    },
+    {
+      "id": "queue",
+      "title": "영지 · 생산 예약",
+      "path": "captures/queue-3b2466a4edf1.png",
+      "sha256": "3b2466a4edf1a5d20c7b3372cbfa5d6aba742781e32c0e402086adb36e09628b",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 화면",
+      "note": "5칸 생산 예약을 채운 장면입니다.",
+      "items": [
+        "territory-production"
+      ]
+    },
+    {
+      "id": "staff",
+      "title": "영지 · 장수 배치",
+      "path": "captures/staff-f57e51512817.png",
+      "sha256": "f57e515128174370500022c1e0b1e0cbfa4d549409570c0b226512518746295a",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 화면",
+      "note": "생산 건물의 담당 장수 선택 화면입니다.",
+      "items": [
+        "territory-staff"
+      ]
+    },
+    {
+      "id": "quest",
+      "title": "영지 · 객잔 의뢰",
+      "path": "captures/quest-b6cb56a63b4c.png",
+      "sha256": "b6cb56a63b4cac9379b8ec336dd2a036feba536b4f1e131a85dbc65bafbae71f",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 화면",
+      "note": "객잔에서 의뢰를 고르는 장면입니다.",
+      "items": [
+        "territory-quests"
+      ]
+    },
+    {
+      "id": "memory",
+      "title": "뒤섞인 군량 상자",
+      "path": "captures/memory-bc6e1e1553a8.png",
+      "sha256": "bc6e1e1553a8aab9500c7bb6075f77c8e7de5ca9d37e18d82d94fcb19eeb2665",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "군량과 산적을 확인하는 본편 검수 장면입니다.",
+      "items": [
+        "cell-games"
+      ]
+    },
+    {
+      "id": "packing",
+      "title": "행상의 보따리",
+      "path": "captures/packing-4b7edc927b62.png",
+      "sha256": "4b7edc927b6236df6305afb4da0c6344f5a37e7d1578008fc6516d8a39a9c9c5",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "무게를 보고 보따리를 고르는 본편 검수 장면입니다.",
+      "items": [
+        "cell-games"
+      ]
+    },
+    {
+      "id": "upgrade",
+      "title": "무기 강화",
+      "path": "captures/upgrade-7633e88e47fa.png",
+      "sha256": "7633e88e47fae467c97e841cf432c9e23bf890e6be16432b1da396a16f4162b9",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "성공 확률과 보상을 확인하는 본편 검수 장면입니다.",
+      "items": [
+        "cell-games"
+      ]
+    },
+    {
+      "id": "ferry",
+      "title": "백성과 함께하는 도하",
+      "path": "captures/ferry-f9d4bf97532c.png",
+      "sha256": "f9d4bf97532c8d4f93d13e2115dedaeb79f7595bc4a0ddce8f62dc63b061bbc9",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "세 번째 자리에 탑승하면 밧줄이 예약되는 장면입니다.",
+      "items": [
+        "corner-events"
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "홈 · 설정",
+      "path": "captures/settings-ff0c645bbb7c.png",
+      "sha256": "ff0c645bbb7c86b6669150094f0a70e50c38e4c3f8cefba89ef61bdd5600ec6d",
+      "saved_at": "2026-09-13",
+      "context": "기존 Godot 화면",
+      "note": "홈 네비게이션 검수 당시입니다. 계정연동 등 준비 중 메뉴의 동작 완료를 뜻하지 않습니다.",
+      "items": [
+        "bag-settings"
+      ]
+    }
+  ],
   "reviewed_at": "2026-09-23",
   "basis": "미커밋 변경을 포함한 현재 작업 폴더의 문서·실행 경로·승인 기록을 대조한 수동 점검입니다. 검증 배지는 과거 기록이며 이번에 게임 전체 검사를 다시 실행한 것은 아닙니다. ‘작업트리’ 근거는 원격 미반영으로 원문 링크를 제공하지 않습니다.",
   "publication_revision": "c2a97c8ed8a7c99ef200b42912f5b44290a35c64",
@@ -440,7 +648,9 @@
                 "docs/art/BOSS_PLACEMENT_BOX.md",
                 "src/tutorial/tutorial_combat_view.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "src/tutorial/tutorial_combat_view.gd"
+              ]
             },
             {
               "id": "battle-art",
@@ -624,7 +834,9 @@
                 "docs/product/WU_WAVE_SKILL_DRAFT.md",
                 "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/WU_WAVE_SKILL_DRAFT.md"
+              ]
             },
             {
               "id": "wind",
@@ -1099,6 +1311,6 @@
     "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md": "e228bb3bb71f050805b9bff0cb585d5a2748186e8ea763c1e2edb1b31aae02cf",
     "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md": "233530d098d9f4e318d0600f129b472bc5a868ed4406d9a3222cd7207b4aaa8a"
   },
-  "changed_items": 0,
-  "snapshot_id": "b0b0314d04fb"
+  "changed_items": 2,
+  "snapshot_id": "caff61278550"
 }

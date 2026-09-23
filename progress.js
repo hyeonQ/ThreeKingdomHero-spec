@@ -6,6 +6,49 @@
   const labels = {implementation:'구현', validation:'검증 기록', quality:'화면·연출'};
   let data, items, catalog = [], loading, options = {area:'', filter:'all', query:'', item:''};
   let bound = false;
+  let galleryExpanded = false, galleryKey = '', galleryImages = [], lightboxImages = [], lightboxIndex = 0, lightboxTrigger;
+
+  const itemImages = id => (data.screenshots || []).filter(shot => shot.items.includes(id));
+
+  function shotCard(shot) {
+    return `<button type="button" class="progress-shot" data-shot="${escape(shot.id)}" aria-haspopup="dialog" aria-label="${escape(shot.title)} 크게 보기"><span class="progress-shot-image"><img src="${escape(shot.path)}" alt="${escape(shot.title)}" loading="lazy" decoding="async"></span><strong>${escape(shot.title)}</strong><small>${escape(shot.context)} · 저장 ${escape(shot.saved_at)}</small></button>`;
+  }
+
+  function renderGallery(filtered) {
+    const key = [options.area, options.filter, options.query].join('|');
+    if (key !== galleryKey) galleryExpanded = false;
+    galleryKey = key;
+    const visible = new Set(filtered.map(item => item.id));
+    galleryImages = (data.screenshots || []).filter(shot => shot.items.some(id => visible.has(id)));
+    $('progress-gallery-count').textContent = `${galleryImages.length}장`;
+    $('progress-gallery-toggle').hidden = galleryImages.length <= 6;
+    $('progress-gallery-toggle').textContent = galleryExpanded ? '접기' : `${galleryImages.length}장 모두 보기`;
+    $('progress-gallery-toggle').setAttribute('aria-expanded', String(galleryExpanded));
+    $('progress-gallery-grid').innerHTML = galleryImages.length ? (galleryExpanded ? galleryImages : galleryImages.slice(0,6)).map(shotCard).join('') : '<p class="progress-no-shots">이 조건에 맞는 기존 캡처가 없습니다. 새 촬영은 하지 않았습니다.</p>';
+  }
+
+  function showCapture(index) {
+    lightboxIndex = (index + lightboxImages.length) % lightboxImages.length;
+    const shot = lightboxImages[lightboxIndex];
+    $('progress-lightbox-title').textContent = shot.title;
+    $('progress-lightbox-meta').textContent = `${shot.context} · 파일 저장일 ${shot.saved_at}`;
+    $('progress-lightbox-note').textContent = shot.note;
+    $('progress-lightbox-position').textContent = `${lightboxIndex+1} / ${lightboxImages.length}`;
+    $('progress-lightbox-original').href = shot.path;
+    $('progress-lightbox-error').hidden = true;
+    const img = $('progress-lightbox-image');
+    img.hidden = false; img.alt = shot.title; img.src = shot.path;
+    $('progress-lightbox-prev').disabled = $('progress-lightbox-next').disabled = lightboxImages.length < 2;
+  }
+
+  function openCapture(button) {
+    const detail = button.closest('.progress-item');
+    lightboxImages = detail ? itemImages(detail.id.replace('progress-item-', '')) : galleryImages;
+    const index = lightboxImages.findIndex(shot => shot.id === button.dataset.shot);
+    if (index < 0) return;
+    lightboxTrigger = button; showCapture(index);
+    $('progress-lightbox').showModal(); document.body.classList.add('progress-modal-open');
+  }
 
   function badge(axis, value) {
     const state = data.states[axis][value];
@@ -35,9 +78,10 @@
 
   function row(item) {
     return `<details class="progress-item" id="progress-item-${item.id}" ${options.item === item.id ? 'open' : ''}>
-      <summary><span class="progress-item-name"><strong>${escape(item.title)}</strong><small>${escape(item.hold || item.group)}${item.changed_sources?.length ? ' · 근거 변경' : ''}</small></span>
+      <summary><span class="progress-item-name"><strong>${escape(item.title)}</strong><small>${escape(item.hold || item.group)}${itemImages(item.id).length ? ` · 화면 ${itemImages(item.id).length}장` : ''}${item.changed_sources?.length ? ' · 근거 변경' : ''}</small></span>
       <span class="progress-cell" data-label="구현">${badge('implementation',item.implementation)}</span><span class="progress-cell" data-label="검증">${badge('validation',item.validation)}</span><span class="progress-cell" data-label="표현">${badge('quality',item.quality)}</span><span class="progress-chevron" aria-hidden="true">＋</span></summary>
       <div class="progress-detail"><div><span>지금 상태</span><p>${escape(item.current)}</p></div><div><span>다음 확인</span><p>${escape(item.next)}</p></div>
+      ${itemImages(item.id).length ? `<section class="progress-detail-shots" aria-label="기존 게임 화면"><div class="progress-shots">${itemImages(item.id).map(shotCard).join('')}</div></section>` : '<p class="progress-no-shots">등록된 기존 캡처 없음</p>'}
       <footer>${item.changed_sources?.length ? `<p class="progress-changed">점검 이후 근거 ${item.changed_sources.length}개가 변경됐습니다. 위 상태를 다시 확인해야 합니다.</p>` : ''}<div class="progress-sources"><span>근거</span>${item.sources.map(sourceLink).join('')}</div><small>작업트리 = 원격 미반영. 원문 링크는 저장소 권한이 필요할 수 있습니다. 검증은 기록된 범위에 한합니다.</small></footer></div></details>`;
   }
 
@@ -61,6 +105,7 @@
       else if (options.item === id) options.item = '';
       saveRoute();
     }));
+    renderGallery(filtered);
   }
 
   function render() {
@@ -101,6 +146,28 @@
     catalog = documents || catalog;
     if (!bound) {
       bound = true;
+      const dialog = $('progress-lightbox');
+      $('progress-content').addEventListener('click', event => {
+        const button = event.target.closest('button[data-shot]');
+        if (button) openCapture(button);
+      });
+      $('progress-gallery-toggle').addEventListener('click', () => {galleryExpanded = !galleryExpanded; renderGallery(ProgressModel.filter(items, options));});
+      $('progress-lightbox-close').addEventListener('click', () => dialog.close());
+      dialog.addEventListener('close', () => {
+        document.body.classList.remove('progress-modal-open');
+        if (lightboxTrigger?.isConnected) lightboxTrigger.focus({preventScroll:true});
+      });
+      dialog.addEventListener('click', event => {
+        const rect = dialog.getBoundingClientRect();
+        if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
+      });
+      dialog.addEventListener('keydown', event => {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {event.preventDefault(); showCapture(lightboxIndex + (event.key === 'ArrowLeft' ? -1 : 1));}
+      });
+      $('progress-lightbox-prev').addEventListener('click', () => showCapture(lightboxIndex - 1));
+      $('progress-lightbox-next').addEventListener('click', () => showCapture(lightboxIndex + 1));
+      $('progress-lightbox-image').addEventListener('error', () => {$('progress-lightbox-image').hidden = true; $('progress-lightbox-error').hidden = false;});
+      window.addEventListener('hashchange', () => {if (dialog.open) dialog.close();});
       $('progress-retry').addEventListener('click', () => { data = null; open(); });
       $('progress-search').addEventListener('input', event => {options.query = event.target.value; options.item = ''; saveRoute(); renderList();});
       $('progress-reset').addEventListener('click', () => {options = {area:'',filter:'all',query:'',item:''}; saveRoute(); renderList();});
