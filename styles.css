@@ -14,7 +14,6 @@
 }
 
 * { box-sizing: border-box; }
-[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
 button, input { color: inherit; font: inherit; }
