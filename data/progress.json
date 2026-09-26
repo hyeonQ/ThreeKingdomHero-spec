@@ -1,0 +1,1781 @@
+{
+  "version": 1,
+  "screenshots": [
+    {
+      "id": "home",
+      "title": "홈 · 원정 계속하기",
+      "path": "captures/home-8f33692073b7.png",
+      "sha256": "8f33692073b7a3662a976970a5d0d6386709a89b4aa952ff07e734ca76d77b4c",
+      "saved_at": "2026-09-17",
+      "context": "기존 Galaxy 화면",
+      "note": "실기기에서 확인했던 홈입니다. 최신 통합 빌드의 재검수는 아닙니다.",
+      "items": [
+        "home",
+        "mobile"
+      ]
+    },
+    {
+      "id": "board",
+      "title": "보드 · 사건 후 복귀",
+      "path": "captures/board-d9c56fb4dc3a.png",
+      "sha256": "d9c56fb4dc3ac7334fc60e885ce2fb078f5bf28e4a7bdd81ada0628bdde01754",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "일반 셀 놀이를 마치고 보드로 돌아온 장면입니다.",
+      "items": [
+        "board-loop"
+      ]
+    },
+    {
+      "id": "battle",
+      "title": "전투 · 관도 보스",
+      "path": "captures/battle-ce9f721aff47.png",
+      "sha256": "ce9f721aff478ac1d5d3d97586c8e39faa0d30cd4d8f32796e09db6885ab9d8d",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 검수",
+      "note": "보스 위치·전투 구도 검수 장면입니다. 수치와 편성은 검수용입니다.",
+      "items": [
+        "battle-ui",
+        "battle-art"
+      ]
+    },
+    {
+      "id": "shop",
+      "title": "상점 · 장수 모집",
+      "path": "captures/shop-392c1d7bc52e.png",
+      "sha256": "392c1d7bc52e5bf4df8e62fc08b5555e72c58519ba5cb3b163b5c6adff1ee2d1",
+      "saved_at": "2026-09-09",
+      "context": "기존 Godot 화면",
+      "note": "상점 재설계 당시 화면입니다. 최신 공용 네비게이션과 차이가 있을 수 있습니다.",
+      "items": [
+        "shop"
+      ]
+    },
+    {
+      "id": "territory",
+      "title": "영지 · 마을 전경",
+      "path": "captures/territory-3e66aceb3b53.png",
+      "sha256": "3e66aceb3b5312f635c95b3e3c31520c1db7c41c6767ef2bb5735e580da98f99",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 화면",
+      "note": "생산·예약 UI 검수 때의 영지입니다.",
+      "items": [
+        "territory-map"
+      ]
+    },
+    {
+      "id": "seal",
+      "title": "봉인된 상자",
+      "path": "captures/seal-f6f85ff1a79c.png",
+      "sha256": "f6f85ff1a79cb22e02a573aabd040ea91f1a2215bc858181cace4d9ef60487c5",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "승인된 일반 셀 본편 적용 검수 화면입니다.",
+      "items": [
+        "cell-games"
+      ]
+    },
+    {
+      "id": "exchange",
+      "title": "상점 · 지정 교환",
+      "path": "captures/exchange-16d23041031a.png",
+      "sha256": "16d23041031a21073d3f4235b7b810d88c5e5e80c453c77f3a9a50da9bb21d27",
+      "saved_at": "2026-09-09",
+      "context": "기존 Godot 화면",
+      "note": "상점 재설계 당시 지정 교환입니다. 최신 공용 네비게이션과 차이가 있을 수 있습니다.",
+      "items": [
+        "shop"
+      ]
+    },
+    {
+      "id": "hero",
+      "title": "장수 · 상세",
+      "path": "captures/hero-cd3f4c76ce50.png",
+      "sha256": "cd3f4c76ce507ebb42a5070605ec2396452185b420afdb0419c512618b6bc12d",
+      "saved_at": "2026-09-09",
+      "context": "기존 Godot 화면",
+      "note": "상세 UI 검수 기록입니다. 이후 카드 외형·계열명 변경이 모두 반영된 사진은 아닙니다.",
+      "items": [
+        "roster"
+      ]
+    },
+    {
+      "id": "growth",
+      "title": "카드 비교 · 성장 전승",
+      "path": "captures/growth-32cfb7ff2c26.png",
+      "sha256": "32cfb7ff2c269c543b11e4ce76949452c5764bb20a5075229dffb135755dec0e",
+      "saved_at": "2026-09-10",
+      "context": "기존 Godot 화면",
+      "note": "카드 비교와 전승 검수 때의 화면입니다.",
+      "items": [
+        "growth"
+      ]
+    },
+    {
+      "id": "queue",
+      "title": "영지 · 생산 예약",
+      "path": "captures/queue-3b2466a4edf1.png",
+      "sha256": "3b2466a4edf1a5d20c7b3372cbfa5d6aba742781e32c0e402086adb36e09628b",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 화면",
+      "note": "5칸 생산 예약을 채운 장면입니다.",
+      "items": [
+        "territory-production"
+      ]
+    },
+    {
+      "id": "staff",
+      "title": "영지 · 장수 배치",
+      "path": "captures/staff-f57e51512817.png",
+      "sha256": "f57e515128174370500022c1e0b1e0cbfa4d549409570c0b226512518746295a",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 화면",
+      "note": "생산 건물의 담당 장수 선택 화면입니다.",
+      "items": [
+        "territory-staff"
+      ]
+    },
+    {
+      "id": "quest",
+      "title": "영지 · 객잔 의뢰",
+      "path": "captures/quest-b6cb56a63b4c.png",
+      "sha256": "b6cb56a63b4cac9379b8ec336dd2a036feba536b4f1e131a85dbc65bafbae71f",
+      "saved_at": "2026-09-22",
+      "context": "기존 Godot 화면",
+      "note": "객잔에서 의뢰를 고르는 장면입니다.",
+      "items": [
+        "territory-quests"
+      ]
+    },
+    {
+      "id": "memory",
+      "title": "뒤섞인 군량 상자",
+      "path": "captures/memory-bc6e1e1553a8.png",
+      "sha256": "bc6e1e1553a8aab9500c7bb6075f77c8e7de5ca9d37e18d82d94fcb19eeb2665",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "군량과 산적을 확인하는 본편 검수 장면입니다.",
+      "items": [
+        "cell-games"
+      ]
+    },
+    {
+      "id": "packing",
+      "title": "행상의 보따리",
+      "path": "captures/packing-4b7edc927b62.png",
+      "sha256": "4b7edc927b6236df6305afb4da0c6344f5a37e7d1578008fc6516d8a39a9c9c5",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "무게를 보고 보따리를 고르는 본편 검수 장면입니다.",
+      "items": [
+        "cell-games"
+      ]
+    },
+    {
+      "id": "upgrade",
+      "title": "무기 강화",
+      "path": "captures/upgrade-7633e88e47fa.png",
+      "sha256": "7633e88e47fae467c97e841cf432c9e23bf890e6be16432b1da396a16f4162b9",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "성공 확률과 보상을 확인하는 본편 검수 장면입니다.",
+      "items": [
+        "cell-games"
+      ]
+    },
+    {
+      "id": "ferry",
+      "title": "백성과 함께하는 도하",
+      "path": "captures/ferry-f9d4bf97532c.png",
+      "sha256": "f9d4bf97532c8d4f93d13e2115dedaeb79f7595bc4a0ddce8f62dc63b061bbc9",
+      "saved_at": "2026-09-23",
+      "context": "기존 Godot 화면",
+      "note": "세 번째 자리에 탑승하면 밧줄이 예약되는 장면입니다.",
+      "items": [
+        "corner-events"
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "홈 · 설정",
+      "path": "captures/settings-ff0c645bbb7c.png",
+      "sha256": "ff0c645bbb7c86b6669150094f0a70e50c38e4c3f8cefba89ef61bdd5600ec6d",
+      "saved_at": "2026-09-13",
+      "context": "기존 Godot 화면",
+      "note": "홈 네비게이션 검수 당시입니다. 계정연동 등 준비 중 메뉴의 동작 완료를 뜻하지 않습니다.",
+      "items": [
+        "bag-settings"
+      ]
+    }
+  ],
+  "reviewed_at": "2026-09-23",
+  "basis": "미커밋 변경을 포함한 현재 작업 폴더의 문서·실행 경로·승인 기록을 대조한 수동 점검입니다. 검증 배지는 과거 기록이며 이번에 게임 전체 검사를 다시 실행한 것은 아닙니다. ‘작업트리’ 근거는 원격 미반영으로 원문 링크를 제공하지 않습니다.",
+  "publication_revision": "c2a97c8ed8a7c99ef200b42912f5b44290a35c64",
+  "source_publication": {
+    "docs/product/PLAYFAB_S2_IMPLEMENTATION_SPEC.md": "same",
+    "server/playfab/src/playfab_dependencies.mjs": "changed",
+    "src/meta/playfab/playfab_local_collection_transport.gd": "changed",
+    "docs/product/CELL_GAMES.md": "unpublished",
+    "server/playfab/src/godot_replay_engine.mjs": "changed",
+    "tests/server_replay/cell_games.test.mjs": "unpublished",
+    "docs/product/SERVER_OPERATION_STORAGE.md": "changed",
+    "docs/product/SERVER_ACCESS_POLICY.md": "same",
+    "server/playfab/src/operation_journal.mjs": "same",
+    "docs/product/SERVER_COMPENSATION.md": "same",
+    "docs/product/SERVER_OPERATIONS_OBSERVABILITY.md": "same",
+    "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md": "same",
+    "docs/product/DICE_PRESENTATION.md": "unpublished",
+    "src/board/board_world.gd": "changed",
+    "src/tutorial/tutorial_run_model.gd": "changed",
+    "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md": "unpublished",
+    "data/campaign/stages.json": "changed",
+    "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md": "same",
+    "src/tutorial/run_checkpoint.gd": "changed",
+    "src/board/cell_games/events.gd": "unpublished",
+    "assets/requests/approvals/cell_games.json": "unpublished",
+    "docs/product/EVENT_CORNER_EXPLORATION.md": "unpublished",
+    "docs/product/EVENT_EXPEDITION_REFINEMENT.md": "unpublished",
+    "src/board/corner_exploration_events.gd": "unpublished",
+    "docs/product/CELL_EVENT_AUDIT.md": "unpublished",
+    "src/tutorial/tutorial_node_choice_view.gd": "changed",
+    "docs/product/CAMPAIGN_ATTACK_ROTATION_IMPLEMENTATION.md": "unpublished",
+    "src/campaign/formation_run.gd": "unpublished",
+    "src/tutorial/faction_skill_runtime.gd": "changed",
+    "docs/art/APPROVED_BATTLE_UI.md": "unpublished",
+    "docs/art/BOSS_PLACEMENT_BOX.md": "unpublished",
+    "src/tutorial/tutorial_combat_view.gd": "changed",
+    "docs/art/APPROVED_BOSS_REFINEMENT.md": "same",
+    "assets/requests/approvals/campaign_boss_refinement.json": "same",
+    "docs/product/DRAGON_SKILL_IMPLEMENTATION.md": "same",
+    "src/tutorial/dragon_skill_runtime.gd": "same",
+    "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md": "changed",
+    "docs/product/SHU_CAMPAIGN_INTEGRATION_AUDIT.md": "same",
+    "src/tutorial/thunder_skill_runtime.gd": "changed",
+    "docs/product/CELESTIAL_SKILLS.md": "changed",
+    "src/tutorial/celestial_skill_runtime.gd": "changed",
+    "docs/product/THORN_SKILL_IMPLEMENTATION.md": "unpublished",
+    "docs/art/THORN_COHESIVE_REVIEW.md": "unpublished",
+    "assets/requests/approvals/thorn_nine_vfx.json": "unpublished",
+    "docs/product/WEI_BLOOD_BATTLE_DRAFT.md": "changed",
+    "docs/art/BLOOD_SKILL_VFX_MOTION.md": "unpublished",
+    "assets/requests/approvals/blood_nine_vfx.json": "unpublished",
+    "docs/product/WEI_IRON_WALL_SKILL_DRAFT.md": "unpublished",
+    "docs/product/WU_FIRE_SKILLS.md": "unpublished",
+    "docs/art/WU_FIRE_CEL_ANIMATION.md": "unpublished",
+    "src/tutorial/wu_fire_skill_runtime.gd": "unpublished",
+    "docs/product/WU_WAVE_SKILL_DRAFT.md": "unpublished",
+    "docs/product/REMAINING_WORK.md": "changed",
+    "docs/art/HOME_AND_NAVIGATION_UI.md": "same",
+    "src/meta/campaign_hub.gd": "changed",
+    "src/meta/meta_shell.gd": "changed",
+    "docs/product/EARLY_GAME_ONBOARDING.md": "unpublished",
+    "src/meta/advisor_guide.gd": "same",
+    "src/meta/settings_dialog.gd": "same",
+    "src/meta/player_settings.gd": "same",
+    "docs/product/RECRUITMENT_SHOP_CONCEPT_IMPLEMENTATION.md": "same",
+    "src/meta/card_shop.gd": "changed",
+    "src/meta/recruitment/recruitment_shop_surface.gd": "changed",
+    "docs/product/RECRUITMENT_RECOVERY_INTEGRATION.md": "same",
+    "src/meta/recruitment/recruitment_presentation.gd": "changed",
+    "src/meta/playfab/card_pack_recovery.gd": "changed",
+    "docs/art/APPROVED_HERO_DETAIL_UI.md": "same",
+    "docs/product/MOBILE_QUALITY_IMPROVEMENTS.md": "same",
+    "src/meta/general_management.gd": "changed",
+    "docs/product/CARD_DUPLICATE_ECONOMY_IMPLEMENTATION.md": "same",
+    "docs/product/CARD_INSTANCE_COMPARISON_IMPLEMENTATION.md": "same",
+    "src/meta/ruler_growth_policy.gd": "changed",
+    "src/meta/mailbox_screen.gd": "changed",
+    "docs/product/TERRITORY_MAP_INTERACTIONS.md": "same",
+    "docs/product/TERRITORY_ROADS_AND_EXPANSION.md": "same",
+    "src/territory/presentation/territory_view.gd": "changed",
+    "docs/product/TERRITORY_SUPPLY_LOOP.md": "unpublished",
+    "src/territory/application/territory_commands.gd": "changed",
+    "src/territory/domain/territory_model.gd": "changed",
+    "data/territory/city_policy.json": "changed",
+    "docs/product/TERRITORY_DAILY_QUESTS.md": "same",
+    "docs/product/EVENT_SUPPLY_IMPLEMENTATION.md": "unpublished",
+    "src/meta/event_supply_settlement.gd": "unpublished",
+    "src/board/event_supplies.gd": "unpublished",
+    "docs/product/FIRST_DAY_INTEGRATION.md": "same",
+    "docs/product/AUDIO_QUALITY_REVIEW.md": "same",
+    "docs/product/TERRITORY_SOFT_LAUNCH_READINESS.md": "same",
+    "export_presets.cfg": "changed",
+    "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md": "changed",
+    "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md": "same"
+  },
+  "scope": "본편은 현재 로컬 게임 기준입니다. 실제 운영 서버·최신 실기기 검수·출시는 별도이며, 항목 수는 작업량이나 출시 완성률이 아닙니다.",
+  "states": {
+    "implementation": {
+      "integrated": {
+        "label": "본편 연결",
+        "tone": "green",
+        "description": "현재 게임의 실제 진행·거래·화면 경로에 연결됨. 출시 완료와는 다릅니다."
+      },
+      "partial": {
+        "label": "부분 연결",
+        "tone": "amber",
+        "description": "기존 기능 또는 일부만 연결됨. 최신 승인안 전체가 적용된 상태는 아닙니다."
+      },
+      "local": {
+        "label": "로컬 기반",
+        "tone": "blue",
+        "description": "서버 계약·도구 등을 로컬/모의 환경에서 구현. 실제 서비스 연결은 남았습니다."
+      },
+      "prototype": {
+        "label": "시안·체험",
+        "tone": "blue",
+        "description": "직접 확인할 시안이나 연출이 있으나 실제 게임 판정·진행 연결은 남았습니다."
+      },
+      "design": {
+        "label": "설계 중",
+        "tone": "amber",
+        "description": "새 방향 또는 세부 명세를 검토 중. 기존 구현이 있는 경우 상세에서 구분합니다."
+      },
+      "planned": {
+        "label": "미구현",
+        "tone": "gray",
+        "description": "현재 목표 범위의 실행 경로가 없거나 착수 전입니다."
+      }
+    },
+    "validation": {
+      "screen": {
+        "label": "실화면 확인",
+        "tone": "green",
+        "description": "해당 범위의 실제 Godot 화면/입력 검사 기록이 있음. 사용자 최종 승인과는 다릅니다."
+      },
+      "automated": {
+        "label": "자동검사",
+        "tone": "blue",
+        "description": "모델·계약·복구·재연산 등 자동 검사 기록. 실서비스 검증은 아닙니다."
+      },
+      "device": {
+        "label": "기기 표본",
+        "tone": "blue",
+        "description": "이전 특정 기기/빌드의 검수 기록. 최신 빌드나 모든 기기를 보장하지 않습니다."
+      },
+      "document": {
+        "label": "문서 대조",
+        "tone": "gray",
+        "description": "설계/잔여 범위 기록까지 확인. 실행 검증 완료는 아닙니다."
+      },
+      "none": {
+        "label": "미검증",
+        "tone": "gray",
+        "description": "해당 목표 범위의 실행 검증 근거가 없습니다."
+      }
+    },
+    "quality": {
+      "approved": {
+        "label": "승인된 표현",
+        "tone": "green",
+        "description": "해당 화면·아트·연출의 사용자 승인 기록. 판정·밸런스·출시 승인과 분리합니다."
+      },
+      "review": {
+        "label": "검수 대기",
+        "tone": "amber",
+        "description": "확인 가능한 화면이 있으나 최신 결과의 최종 품질 승인은 남았습니다."
+      },
+      "improve": {
+        "label": "보완 필요",
+        "tone": "red",
+        "description": "구체적인 사용성·연출·가독성 보완 또는 재설계가 남았습니다."
+      },
+      "undecided": {
+        "label": "방향 검토",
+        "tone": "gray",
+        "description": "구체적인 체험/표현 방향부터 결정해야 합니다."
+      },
+      "na": {
+        "label": "해당 없음",
+        "tone": "gray",
+        "description": "화면·연출이 아닌 기반 항목. 운영 준비도는 구현·검증과 상세에서 확인합니다."
+      }
+    }
+  },
+  "focus": [
+    "blood-rules",
+    "thorn-vfx",
+    "live-backend",
+    "first-week"
+  ],
+  "areas": [
+    {
+      "id": "server",
+      "name": "서버",
+      "eyebrow": "SERVER",
+      "summary": "계약·복구는 로컬 검증. 실환경 연결은 보류.",
+      "groups": [
+        {
+          "name": "계정·거래",
+          "items": [
+            {
+              "id": "server-contract",
+              "title": "계정 · 인벤토리 · 거래",
+              "implementation": "local",
+              "validation": "automated",
+              "quality": "na",
+              "attention": false,
+              "current": "PlayFab/Azure 명령, 소유권·가격·정책 검증과 멱등 거래를 구현했습니다. 앱 기본값은 영속 로컬 provider입니다.",
+              "next": "재개 승인 후 실제 계정 인증과 경제 거래를 검증합니다.",
+              "sources": [
+                "docs/product/PLAYFAB_S2_IMPLEMENTATION_SPEC.md",
+                "server/playfab/src/playfab_dependencies.mjs",
+                "src/meta/playfab/playfab_local_collection_transport.gd"
+              ],
+              "changed_sources": [
+                "server/playfab/src/playfab_dependencies.mjs",
+                "src/meta/playfab/playfab_local_collection_transport.gd"
+              ]
+            },
+            {
+              "id": "server-replay",
+              "title": "원정 발급 · 재연산 · 정산",
+              "implementation": "local",
+              "validation": "automated",
+              "quality": "na",
+              "attention": false,
+              "current": "발급된 규칙과 선택 기록으로 실제 Godot 재연산을 합니다. 새 일반 셀9종과 기존 코너 흐름까지 로컬 검증했습니다.",
+              "next": "운영용 번들을 고정하고 실제 환경에서 발급부터 지급까지 확인합니다.",
+              "sources": [
+                "docs/product/CELL_GAMES.md",
+                "server/playfab/src/godot_replay_engine.mjs",
+                "tests/server_replay/cell_games.test.mjs"
+              ],
+              "changed_sources": [
+                "server/playfab/src/godot_replay_engine.mjs"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "운영 기반",
+          "items": [
+            {
+              "id": "server-recovery",
+              "title": "중복 방지 · 장애 복구",
+              "implementation": "local",
+              "validation": "automated",
+              "quality": "na",
+              "attention": false,
+              "current": "응답 유실·재시도·지급 정지와 원래 거래 복구 계약이 있습니다. 모의 provider 검사와 운영 증거를 구분합니다.",
+              "next": "영속 저장 provider의 재시작·백업 복원·재조정을 검증합니다.",
+              "sources": [
+                "docs/product/SERVER_OPERATION_STORAGE.md",
+                "docs/product/SERVER_ACCESS_POLICY.md",
+                "server/playfab/src/operation_journal.mjs"
+              ],
+              "changed_sources": [
+                "docs/product/SERVER_OPERATION_STORAGE.md"
+              ]
+            },
+            {
+              "id": "server-liveops",
+              "title": "운영 콘솔 · 우편 · 관측",
+              "implementation": "local",
+              "validation": "automated",
+              "quality": "review",
+              "attention": true,
+              "current": "보상/우편과 운영 조회·경보 판정의 로컬 경로가 있습니다. 콘솔은 합성 데이터이며 실제 인증·관측·통지는 미연결입니다.",
+              "next": "운영자 인증·감사·수집·실제 알림과 수리 화면을 연결합니다.",
+              "sources": [
+                "docs/product/SERVER_COMPENSATION.md",
+                "docs/product/SERVER_OPERATIONS_OBSERVABILITY.md",
+                "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "live-backend",
+              "title": "실제 서버 연결 · 배포",
+              "implementation": "planned",
+              "validation": "none",
+              "quality": "na",
+              "attention": true,
+              "hold": "사용자 보류",
+              "current": "실제 운영 원장·인증·지급·배포는 완료되지 않았습니다. 로컬 검사 통과를 운영 완료로 계산하지 않습니다.",
+              "next": "재개 승인과 환경·비용·접근 권한을 정한 뒤 실환경 게이트를 진행합니다.",
+              "sources": [
+                "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
+              ],
+              "changed_sources": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "board",
+      "name": "인게임 · 보드",
+      "eyebrow": "BOARD",
+      "summary": "30전장 진행과 새9종 사건 연결. 반복 플레이는 별도.",
+      "groups": [
+        {
+          "name": "한 판의 진행",
+          "items": [
+            {
+              "id": "board-loop",
+              "title": "주사위 · 이동 · 착지",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "40칸·30회 주사위, 코너 통과·정예 전환과 승인된 공용 주사위 표현이 연결되어 있습니다.",
+              "next": "최신 모바일 빌드에서 이동 속도와 터치를 확인합니다.",
+              "sources": [
+                "docs/product/DICE_PRESENTATION.md",
+                "src/board/board_world.gd",
+                "src/tutorial/tutorial_run_model.gd"
+              ],
+              "changed_sources": [
+                "src/tutorial/tutorial_run_model.gd"
+              ]
+            },
+            {
+              "id": "campaign-route",
+              "title": "8장 · 30전장 · 해금",
+              "implementation": "integrated",
+              "validation": "automated",
+              "quality": "review",
+              "attention": false,
+              "current": "황건부터 오 멸망까지 승리·다음 해금·최초 보상 경로가 있습니다. 정상 계정 여정과 재연산 검증 기록이 있습니다.",
+              "next": "최신 스킬/사건을 포함한 장간 난이도와 실제 플레이 호흡을 확인합니다.",
+              "sources": [
+                "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md",
+                "data/campaign/stages.json"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "board-save",
+              "title": "중단 · 복원 · 결과 복귀",
+              "implementation": "integrated",
+              "validation": "automated",
+              "quality": "na",
+              "attention": false,
+              "current": "같은 티켓·편성·규칙으로 복원하며 결과 지급을 중복하지 않습니다. 모르는 구규칙은 무리하게 변환하지 않습니다.",
+              "next": "최신 기기 업데이트·강제 종료의 전체 경로를 확인합니다.",
+              "sources": [
+                "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md",
+                "docs/product/CELL_GAMES.md",
+                "src/tutorial/run_checkpoint.gd"
+              ],
+              "changed_sources": [
+                "src/tutorial/run_checkpoint.gd"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "사건·선택",
+          "items": [
+            {
+              "id": "cell-games",
+              "title": "일반 셀 · 새 놀이9종",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "군량·봉인·보따리·흥정·창고·담금질·길 잇기·무기/방어구 강화가 새 원정에 연결되었습니다. 실제 능력치로 한 번만 정산합니다.",
+              "next": "등장 빈도와 체감 보상을 실제 원정에서 확인합니다.",
+              "sources": [
+                "docs/product/CELL_GAMES.md",
+                "src/board/cell_games/events.gd",
+                "assets/requests/approvals/cell_games.json"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "corner-events",
+              "title": "코너 · 도하 · 화살 · 보물터",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": false,
+              "current": "11번 무료 보물터, 지역별 도하/화살과 휴식·상점을 유지합니다. 의병촌은 일반 셀이며 지도 조각 수집은 제거했습니다.",
+              "next": "지역별 큰 사건의 기대감과 난이도를 비교합니다.",
+              "sources": [
+                "docs/product/EVENT_CORNER_EXPLORATION.md",
+                "docs/product/EVENT_EXPEDITION_REFINEMENT.md",
+                "src/board/corner_exploration_events.gd"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "story-cells",
+              "title": "남은 이야기 셀 · 전장 상점",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "improve",
+              "attention": true,
+              "current": "기존 지역 사건·상점 경로는 있습니다. 사건 이름 대비 행동 구조 반복과 작은 화면 선택지 문제가 감사에서 확인됐습니다.",
+              "next": "남은 이야기4칸의 선택지 가독성과 지역별 차이를 정리합니다.",
+              "sources": [
+                "docs/product/CELL_EVENT_AUDIT.md",
+                "docs/product/CELL_GAMES.md",
+                "src/tutorial/tutorial_node_choice_view.gd"
+              ],
+              "changed_sources": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "battle",
+      "name": "인게임 · 배틀",
+      "eyebrow": "BATTLE",
+      "summary": "전투 골격과 촉3계열 구현. 위·오 후속은 상태가 다름.",
+      "groups": [
+        {
+          "name": "전투 공통",
+          "items": [
+            {
+              "id": "battle-core",
+              "title": "자동 전투 · 다중 적 · 상태",
+              "implementation": "integrated",
+              "validation": "automated",
+              "quality": "review",
+              "attention": false,
+              "current": "다중 적·기본 광역·행동 상성4순환과 전장 패턴이 연결되어 있습니다.",
+              "next": "새 계열을 넣은 단독/혼합 편성과 과한 연쇄를 비교합니다.",
+              "sources": [
+                "docs/product/CAMPAIGN_ATTACK_ROTATION_IMPLEMENTATION.md",
+                "src/campaign/formation_run.gd",
+                "src/tutorial/faction_skill_runtime.gd"
+              ],
+              "changed_sources": [
+                "src/campaign/formation_run.gd",
+                "src/tutorial/faction_skill_runtime.gd"
+              ]
+            },
+            {
+              "id": "battle-ui",
+              "title": "전투 구도 · HUD · 진형",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "승인된 전투 구도를 모든 전장에 적용했습니다. 보스 발/실루엣·체력바·15명 진형의 표시 계약이 있습니다.",
+              "next": "실기기의 작은 화면과 최신 VFX 가림을 확인합니다.",
+              "sources": [
+                "docs/art/APPROVED_BATTLE_UI.md",
+                "docs/art/BOSS_PLACEMENT_BOX.md",
+                "src/tutorial/tutorial_combat_view.gd"
+              ],
+              "changed_sources": [
+                "src/tutorial/tutorial_combat_view.gd"
+              ]
+            },
+            {
+              "id": "battle-art",
+              "title": "전장 배경 · 적 · 보스",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "30전장 배경·8지역 보드·28보스 정체성과 후속6보스 수정본이 연결·승인되어 있습니다.",
+              "next": "최신 기기에서 보스 잘림·접지·타격점을 확인합니다.",
+              "sources": [
+                "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md",
+                "docs/art/APPROVED_BOSS_REFINEMENT.md",
+                "assets/requests/approvals/campaign_boss_refinement.json"
+              ],
+              "changed_sources": []
+            }
+          ]
+        },
+        {
+          "name": "촉 · 적용 계열",
+          "items": [
+            {
+              "id": "dragon",
+              "title": "용술9종",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "판정·성장·설명과 승인된 셀 애니메이션을 본편에서 사용합니다.",
+              "next": "최신 전장/성장 구간의 단독·혼합 성능을 확인합니다.",
+              "sources": [
+                "docs/product/DRAGON_SKILL_IMPLEMENTATION.md",
+                "src/tutorial/dragon_skill_runtime.gd"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "thunder",
+              "title": "벼락9종",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "본편 판정과 표현이 연결된 촉 계열입니다. 혈전으로 바뀌는 구 위나라 lightning과 다릅니다.",
+              "next": "장수별 설명 수치와 후반 성장 효율을 확인합니다.",
+              "sources": [
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+                "docs/product/SHU_CAMPAIGN_INTEGRATION_AUDIT.md",
+                "src/tutorial/thunder_skill_runtime.gd"
+              ],
+              "changed_sources": [
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+                "src/tutorial/thunder_skill_runtime.gd"
+              ]
+            },
+            {
+              "id": "celestial",
+              "title": "천체9종 · 공용 주사위",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "위성·주사위·효과 유지·대성공 표현까지 승인된 본편 경로가 있습니다.",
+              "next": "다인 진형에서 효과 읽힘과 전투 시간을 확인합니다.",
+              "sources": [
+                "docs/product/CELESTIAL_SKILLS.md",
+                "docs/product/DICE_PRESENTATION.md",
+                "src/tutorial/celestial_skill_runtime.gd"
+              ],
+              "changed_sources": [
+                "docs/product/CELESTIAL_SKILLS.md",
+                "src/tutorial/celestial_skill_runtime.gd"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "위 · 재설계/이관",
+          "items": [
+            {
+              "id": "thorn-rules",
+              "title": "가시 · 새 전투 판정",
+              "implementation": "partial",
+              "validation": "automated",
+              "quality": "undecided",
+              "attention": true,
+              "current": "기존 가시 판정은 실행됩니다. 새4차의 상태·확률·세부 판정은 아직 경계 결정과 구현이 남았습니다.",
+              "next": "승인된 연출과 별개로 새 판정 명세를 확정하고 연결합니다.",
+              "sources": [
+                "docs/product/THORN_SKILL_IMPLEMENTATION.md",
+                "src/tutorial/faction_skill_runtime.gd"
+              ],
+              "changed_sources": [
+                "docs/product/THORN_SKILL_IMPLEMENTATION.md",
+                "src/tutorial/faction_skill_runtime.gd"
+              ]
+            },
+            {
+              "id": "thorn-vfx",
+              "title": "가시 · 승인9종 연출",
+              "implementation": "partial",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": true,
+              "current": "9종 원화·동작은 승인됐습니다. 원본3종은 본편에 있고 최신 새6종은 본편 연결이 남았습니다.",
+              "next": "승인된 새6종을 본편 발동에 연결하고 기존 피해/표적 회귀를 확인합니다.",
+              "sources": [
+                "docs/art/THORN_COHESIVE_REVIEW.md",
+                "assets/requests/approvals/thorn_nine_vfx.json"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "blood-rules",
+              "title": "혈전 · 피해/흡혈 판정",
+              "implementation": "design",
+              "validation": "document",
+              "quality": "undecided",
+              "attention": true,
+              "current": "초기9종의 핵심 설계는 승인됐으나 계수·세부 정산·실행 모델과 구 계열/카드/세이브 이관은 미완료입니다.",
+              "next": "피해·회복·비용 명세와 이관 범위를 확정합니다.",
+              "sources": [
+                "docs/product/WEI_BLOOD_BATTLE_DRAFT.md",
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md"
+              ],
+              "changed_sources": [
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md"
+              ]
+            },
+            {
+              "id": "blood-vfx",
+              "title": "혈전 · 승인9종 연출",
+              "implementation": "prototype",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "실제 전투 렌더러에서 검수 사건으로 재생한 원화·모션·보스 접점은 승인됐습니다. 실제 흡혈 계산 연결은 아닙니다.",
+              "next": "판정 구현 후 실제 피해·회복 사건으로 구동합니다.",
+              "sources": [
+                "docs/art/BLOOD_SKILL_VFX_MOTION.md",
+                "assets/requests/approvals/blood_nine_vfx.json"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "iron-wall",
+              "title": "철벽 · 순욱/조인 재설계",
+              "implementation": "design",
+              "validation": "document",
+              "quality": "undecided",
+              "attention": true,
+              "current": "기존9종은 있습니다. 새 보호막 공급/활용 구조와 순욱 신화·조인 전설의 실제 판정/카탈로그 이관은 남아 있습니다.",
+              "next": "순욱의 최신 제안과 나머지 역할/수치를 검토한 뒤 구현 범위를 정합니다.",
+              "sources": [
+                "docs/product/WEI_IRON_WALL_SKILL_DRAFT.md",
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md"
+              ],
+              "changed_sources": [
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "오 · 적용과 재검토",
+          "items": [
+            {
+              "id": "fire",
+              "title": "화공9종 · 연쇄화재",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": true,
+              "current": "화유→점화→비소모 연쇄 판정은 본편에 있습니다. 최신90포즈 셀 애니메이션도 적용했으며 새 미감 승인은 기다리는 상태입니다.",
+              "next": "새 연출의 읽힘·호흡을 검토하고 계열 체감 밸런스를 확인합니다.",
+              "sources": [
+                "docs/product/WU_FIRE_SKILLS.md",
+                "docs/art/WU_FIRE_CEL_ANIMATION.md",
+                "src/tutorial/wu_fire_skill_runtime.gd"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "wave",
+              "title": "파도 · 고유 메커니즘",
+              "implementation": "design",
+              "validation": "document",
+              "quality": "undecided",
+              "attention": true,
+              "current": "기존 파도9종은 남아 있습니다. 최신 침수·환류9종은 검토안이며 새 판정·에셋은 미구현입니다.",
+              "next": "기존 구현과 구분해 파도 고유 메커니즘을 선택합니다.",
+              "sources": [
+                "docs/product/WU_WAVE_SKILL_DRAFT.md",
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md"
+              ],
+              "changed_sources": [
+                "docs/product/WU_WAVE_SKILL_DRAFT.md",
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md"
+              ]
+            },
+            {
+              "id": "wind",
+              "title": "질풍9종 · 후속 완성도",
+              "implementation": "partial",
+              "validation": "automated",
+              "quality": "improve",
+              "attention": true,
+              "current": "기존9종 카탈로그/실행식은 있습니다. 촉 수준의 후속 판정·연출·역할 검토 완료로 보지는 않습니다.",
+              "next": "다른 오나라 계열과 구별되는 역할과 표현을 점검합니다.",
+              "sources": [
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+                "docs/product/REMAINING_WORK.md",
+                "src/tutorial/faction_skill_runtime.gd"
+              ],
+              "changed_sources": [
+                "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
+                "src/tutorial/faction_skill_runtime.gd"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "메타 · 홈과 성장",
+      "eyebrow": "META",
+      "summary": "홈·모집·성장 연결. 준비 중 메뉴와 실제 기능을 구분.",
+      "groups": [
+        {
+          "name": "홈·탐색",
+          "items": [
+            {
+              "id": "home",
+              "title": "홈 · 바텀 · 더보기",
+              "implementation": "integrated",
+              "validation": "device",
+              "quality": "approved",
+              "attention": false,
+              "current": "출정/이어가기/정산 우선의 홈과5탭·더보기 UI가 연결·승인됐습니다. 이전 Galaxy 검수 기록이 있습니다.",
+              "next": "최신 콘텐츠와 새 원정에서 기기 회귀를 확인합니다.",
+              "sources": [
+                "docs/art/HOME_AND_NAVIGATION_UI.md",
+                "src/meta/campaign_hub.gd",
+                "src/meta/meta_shell.gd"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "onboarding",
+              "title": "초반 목표 · 첫 원정→영지",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": false,
+              "current": "첫 주사위·장수→완료→군주 강화→생산·모집으로 목표가 이어집니다. 실제 계정 기록과5탭/재접속을 공유합니다.",
+              "next": "실기기 첫 세션의 이해도와 생산 대기 중 다음 행동을 확인합니다.",
+              "sources": [
+                "docs/product/EARLY_GAME_ONBOARDING.md",
+                "src/meta/advisor_guide.gd"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "bag-settings",
+              "title": "가방 · 설정 · 크레딧",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "보유 아이템 조회와 음악·효과음·모션 설정, 크레딧 진입이 연결되어 있습니다.",
+              "next": "소리 설정의 재접속 및 원정/메타 적용 범위를 함께 확인합니다.",
+              "sources": [
+                "docs/art/HOME_AND_NAVIGATION_UI.md",
+                "src/meta/settings_dialog.gd",
+                "src/meta/player_settings.gd"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "meta-placeholders",
+              "title": "업적 · 임무 · 이벤트 · 공지",
+              "implementation": "planned",
+              "validation": "document",
+              "quality": "undecided",
+              "attention": true,
+              "current": "더보기 진입 아이콘과 준비 중 화면은 있지만 실제 콘텐츠/지급 기능은 아닙니다. 영지 의뢰와는 별개입니다.",
+              "next": "첫 반복 콘텐츠와 역할을 정한 뒤 필요한 메뉴부터 연결합니다.",
+              "sources": [
+                "docs/art/HOME_AND_NAVIGATION_UI.md",
+                "docs/product/REMAINING_WORK.md"
+              ],
+              "changed_sources": []
+            }
+          ]
+        },
+        {
+          "name": "상점·장수",
+          "items": [
+            {
+              "id": "shop",
+              "title": "모집 상점 · 지정 교환",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": true,
+              "current": "보유 보석/등용패 사용, 상품 미리보기·보장·지정 교환과 부족 재화 검사가 연결되어 있습니다. 현금 결제는 아닙니다.",
+              "next": "최신 상품 진열·가독성·가치와 전체 경제를 함께 점검합니다.",
+              "sources": [
+                "docs/product/RECRUITMENT_SHOP_CONCEPT_IMPLEMENTATION.md",
+                "src/meta/card_shop.gd",
+                "src/meta/recruitment/recruitment_shop_surface.gd"
+              ],
+              "changed_sources": [
+                "src/meta/card_shop.gd",
+                "src/meta/recruitment/recruitment_shop_surface.gd"
+              ]
+            },
+            {
+              "id": "recruit-reveal",
+              "title": "개봉 · 획득 · 거래 복구",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": false,
+              "current": "실제 거래 후 개봉/결과를 표시하고 응답 유실·재실행에도 같은 카드와 옵션을 복원합니다.",
+              "next": "소리·등급별 기대감과 결과에서 장수 활용까지의 흐름을 다듬습니다.",
+              "sources": [
+                "docs/product/RECRUITMENT_RECOVERY_INTEGRATION.md",
+                "src/meta/recruitment/recruitment_presentation.gd",
+                "src/meta/playfab/card_pack_recovery.gd"
+              ],
+              "changed_sources": [
+                "src/meta/recruitment/recruitment_presentation.gd",
+                "src/meta/playfab/card_pack_recovery.gd"
+              ]
+            },
+            {
+              "id": "roster",
+              "title": "장수 목록 · 상세 · 편성",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "보유 장수/버전·개체 상세와 최대3계열 자동 편성이 연결되어 있습니다. 승인된 상세 UI 톤을 사용합니다.",
+              "next": "긴 설명·다수 보유·신규 카드 비교의 실제 조작을 확인합니다.",
+              "sources": [
+                "docs/art/APPROVED_HERO_DETAIL_UI.md",
+                "docs/product/MOBILE_QUALITY_IMPROVEMENTS.md",
+                "src/meta/general_management.gd"
+              ],
+              "changed_sources": [
+                "src/meta/general_management.gd"
+              ]
+            },
+            {
+              "id": "growth",
+              "title": "군주 · 장수 성장 · 전승",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": false,
+              "current": "군주 성장, 카드 중복 강화·개체 옵션 비교·잠금·동일버전 전승과 실제 비용 처리가 있습니다.",
+              "next": "획득→비교→성장→다음 출정의 이해도와 비용 곡선을 확인합니다.",
+              "sources": [
+                "docs/product/CARD_DUPLICATE_ECONOMY_IMPLEMENTATION.md",
+                "docs/product/CARD_INSTANCE_COMPARISON_IMPLEMENTATION.md",
+                "src/meta/ruler_growth_policy.gd"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "mailbox",
+              "title": "우편함 · 보상 수령",
+              "implementation": "partial",
+              "validation": "screen",
+              "quality": "review",
+              "attention": false,
+              "current": "Godot 조회/수령 화면과 로컬 계약은 연결됐습니다. 운영 지급 provider가 없으면 수령을 열지 않습니다.",
+              "next": "실제 인증·지급 연결 후 유실/재시도와 보유량 갱신을 확인합니다.",
+              "sources": [
+                "docs/product/SERVER_COMPENSATION.md",
+                "src/meta/mailbox_screen.gd"
+              ],
+              "changed_sources": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "territory",
+      "name": "메타 · 영지",
+      "eyebrow": "TERRITORY",
+      "summary": "생산·예약·의뢰·원정 물품까지 로컬 계정 연결.",
+      "groups": [
+        {
+          "name": "도시와 생산",
+          "items": [
+            {
+              "id": "territory-map",
+              "title": "건설 · 배치 · 도로 · 증축",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "approved",
+              "attention": false,
+              "current": "지도 직접 조작·이동·보관·수확과 승인된 도시/도로 표현이 있습니다. 최신 추가 건물 전체의 승인을 뜻하지는 않습니다.",
+              "next": "실기기 최대 배치에서 드래그/핀치·선택 지연을 확인합니다.",
+              "sources": [
+                "docs/product/TERRITORY_MAP_INTERACTIONS.md",
+                "docs/product/TERRITORY_ROADS_AND_EXPANSION.md",
+                "src/territory/presentation/territory_view.gd"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "territory-production",
+              "title": "생산7종 · 5칸 예약 · 수령",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": false,
+              "current": "목재·석재·식량과 훈련/모집 준비를 계정 거래로 처리합니다.5칸 예약·취소 환급·수령·부분 생산 보존이 연결됐습니다.",
+              "next": "실제 접속 간격에서 생산 대기와 재투자 체감을 확인합니다.",
+              "sources": [
+                "docs/product/TERRITORY_SUPPLY_LOOP.md",
+                "src/territory/application/territory_commands.gd",
+                "src/territory/domain/territory_model.gd"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "territory-staff",
+              "title": "장수 배치 · 시간 효율",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": false,
+              "current": "보유 장수 등록과 지도 표시, 담당/관아의 시간 감소가 연결되어 있습니다. 최대20%이며 장수 특성은 후속입니다.",
+              "next": "등록 UI 이해도와 장수별 차이가 과하지 않은지 확인합니다.",
+              "sources": [
+                "docs/product/TERRITORY_SUPPLY_LOOP.md",
+                "data/territory/city_policy.json"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "territory-quests",
+              "title": "객잔 의뢰 · 성장/모집 연결",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": false,
+              "current": "수확/납품 의뢰와 훈련·모집 보상을 기존 계정 재고로 연결합니다. 보상 수령·새로고침·복구 검사가 있습니다.",
+              "next": "의뢰·증축·성장 사이 우선순위와 하루 수급을 검토합니다.",
+              "sources": [
+                "docs/product/TERRITORY_SUPPLY_LOOP.md",
+                "docs/product/TERRITORY_DAILY_QUESTS.md"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "territory-supplies",
+              "title": "원정 공방 · 밧줄/짚단",
+              "implementation": "integrated",
+              "validation": "screen",
+              "quality": "review",
+              "attention": false,
+              "current": "생산·보관→출정 재고 고정→사건 사용→종료 시 사용분 차감이 연결됐습니다. 미사용/새 생산분은 보존합니다.",
+              "next": "제작 비용·보유 필요성과 사건 조우 빈도를 함께 확인합니다.",
+              "sources": [
+                "docs/product/EVENT_SUPPLY_IMPLEMENTATION.md",
+                "src/meta/event_supply_settlement.gd",
+                "src/board/event_supplies.gd"
+              ],
+              "changed_sources": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quality",
+      "name": "공통 · 출시 준비",
+      "eyebrow": "QUALITY & RELEASE",
+      "summary": "출시 완료와 구분해야 할 경제·기기·음향·반복성.",
+      "groups": [
+        {
+          "name": "플레이 품질",
+          "items": [
+            {
+              "id": "first-week",
+              "title": "반복 도전 · 첫 주 플레이",
+              "implementation": "design",
+              "validation": "document",
+              "quality": "undecided",
+              "attention": true,
+              "current": "완료 원정 재출정 금지는 유지합니다. 캠페인 소진 뒤 별도 반복 전투/기간 이벤트의 목적·주기·보상은 미정입니다.",
+              "next": "첫 반복 콘텐츠1종과 소진 후 다음 목표를 결정합니다.",
+              "sources": [
+                "docs/product/REMAINING_WORK.md"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "economy",
+              "title": "성장 · 수급 · 전체 밸런스",
+              "implementation": "partial",
+              "validation": "automated",
+              "quality": "improve",
+              "attention": true,
+              "current": "정상 계정 진행·초기 경제/전장 비교 검사가 있습니다. 최신 사건·영지·모집을 합친 첫날/3일/7일 최종 곡선은 별도입니다.",
+              "next": "실제 플레이 계정의 시간·획득·지출과 막히는 구간을 함께 측정합니다.",
+              "sources": [
+                "docs/product/REMAINING_WORK.md",
+                "docs/product/FIRST_DAY_INTEGRATION.md",
+                "docs/product/CAMPAIGN_ATTACK_ROTATION_IMPLEMENTATION.md"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "audio",
+              "title": "BGM · 효과음 · 개봉 사운드",
+              "implementation": "partial",
+              "validation": "automated",
+              "quality": "improve",
+              "attention": true,
+              "current": "원정 음악 루프·음소거 결함은 수정/PCM 검증했습니다. 홈·모집 개봉 음향 연결과 전체 청각 검수는 남았습니다.",
+              "next": "메타/등급 공개 음향을 연결하고 실제 기기에서 타격 싱크·음량을 듣습니다.",
+              "sources": [
+                "docs/product/AUDIO_QUALITY_REVIEW.md"
+              ],
+              "changed_sources": []
+            },
+            {
+              "id": "mobile",
+              "title": "최신 실기기 · 성능 · 업데이트",
+              "implementation": "partial",
+              "validation": "device",
+              "quality": "improve",
+              "attention": true,
+              "current": "이전 Galaxy 설치/플레이와 모바일 개선 기록은 있습니다. 최신9종 사건·VFX·영지의 통합 기기 검수 완료는 아닙니다.",
+              "next": "최신 빌드로 터치·발열·프레임·중단/복원·데이터 보존 업데이트를 검수합니다.",
+              "sources": [
+                "docs/product/MOBILE_QUALITY_IMPROVEMENTS.md",
+                "docs/product/TERRITORY_SOFT_LAUNCH_READINESS.md",
+                "export_presets.cfg"
+              ],
+              "changed_sources": [
+                "export_presets.cfg"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "공개 게이트",
+          "items": [
+            {
+              "id": "payments",
+              "title": "현금 결제 · 환불 · 복원",
+              "implementation": "planned",
+              "validation": "none",
+              "quality": "na",
+              "attention": false,
+              "hold": "판매 범위 미정",
+              "current": "보유 재화 상점과 현금 결제는 별개입니다. 실제 IAP 상품·영수증·환불·복원 경로는 아직 없습니다.",
+              "next": "유료 판매를 선택할 때에만 상품과 결제 검증 범위를 확정합니다.",
+              "sources": [
+                "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md",
+                "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md"
+              ],
+              "changed_sources": [
+                "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md"
+              ]
+            },
+            {
+              "id": "release",
+              "title": "제한 공개 · 장애/복구 리허설",
+              "implementation": "planned",
+              "validation": "none",
+              "quality": "na",
+              "attention": true,
+              "hold": "실환경 보류",
+              "current": "공개 규모·운영 관측·실제 계정 복구·부하/비용·지원 정책의 통합 검증은 완료되지 않았습니다.",
+              "next": "공개 범위를 정하고 실환경 게이트와 장애→차단→복구 리허설을 통과합니다.",
+              "sources": [
+                "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md",
+                "docs/product/REMAINING_WORK.md"
+              ],
+              "changed_sources": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source_hashes": {
+    "docs/product/PLAYFAB_S2_IMPLEMENTATION_SPEC.md": "771b08217bf1ae8c8f0fa0a0620257fecce6d6cc3d06c32ccfea11f3ce57538b",
+    "server/playfab/src/playfab_dependencies.mjs": "fb843bb9bbc61e90a36ac5a5ae3fc12e830ed70800752fc1c0bb3e5f27776720",
+    "src/meta/playfab/playfab_local_collection_transport.gd": "0cb38225237cd003dba5a2137c2f705758fe281c853300ed44311f8fcdb6f91d",
+    "docs/product/CELL_GAMES.md": "a49e0578420c191e4f32a6292cb0ed3259dc443c8d92789a74eaae366eae024c",
+    "server/playfab/src/godot_replay_engine.mjs": "bb6c1a7cdf7af7e02e8272495e38c0cd088f47d94f7c01d8f21412cf6110d207",
+    "tests/server_replay/cell_games.test.mjs": "9b0030697af38743d1f822d36cb8a83d20e7b5f69cf699d96eef9304e0145e98",
+    "docs/product/SERVER_OPERATION_STORAGE.md": "f6e3e0fd878190fa9f9928534f4c8d332cd3397422910e47b0968e076719e650",
+    "docs/product/SERVER_ACCESS_POLICY.md": "45e3edfbbabdbd843525c67fc27d88b599164a7a7b06ef1e050bb8e7f490012f",
+    "server/playfab/src/operation_journal.mjs": "0bf1fff6f250bfe50e5d5935ea6f4019347dcfa1d4f90066241cb4dd086602ee",
+    "docs/product/SERVER_COMPENSATION.md": "82f22b1768e4e9308e04f2692e67d324c5a73618a58cd525c931bccbab841794",
+    "docs/product/SERVER_OPERATIONS_OBSERVABILITY.md": "561a80c8278d4c87c50e5849937d0b12e7ad4ec0d944e08dff1a99ef6b8dfe05",
+    "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md": "a8f232962768d880c324fd8f6cf06eb8b74380f99aae076f82ba70efbe720503",
+    "docs/product/DICE_PRESENTATION.md": "67d3ca79a1d67eb51cf833613b04afccf8b0796ec1366c1f01327673764abebc",
+    "src/board/board_world.gd": "dc34347cfa15f00445956905ce6975aa575f470d6bae8c05e6b937ece540854f",
+    "src/tutorial/tutorial_run_model.gd": "c5e462900a5eae81948b68c18b26ec19624c58edbb09f4a6640af04a43cc4071",
+    "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md": "71625593ca8bc8400ef4575a514a2f3de2a153aa70b460a9781731f57f8f889f",
+    "data/campaign/stages.json": "8bb82e61f420056b1a48cccb7d3b99d625cc28394c855fdae646ad70f4ad0007",
+    "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md": "79e6b9a332068fc29b2f4d7d0f9f6cfed65bb78960db4a7538039c08478e7f5a",
+    "src/tutorial/run_checkpoint.gd": "4713e8642dbed08226eb4db6e52d42390fe7f49be57add8a6eeb4dec0fb3b545",
+    "src/board/cell_games/events.gd": "d1067153d92568af30047a11fb349ae8f4d8ea2711d4aafe3a7fb00575f68f33",
+    "assets/requests/approvals/cell_games.json": "acf40afaf006764460bb38c471ae175e8250d8fb43eb639c712b2e584b92e5fe",
+    "docs/product/EVENT_CORNER_EXPLORATION.md": "70516c2b7845ca4386b04eb50920fd2c5d5354a5ea53afd01e59e332aab5b66f",
+    "docs/product/EVENT_EXPEDITION_REFINEMENT.md": "df2eacb3087c84b08e114a69798e74816ac9accc1389fdd553cbad0f69fb74e5",
+    "src/board/corner_exploration_events.gd": "d4aca98208bb73baebceae05222dbffd36783d6f76a414efce4bc3aa22fdc3f4",
+    "docs/product/CELL_EVENT_AUDIT.md": "fd9e2414d3c7d2a78c8e03451a88b23ff3dd54536c6b4ffa10464f62755a71d2",
+    "src/tutorial/tutorial_node_choice_view.gd": "ce03f1214a7ec4ef4c0b6cfb75be6743dfc85896f07dd1a5650aaecd9503e928",
+    "docs/product/CAMPAIGN_ATTACK_ROTATION_IMPLEMENTATION.md": "66a005a674d8fd3ee83ab6a461f167f38cf198439a42cd05d5a6de0484f14158",
+    "src/campaign/formation_run.gd": "ccf38ad147d97bb8bae6b56a191948f4f5b28e1a62e8008d1a102209a113ac47",
+    "src/tutorial/faction_skill_runtime.gd": "7e06c3687333d8c16dae8564419276d5c04e9c884cc3d9ea295504090d600d2b",
+    "docs/art/APPROVED_BATTLE_UI.md": "f044b8932c6846eb69b4350d45d5ee69312fd9335e6d90e90644f1a55cf472a0",
+    "docs/art/BOSS_PLACEMENT_BOX.md": "b7bb7c966bb5bab09a62dfb903fada567c9b9f6198108b4a03926b85d722350c",
+    "src/tutorial/tutorial_combat_view.gd": "c870c066fd4ece7273f68d3217fbad7740d9b27405b257d455008560d4708d54",
+    "docs/art/APPROVED_BOSS_REFINEMENT.md": "5313ce2f12a58397d0d3dbd186ddc28d14ca61869091bb25f54c1e364cf63600",
+    "assets/requests/approvals/campaign_boss_refinement.json": "9c5a876e1ed79bcfb143db98fbabf2d5bd4dd2d72dfcf71681e4ae65d44edd82",
+    "docs/product/DRAGON_SKILL_IMPLEMENTATION.md": "26bfece8e44ade07c4ce47bddf498a9dab862c057e8850aae528db6b35592574",
+    "src/tutorial/dragon_skill_runtime.gd": "68e0d31df19a3405f78d5d565de0d8bbcc8212c6d1a0fe8bc782eb4c7087b136",
+    "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md": "6aea732fb76e6bf9d719722191d1b659a9e2b6cebcab26aa6d8a7b7850e7a1db",
+    "docs/product/SHU_CAMPAIGN_INTEGRATION_AUDIT.md": "95a4e306464a382588b5a936dd7f2b9704dc20234db98e1235bfd598d3e03462",
+    "src/tutorial/thunder_skill_runtime.gd": "1492302bfe5c21c1c336a7409cd97fd7783920fa66f09b0d70396a1eb781b328",
+    "docs/product/CELESTIAL_SKILLS.md": "1381d5824ce6c4a1bc1dbe3f739ac5e6f2c61b9a721d52ecb76ae95003399108",
+    "src/tutorial/celestial_skill_runtime.gd": "336a04702207d41b6a2eef627653c4a3bd32166be9b4a650d4ec54538ee82430",
+    "docs/product/THORN_SKILL_IMPLEMENTATION.md": "d895a996bd06abef79ee97625ad2f9e06089005911906b2801f080c693b3b476",
+    "docs/art/THORN_COHESIVE_REVIEW.md": "5b3b7f02ba51a34091c084b5aae7f0ef8588c53ac6b5faa71e70f8077e370eff",
+    "assets/requests/approvals/thorn_nine_vfx.json": "733f2b7544653f72d3752585482490040a4ad02af6e8711e7416b5675166c481",
+    "docs/product/WEI_BLOOD_BATTLE_DRAFT.md": "2e7e095fe8349b252b12b85f41980c0201ddba1d9b4b6477e795c037f63efcc0",
+    "docs/art/BLOOD_SKILL_VFX_MOTION.md": "3ebf37bf30b65621a641336eda3d947123ef960accab168d597d499e8eac93fa",
+    "assets/requests/approvals/blood_nine_vfx.json": "e7926a25c856615dcab3887c27214527677ba7a039aceed7b0b153b44611119f",
+    "docs/product/WEI_IRON_WALL_SKILL_DRAFT.md": "3824162410c51380a98689c9f030fe03574eb6dc2ca595f02c03a2d1ca97391c",
+    "docs/product/WU_FIRE_SKILLS.md": "49301870941bb43f03524b9a3d4e5d7bffbb4dd96c9dcd13a697f09fb08e0486",
+    "docs/art/WU_FIRE_CEL_ANIMATION.md": "355659b30266884411fe4ca6ec7217ca708e94a9b989f63b003d34c4e5a62b44",
+    "src/tutorial/wu_fire_skill_runtime.gd": "3cc83d6b6975323698c7b6a87d6db400b1db01b19a8cf785679491be91cec319",
+    "docs/product/WU_WAVE_SKILL_DRAFT.md": "2f479b566e240dddc835d144364aa043487c391c92bcfac784158802b4fb315d",
+    "docs/product/REMAINING_WORK.md": "6570a2bd342939f5ed6efb06b399e43a61d8ee96514474bfaf5e7e401a2dbbd8",
+    "docs/art/HOME_AND_NAVIGATION_UI.md": "d817a7999092f0dfa61cfa771b6c8fb7da4c75394efafb177f443cb5774006bf",
+    "src/meta/campaign_hub.gd": "92ec590fd61aff9d8a4797943d4c40860b2d080539915d5126387f1662e5a1d9",
+    "src/meta/meta_shell.gd": "8636fb9ab056458970dcc784cc99252562b915aca63c85b27683ab46fa4ebcfb",
+    "docs/product/EARLY_GAME_ONBOARDING.md": "df162c7417fcf7cc47e6e2acff59648a2af680dd664e8d90303ba7b3ac92a921",
+    "src/meta/advisor_guide.gd": "38dda488084868d39cdb13b66928782b05688f6d2168e711b84396db3bfd7ec7",
+    "src/meta/settings_dialog.gd": "8dacd80947b4fa7553be25b2b470067bef84b801c9c71b7360f045d27641d4bd",
+    "src/meta/player_settings.gd": "ad07c0a9ca3afa24db76579d64215cfa785db11e2b4beb1b3d627189fe289dee",
+    "docs/product/RECRUITMENT_SHOP_CONCEPT_IMPLEMENTATION.md": "9dd6bd809910481bf3ef2772eca0381bbb9069ded7f6e0ca87d7268da4e7befa",
+    "src/meta/card_shop.gd": "8b9bc5659897a8ae30d35dbea80a6c4cfcea56498a4811973c3f37d1ea24bf29",
+    "src/meta/recruitment/recruitment_shop_surface.gd": "f7f401f31efff3d056aeadabada92cb43d062bda11f1296e743687346da0dbf5",
+    "docs/product/RECRUITMENT_RECOVERY_INTEGRATION.md": "9af2d526f3597dec336f57cfb705b187004bc2b42b370c92bd820ce559998e62",
+    "src/meta/recruitment/recruitment_presentation.gd": "8cff23863487541ae1c9100782e75ed1cf2989477f43bc1bc6f5ae615cefd0a4",
+    "src/meta/playfab/card_pack_recovery.gd": "820f108280274c84af17de601abe6b798354bf7ec6a6abddf5cf3f91ffbf318f",
+    "docs/art/APPROVED_HERO_DETAIL_UI.md": "ab4ff31471ee0ff4733a5cf79345aaa5b5e0fd685dae2db4adc94f8f506d6618",
+    "docs/product/MOBILE_QUALITY_IMPROVEMENTS.md": "2db839f4178e983586336979a2b2f040af5b03025ec844e3a9bdd83988012de2",
+    "src/meta/general_management.gd": "6ce9a402ba42bc30035adda639db1b4a781987252c6b56a36a78c750f68e1774",
+    "docs/product/CARD_DUPLICATE_ECONOMY_IMPLEMENTATION.md": "2d2ef7b8f1f6cec1a0a68e5699032872247d0853af9be1ffecde8ff10cc92d77",
+    "docs/product/CARD_INSTANCE_COMPARISON_IMPLEMENTATION.md": "d8b8721c523a076368f74fb488363ecaa856907b34bc29a52a59ff47480dbe2d",
+    "src/meta/ruler_growth_policy.gd": "e20321a6f63ce9cafb7cf4cf73c12be1aeecb1a30c2dd639f45b03100fd23544",
+    "src/meta/mailbox_screen.gd": "700a3a007bdc5a6aaa2d05fe3cfff22c83dbca9a03f5b8407bfbd60be7807c49",
+    "docs/product/TERRITORY_MAP_INTERACTIONS.md": "e7edce52ee35d0af17a82258957b9ba6a4dcad0992ca8e2a3933b38cdf3601bd",
+    "docs/product/TERRITORY_ROADS_AND_EXPANSION.md": "fa1f339c01ba75561967fe28b8aa22a30166bedf9c93b01c8d7bca1f198afc8c",
+    "src/territory/presentation/territory_view.gd": "4223f4d3c2d69201f6f01376052ca0f9efc4b8d3b8286b1c4ef563f918508784",
+    "docs/product/TERRITORY_SUPPLY_LOOP.md": "df013a8412e1496867ed91909ec4eb516d7246eb2a8cfc269181ebdef44454ff",
+    "src/territory/application/territory_commands.gd": "d35205cdaf409014d1ea160a59ab7af17bdcb4245926e1be7e89e8f3abcfac95",
+    "src/territory/domain/territory_model.gd": "1c8d72c8c844ca38bc14f67ccc71ac3cf7b6444ffc75550e74830446fae0b67a",
+    "data/territory/city_policy.json": "e36673f95cd51e7bf73a955eb0d8f97a823e60fb7d4de1717dcccfd2d898ef3b",
+    "docs/product/TERRITORY_DAILY_QUESTS.md": "742b53a9a67a429c82b77719ebc013a293420df81cde37a3526ba8e37c5cf343",
+    "docs/product/EVENT_SUPPLY_IMPLEMENTATION.md": "02aa038ea6ffc65295172ec82dbbabc962806a437371430942825959b0867a6d",
+    "src/meta/event_supply_settlement.gd": "c49bae51d82a55e90a4b6dc23ce3327d2b636f134d33588cf6f1e2ab8e84685c",
+    "src/board/event_supplies.gd": "4c51801c1f17365db5697a270e4457e58f1e44fd72568ac1727e9795b57846d2",
+    "docs/product/FIRST_DAY_INTEGRATION.md": "29cd9ecf564daa974523bd6fb7d460d5ea88538d8564134766cc08a26148e9d9",
+    "docs/product/AUDIO_QUALITY_REVIEW.md": "fe5660f44fd3c0dc9ec6184962055eb2d0a903fe71697b13ea5aacc803c221ae",
+    "docs/product/TERRITORY_SOFT_LAUNCH_READINESS.md": "e263337a437f36fcbe84d337c5d40d47fe6565dd10b038afad5b39930a2c0c46",
+    "export_presets.cfg": "c1cb71c5b6c83aa5d125800b9ef439e8100f4329bbbed9f48d7ff1cec728cc1c",
+    "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md": "e228bb3bb71f050805b9bff0cb585d5a2748186e8ea763c1e2edb1b31aae02cf",
+    "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md": "233530d098d9f4e318d0600f129b472bc5a868ed4406d9a3222cd7207b4aaa8a"
+  },
+  "launch": {
+    "version": 1,
+    "organized_at": "2026-09-26",
+    "basis": "REMAINING_WORK.md의 현행 필수 범위를 기능별로 묶었습니다. 완료는 명시된 세부 조건 기준이며, 최신 실기기·경제·실서비스 검증은 별도 필수 항목으로 남습니다. 전체 항목 수는 작업량이나 출시 확률이 아닙니다.",
+    "counting": "모든 단계의 큰 분수는 하위 필수 세부 항목의 완료/전체입니다. 작은 분야 수는 바로 아래 묶음의 완료/전체입니다. 조건부·선택 후속은 분모에서 제외합니다.",
+    "tree": [
+      {
+        "id": "ingame",
+        "title": "인게임",
+        "children": [
+          {
+            "id": "board",
+            "title": "보드",
+            "children": [
+              {
+                "item": "board-loop",
+                "scope": "required",
+                "status": "done",
+                "criterion": "40칸 이동·30회 주사위·착지·정예 전환이 실제 한 판에서 동작한다."
+              },
+              {
+                "item": "board-save",
+                "scope": "required",
+                "status": "done",
+                "criterion": "같은 발급 규칙으로 중단 복원하고 결과 보상을 중복 지급하지 않는다."
+              }
+            ]
+          },
+          {
+            "id": "battle",
+            "title": "배틀",
+            "children": [
+              {
+                "item": "battle-core",
+                "scope": "required",
+                "status": "review",
+                "criterion": "다중 적·상태·행동 상성과 최신 계열의 전투 연결을 검증한다."
+              },
+              {
+                "item": "battle-ui",
+                "scope": "required",
+                "status": "done",
+                "criterion": "승인 전투 구도·HUD·보스 발 기준·진형 표시를 공통 화면에 적용한다."
+              },
+              {
+                "item": "battle-art",
+                "scope": "required",
+                "status": "done",
+                "criterion": "30전장 배경과28보스의 승인 외형·모션을 본편에 연결한다."
+              }
+            ]
+          },
+          {
+            "id": "skills",
+            "title": "스킬",
+            "children": [
+              {
+                "id": "shu",
+                "title": "촉",
+                "children": [
+                  {
+                    "item": "dragon",
+                    "scope": "required",
+                    "status": "done",
+                    "criterion": "용술9종의 판정·성장·설명·승인 연출과 재연산을 연결한다."
+                  },
+                  {
+                    "item": "thunder",
+                    "scope": "required",
+                    "status": "done",
+                    "criterion": "벼락9종의 판정·성장·설명과 승인 연출을 연결한다."
+                  },
+                  {
+                    "item": "celestial",
+                    "scope": "required",
+                    "status": "done",
+                    "criterion": "천체9종의 위성·주사위·유지 효과·승인 연출을 연결한다."
+                  }
+                ]
+              },
+              {
+                "id": "wei",
+                "title": "위",
+                "children": [
+                  {
+                    "item": "thorn-rules",
+                    "scope": "required",
+                    "status": "remaining",
+                    "criterion": "최신 가시 판정9종과 카드·저장·서버 재연산을 이관한다."
+                  },
+                  {
+                    "item": "thorn-vfx",
+                    "scope": "required",
+                    "status": "remaining",
+                    "criterion": "승인 가시9종이 본편의 실제 발동 사건으로 재생된다."
+                  },
+                  {
+                    "item": "blood-rules",
+                    "scope": "required",
+                    "status": "remaining",
+                    "criterion": "위나라 혈전9종의 피해·흡혈·비용과 기존 투자 보존을 구현한다."
+                  },
+                  {
+                    "item": "blood-vfx",
+                    "scope": "required",
+                    "status": "remaining",
+                    "criterion": "승인 혈전9종 연출을 실제 피해·회복 사건에 연결한다."
+                  },
+                  {
+                    "item": "iron-wall",
+                    "scope": "required",
+                    "status": "remaining",
+                    "criterion": "최신 철벽9종·순욱/조인 위계·카드·저장 이관을 검증한다."
+                  }
+                ]
+              },
+              {
+                "id": "wu",
+                "title": "오",
+                "children": [
+                  {
+                    "item": "fire",
+                    "scope": "required",
+                    "status": "review",
+                    "criterion": "최신 화공9종의 판정·승인 연출·성장 연결을 확인한다."
+                  },
+                  {
+                    "item": "wave",
+                    "scope": "required",
+                    "status": "remaining",
+                    "criterion": "최신 왕복 파도9종의 판정·승인 연출·카드·저장을 연결한다."
+                  },
+                  {
+                    "item": "wind",
+                    "scope": "required",
+                    "status": "remaining",
+                    "criterion": "최신 질풍9종의 판정·승인 연출·카드·저장을 연결한다."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "campaign",
+            "title": "스테이지",
+            "children": [
+              {
+                "item": "campaign-route",
+                "scope": "required",
+                "status": "review",
+                "criterion": "8장30전장의 해금·최초 보상·정산과 장간 난이도를 정상 계정으로 확인한다."
+              }
+            ]
+          },
+          {
+            "id": "board-events",
+            "title": "원정 사건",
+            "children": [
+              {
+                "item": "cell-games",
+                "scope": "required",
+                "status": "done",
+                "criterion": "승인9종의 착지→입력→실제 보상→보드 복귀와 저장 복구를 연결한다."
+              },
+              {
+                "item": "corner-events",
+                "scope": "required",
+                "status": "review",
+                "criterion": "지역별 코너 사건의 조작·보상·난이도와 재진입을 확인한다."
+              },
+              {
+                "item": "story-cells",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "남은 이야기4칸과 전장 상점의 선택지 가독성·지역별 차이를 보완한다."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "meta",
+        "title": "메타",
+        "children": [
+          {
+            "id": "home",
+            "title": "홈 · 첫 여정",
+            "children": [
+              {
+                "item": "home",
+                "scope": "required",
+                "status": "done",
+                "criterion": "출정/이어가기/정산 우선 홈·5탭·더보기의 승인 화면을 연결한다."
+              },
+              {
+                "item": "onboarding",
+                "scope": "required",
+                "status": "review",
+                "criterion": "신규 계정 첫 원정→성장→영지→모집과 다음 행동의 이해도를 확인한다."
+              },
+              {
+                "item": "bag-settings",
+                "scope": "required",
+                "status": "done",
+                "criterion": "실제 가방 조회·음악/효과음/모션 설정·크레딧 경로를 제공한다."
+              }
+            ]
+          },
+          {
+            "id": "shop",
+            "title": "상점",
+            "children": [
+              {
+                "item": "shop",
+                "scope": "required",
+                "status": "review",
+                "criterion": "단일 모집·미리보기·보장·지정 교환의 가독성·상품 가치·거래를 확인한다."
+              },
+              {
+                "item": "recruit-reveal",
+                "scope": "required",
+                "status": "review",
+                "criterion": "획득·개봉·등급 표현과 응답 유실 후 동일 결과 복구를 확인한다."
+              },
+              {
+                "item": "payments",
+                "scope": "conditional",
+                "status": "decision",
+                "criterion": "유료 판매 선택 시 Android/iOS 상품·영수증·환불·복원을 실결제로 검증한다."
+              }
+            ]
+          },
+          {
+            "id": "roster",
+            "title": "장수 · 성장",
+            "children": [
+              {
+                "item": "roster",
+                "scope": "required",
+                "status": "done",
+                "criterion": "장수/버전/개체 조회·상세와 최대3계열 편성을 연결한다."
+              },
+              {
+                "item": "growth",
+                "scope": "required",
+                "status": "review",
+                "criterion": "강화·전승·잠금·옵션 비교에서 실제 비용과 투자 보존을 확인한다."
+              }
+            ]
+          },
+          {
+            "id": "territory",
+            "title": "영지",
+            "children": [
+              {
+                "item": "territory-map",
+                "scope": "required",
+                "status": "done",
+                "criterion": "건설·배치·도로·증축·보관의 승인 지도 조작을 연결한다."
+              },
+              {
+                "item": "territory-production",
+                "scope": "required",
+                "status": "review",
+                "criterion": "생산7종·5칸 예약·취소 환급·수령의 실제 대기/재투자 흐름을 검수한다."
+              },
+              {
+                "item": "territory-staff",
+                "scope": "required",
+                "status": "review",
+                "criterion": "장수 배치와 최대20% 시간 효율을 실제 운영 흐름에서 확인한다."
+              },
+              {
+                "item": "territory-quests",
+                "scope": "required",
+                "status": "review",
+                "criterion": "객잔 의뢰·성장·모집 보상과 일일 수급/복구를 확인한다."
+              },
+              {
+                "item": "territory-supplies",
+                "scope": "required",
+                "status": "review",
+                "criterion": "밧줄/짚단 생산→출정 고정→사건 사용→사용분 정산을 검수한다."
+              }
+            ]
+          },
+          {
+            "id": "events",
+            "title": "이벤트",
+            "children": [
+              {
+                "item": "first-week",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "원정 반복 금지를 유지하며 별도 반복 콘텐츠1종의 진입·보상·복구를 완성한다."
+              },
+              {
+                "item": "meta-placeholders",
+                "scope": "optional",
+                "status": "decision",
+                "criterion": "업적·일일/주간 목표·추가 공지의 초기 공개 범위를 결정한다."
+              }
+            ]
+          },
+          {
+            "id": "mail",
+            "title": "우편함",
+            "children": [
+              {
+                "item": "mailbox",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "실제 계정의 우편 조회·보상 수령·재시도를 운영 지급에 연결한다."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "service",
+        "title": "서버 · 운영",
+        "children": [
+          {
+            "id": "account",
+            "title": "계정 · 거래",
+            "children": [
+              {
+                "item": "server-contract",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "실제 계정 인증·인벤토리·경제 거래를 운영 provider에 연결한다."
+              },
+              {
+                "item": "server-replay",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "고정 운영 번들로 발급→재연산→최종 지급을 실환경에서 확인한다."
+              }
+            ]
+          },
+          {
+            "id": "recovery",
+            "title": "저장 · 복구",
+            "children": [
+              {
+                "item": "server-recovery",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "영속 원장의 재시작·백업 복원·재조정과 중복 지급 방지를 검증한다."
+              }
+            ]
+          },
+          {
+            "id": "operations",
+            "title": "운영 · 배포",
+            "children": [
+              {
+                "item": "server-liveops",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "운영자 인증·감사·업무 성공 관측·실제 경보와 보상/수리 도구를 연결한다."
+              },
+              {
+                "item": "live-backend",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "외부 작업 재개와 환경 결정 후 실제 서버 배포·접근 경계를 검증한다."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "release",
+        "title": "출시 검증",
+        "children": [
+          {
+            "id": "economy",
+            "title": "밸런스 · 첫 주",
+            "children": [
+              {
+                "item": "economy",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "최신9계열·모집·성장·영지·이벤트의 첫날/3일/7일 수급과 실제 플레이를 검증한다."
+              }
+            ]
+          },
+          {
+            "id": "quality",
+            "title": "기기 · 음향",
+            "children": [
+              {
+                "item": "mobile",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "대상 최신 빌드의 터치·가독성·성능·강제 종료·업데이트 보존을 검수한다."
+              },
+              {
+                "item": "audio",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "메타·개봉 음향 연결과 실제 기기 타격 싱크/음량 검수를 마친다."
+              }
+            ]
+          },
+          {
+            "id": "rehearsal",
+            "title": "공개 · 리허설",
+            "children": [
+              {
+                "item": "release",
+                "scope": "required",
+                "status": "remaining",
+                "criterion": "플랫폼/지역/공개 범위를 확정하고 실제 계정·장애 복구·부하/비용 리허설을 통과한다."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "changed_items": 19,
+  "snapshot_id": "88f70059623f"
+}

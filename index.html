@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <title>삼국 히어로 · 제품 스펙</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>삼국 히어로 · 소프트런칭 현황</title>
+  <link rel="stylesheet" href="styles.css?v=launch-tree-1">
+  <link rel="stylesheet" href="progress.css?v=launch-tree-1">
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar">
       <a class="brand" href="#">
         <span class="brand-seal">三</span>
-        <span><strong>삼국 히어로</strong><small>PRODUCT SPEC</small></span>
+        <span><strong>삼국 히어로</strong><small>LAUNCH CHECKLIST</small></span>
       </a>
-      <div class="source-state"><span></span><div><strong>main 기준</strong><small>승인 문서의 최신 배포본</small></div></div>
+      <div class="source-state"><span></span><div><strong>소프트런칭 준비 현황</strong><small>전체에서 세부 기능까지</small></div></div>
       <nav id="category-nav" aria-label="스펙 카테고리"></nav>
       <div class="sidebar-foot">
         <div class="scope-note">확정·현행 문서를 기본 표시합니다. 검토 중 문서는 분리되며 제안 작성에는 비공개 저장소 접근 권한이 필요합니다.</div>
@@ -35,6 +36,7 @@
       </header>
 
       <section id="home-view" class="home-view">
+        <a class="progress-entry" href="#progress"><span>소프트런칭 현황 보기</span><small>인게임 · 메타 · 서버 · 출시 검증 →</small></a>
         <div class="hero">
           <div><span class="kicker">SINGLE SOURCE OF TRUTH</span><h1>게임의 현재를<br>한곳에서 읽습니다.</h1></div>
           <p>확정된 제품 규칙과 실제 적용 경계를 카테고리별로 탐색합니다. 제안은 원문과 섞이지 않으며, 승인 후에만 스펙이 됩니다.</p>
@@ -66,8 +68,28 @@
         <div class="listing-head"><span>SEARCH</span><h1>검색 결과</h1><p id="search-summary"></p></div>
         <div id="search-list" class="document-list"></div>
       </section>
+
+      <section id="progress-view" class="progress-view" aria-labelledby="progress-title" hidden>
+        <div class="progress-heading"><div><span class="kicker">SOFT LAUNCH CHECKLIST</span><h1 id="progress-title">소프트런칭까지 남은 일</h1><p>분야를 펼쳐 완료한 기능과 남은 작업을 확인하세요.</p></div><div class="progress-date"><span>체크리스트 정리</span><strong id="progress-date">—</strong><small id="progress-version"></small></div></div>
+        <div id="progress-error" class="progress-error" role="alert" hidden><p>현황을 불러오지 못했습니다.</p><button id="progress-retry" type="button">다시 불러오기</button></div>
+        <div id="progress-content" hidden>
+          <div id="progress-summary" class="progress-summary"></div>
+          <p class="progress-scope" id="progress-scope"></p>
+          <div class="progress-toolbar"><div id="progress-filters" class="progress-filters" aria-label="상태 필터"><button data-filter="all" aria-pressed="true">전체</button><button data-filter="remaining" aria-pressed="false">남은 항목</button><button data-filter="done" aria-pressed="false">완료</button><button data-filter="review" aria-pressed="false">검수·재점검</button><button data-filter="outside" aria-pressed="false">조건부·후속</button></div><label class="progress-search"><span class="sr-only">개발 항목 검색</span><input id="progress-search" type="search" placeholder="상점, 영지, 스킬 검색…" autocomplete="off"></label></div>
+          <div id="progress-areas" class="progress-areas" aria-label="분야 선택"></div>
+          <div class="progress-list-heading"><div><h2 id="progress-list-title">전체 개발 범위</h2><span id="progress-count" aria-live="polite"></span></div><div class="tree-actions"><button data-depth="collapse">모두 접기</button><button data-depth="areas">분야 펼치기</button><button data-depth="all">모두 펼치기</button><button id="progress-reset" type="button">초기화</button></div></div>
+          <p class="tree-hint">분수는 <b>필수 세부 항목 완료 / 전체</b> · 펼치기와 필터로 분모는 바뀌지 않습니다.</p>
+          <div id="progress-list"></div>
+          <details class="capture-archive"><summary>기존 게임 화면 모아보기</summary><section class="progress-gallery" aria-labelledby="progress-gallery-title"><div class="progress-gallery-heading"><h3 id="progress-gallery-title">저장된 게임 화면 <small id="progress-gallery-count"></small></h3><button id="progress-gallery-toggle" type="button" aria-expanded="false">모두 보기</button></div><p>이전에 찍어둔 화면입니다. 새로 촬영하지 않았으며, 저장일 이후 변경은 반영되지 않을 수 있습니다.</p><div id="progress-gallery-grid" class="progress-shots"></div></section></details>
+          <section class="progress-focus"><span class="kicker">NEXT TO CHECK</span><h2>주요 남은 작업</h2><div id="progress-focus"></div></section>
+          <details class="progress-method"><summary>집계 기준 · 상태와 근거</summary><div id="progress-drift" class="progress-drift" hidden></div><p id="progress-basis"></p><div id="progress-legend"></div><p>상태는 수동 점검값입니다. 근거 파일이 바뀌면 사이트 빌드 때 ‘재점검’으로 표시하며, 테스트 파일이 있다는 이유로 자동 완료 처리하지 않습니다. 새 구현·검수·승인 후 원본 현황표를 갱신해야 합니다.</p></details>
+        </div>
+      </section>
     </main>
   </div>
-  <script src="app.js"></script>
+  <dialog id="progress-lightbox" class="progress-lightbox" aria-labelledby="progress-lightbox-title" aria-describedby="progress-lightbox-note"><header><div><h2 id="progress-lightbox-title"></h2><p id="progress-lightbox-meta"></p></div><button id="progress-lightbox-close" type="button" autofocus>닫기 ×</button></header><div class="progress-lightbox-image"><img id="progress-lightbox-image" alt=""><p id="progress-lightbox-error" hidden>이미지를 불러오지 못했습니다. 아래 원본 링크를 확인해 주세요.</p></div><p id="progress-lightbox-note"></p><footer><button id="progress-lightbox-prev" type="button">← 이전</button><span id="progress-lightbox-position"></span><button id="progress-lightbox-next" type="button">다음 →</button><a id="progress-lightbox-original" target="_blank" rel="noreferrer">원본 보기 ↗</a></footer></dialog>
+  <script src="progress-model.js?v=launch-tree-1"></script>
+  <script src="progress.js?v=launch-tree-1"></script>
+  <script src="app.js?v=launch-tree-1"></script>
 </body>
 </html>

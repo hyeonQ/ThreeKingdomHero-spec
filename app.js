@@ -1,9 +1,12 @@
-const state = { catalog: null, activeCategory: null, includeReview: false, previousView: "home" };
-const views = ["home-view", "listing-view", "document-view", "search-view"];
+const state = { catalog: null, activeCategory: null, includeReview: false, previousView: "home", progressRoute: "#progress" };
+const views = ["home-view", "listing-view", "document-view", "search-view", "progress-view"];
 const marks = { overview: "總", combat: "戰", campaign: "史", collection: "將", territory: "城" };
 
 function showView(id) {
+  document.body.classList.toggle("launch-mode", id === "progress-view");
   views.forEach(viewId => document.getElementById(viewId).hidden = viewId !== id);
+  document.getElementById("review-toggle").hidden = id === "progress-view";
+  document.getElementById("search").placeholder = id === "progress-view" ? "스펙 문서 검색" : "스킬, 스테이지, 상점, 영지 검색";
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 
@@ -25,16 +28,38 @@ function bindDocumentRows(root = document) {
 
 function renderNavigation() {
   const nav = document.getElementById("category-nav");
-  nav.innerHTML = `<button class="nav-button active" data-home>스펙 홈 <small>⌂</small></button>` + state.catalog.categories.map(category => {
+  nav.innerHTML = `<button class="nav-button" data-progress>소프트런칭 현황 <small>↗</small></button><button class="nav-button active" data-home>스펙 문서 <small>⌂</small></button>` + state.catalog.categories.map(category => {
     const count = visibleDocuments(category.id).length;
     return `<button class="nav-button" data-category="${category.id}">${category.name}<small>${count}</small></button>`;
   }).join("");
   nav.querySelector("[data-home]").addEventListener("click", openHome);
+  nav.querySelector("[data-progress]").addEventListener("click", openProgress);
   nav.querySelectorAll("[data-category]").forEach(button => button.addEventListener("click", () => openCategory(button.dataset.category)));
 }
 
 function setActiveNav(categoryId = null) {
   document.querySelectorAll(".nav-button").forEach(button => button.classList.toggle("active", categoryId ? button.dataset.category === categoryId : button.hasAttribute("data-home")));
+}
+
+async function openProgress() {
+  state.activeCategory = null;
+  state.previousView = "progress";
+  document.getElementById("search").value = "";
+  if (!location.hash.startsWith("#progress")) history.replaceState(null, "", `${location.pathname}${state.progressRoute}`);
+  setActiveNav("__progress__");
+  document.querySelector("[data-progress]").classList.add("active");
+  document.querySelector(".sidebar").classList.remove("open");
+  showView("progress-view");
+  await ProgressDashboard.open(state.catalog.documents);
+}
+
+function route() {
+  const route = location.hash.slice(1);
+  if (route.startsWith("progress")) openProgress();
+  else if (route.startsWith("doc=")) openDocument(route.slice(4));
+  else if (route.startsWith("category=")) openCategory(route.slice(9));
+  else if (route === "specs") openHome();
+  else if (!route) openProgress();
 }
 
 function renderHome() {
@@ -54,7 +79,7 @@ function openHome() {
   state.activeCategory = null;
   state.previousView = "home";
   document.getElementById("search").value = "";
-  history.replaceState(null, "", location.pathname);
+  history.replaceState(null, "", `${location.pathname}#specs`);
   renderHome();
   setActiveNav();
   showView("home-view");
@@ -78,6 +103,7 @@ function openCategory(categoryId) {
 }
 
 async function openDocument(documentId) {
+  if (location.hash.startsWith("#progress")) state.progressRoute = location.hash;
   const response = await fetch(`data/documents/${encodeURIComponent(documentId)}.json`);
   if (!response.ok) return;
   const doc = await response.json();
@@ -138,8 +164,14 @@ async function init() {
   renderNavigation();
   renderHome();
 
+  // Native source anchors change the hash before route() opens the document.
+  // Capture the checklist route while its expanded branches are still current.
+  document.getElementById("progress-view").addEventListener("click", event => {
+    if (event.target.closest('a[href^="#doc="]')) state.progressRoute = location.hash;
+  });
+
   document.getElementById("listing-back").addEventListener("click", openHome);
-  document.getElementById("document-back").addEventListener("click", () => state.activeCategory ? openCategory(state.activeCategory) : openHome());
+  document.getElementById("document-back").addEventListener("click", () => state.previousView === "progress" ? openProgress() : state.activeCategory ? openCategory(state.activeCategory) : openHome());
   document.getElementById("mobile-menu").addEventListener("click", () => document.querySelector(".sidebar").classList.toggle("open"));
   document.getElementById("review-toggle").addEventListener("click", event => {
     state.includeReview = !state.includeReview;
@@ -156,12 +188,11 @@ async function init() {
   document.addEventListener("keydown", event => {
     if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
       event.preventDefault();
-      document.getElementById("search").focus();
+      document.getElementById(document.body.classList.contains("launch-mode") ? "progress-search" : "search").focus();
     }
   });
-  const route = location.hash.slice(1);
-  if (route.startsWith("doc=")) openDocument(route.slice(4));
-  else if (route.startsWith("category=")) openCategory(route.slice(9));
+  window.addEventListener("hashchange", route);
+  route();
 }
 
 init();
