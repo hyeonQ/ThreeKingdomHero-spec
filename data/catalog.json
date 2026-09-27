@@ -339,15 +339,6 @@
       "tone": "review",
       "summary": "아직 확정 명단이 아닌 생활 도시 건물 확장안",
       "review": true
-    },
-    {
-      "id": "combat-lifecycle",
-      "category": "combat",
-      "title": "자동 전투·다중 적·상태",
-      "path": "docs/product/COMBAT_LIFECYCLE.md",
-      "status": "구현·검증 완료",
-      "tone": "active",
-      "summary": "최신9계열 혼합·개체 상태·정지/취소·정확한 저장·종료 자원 검증"
     }
   ]
 }
