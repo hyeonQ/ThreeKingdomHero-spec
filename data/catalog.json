@@ -177,6 +177,15 @@
       "summary": "태양·공격·수호·파편 위성의 현재 적용 계약"
     },
     {
+      "id": "dice",
+      "category": "combat",
+      "title": "보드·천체 공용 주사위",
+      "path": "docs/product/DICE_PRESENTATION.md",
+      "status": "승인·적용",
+      "tone": "approved",
+      "summary": "공용 D6 모델과 보드·천체 판정 표시 규칙"
+    },
+    {
       "id": "campaign-overview",
       "category": "campaign",
       "title": "연대기·스테이지 개요",
