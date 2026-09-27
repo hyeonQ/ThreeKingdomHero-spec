@@ -209,7 +209,7 @@
     }
   ],
   "reviewed_at": "2026-09-27",
-  "basis": "2026-09-27에는 인게임 보드의 주사위·이동·착지와 중단·복원·결과 복귀만 재점검했습니다. 나머지 항목은 기존9/23 점검과9/26 분류 기록이며 게임 전체 재검증이 아닙니다. 작업트리 근거는 원격 미반영으로 원문 링크를 제공하지 않습니다.",
+  "basis": "2026-09-27에는 인게임 보드의2종을 관련 코드 수정·실행 검증 후 완료 처리했습니다. 나머지 항목은 기존9/23 점검과9/26 분류 기록이며 게임 전체 재검증이 아닙니다. 작업트리 근거는 원격 미반영으로 원문 링크를 제공하지 않습니다.",
   "publication_revision": "c2a97c8ed8a7c99ef200b42912f5b44290a35c64",
   "source_publication": {
     "docs/product/PLAYFAB_S2_IMPLEMENTATION_SPEC.md": "same",
@@ -304,7 +304,9 @@
     "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md": "same",
     "tests/godot/test_run_force_quit.gd": "unpublished",
     "tests/godot/test_campaign_account_flow.gd": "unpublished",
-    "tests/godot/test_campaign_checkpoint_compatibility.gd": "unpublished"
+    "tests/godot/test_campaign_checkpoint_compatibility.gd": "unpublished",
+    "data/campaign/checkpoint_compatibility.json": "unpublished",
+    "tests/godot/test_attack_rotation_resume.gd": "unpublished"
   },
   "scope": "본편은 현재 로컬 게임 기준입니다. 실제 운영 서버·최신 실기기 검수·출시는 별도이며, 항목 수는 작업량이나 출시 완성률이 아닙니다.",
   "states": {
@@ -552,16 +554,18 @@
               "implementation": "integrated",
               "validation": "automated",
               "quality": "na",
-              "attention": true,
-              "current": "2026-09-27 현재 버전의 전투 중 실제 강제 종료·재실행,디스크321명령,선택 보존·결과 중복 정산 방지는 통과했습니다. 전투의 마지막 저장 턴부터 이어집니다. 과거 버전 황건 저장 fixture 복원1건은 실패해 업데이트 호환까지 완료로 처리하지 않습니다.",
-              "next": "기존 구버전 저장본의 규칙 호환 실패를 확인하고 통과한 범위부터 완료 처리합니다. Android/iOS 실기기 종료는 별도 출시 검증입니다.",
+              "attention": false,
+              "current": "2026-09-27 완료. 실제 전투 중 강제 종료·재실행과 결과 중복 정산 방지를 확인했습니다. 전투의 마지막 저장 턴부터 이어집니다. 구스키마 호환을 수정해 등록된3종 규칙의9/9전이,디스크321명령,최신 전투 복원을 통과했습니다. 알 수 없는 규칙/손상 기록은 원본을 보존하고 확인을 요청합니다.",
+              "next": "기능 완료. 최신 Android/iOS 실기기·운영 서버 부하는 별도 출시 검증에서 확인합니다.",
               "sources": [
                 "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md",
                 "docs/product/CELL_GAMES.md",
                 "src/tutorial/run_checkpoint.gd",
                 "tests/godot/test_run_force_quit.gd",
                 "tests/godot/test_campaign_account_flow.gd",
-                "tests/godot/test_campaign_checkpoint_compatibility.gd"
+                "tests/godot/test_campaign_checkpoint_compatibility.gd",
+                "data/campaign/checkpoint_compatibility.json",
+                "tests/godot/test_attack_rotation_resume.gd"
               ],
               "changed_sources": []
             }
@@ -1282,8 +1286,8 @@
     "src/tutorial/tutorial_run_model.gd": "9c6313d383f56e23a22b793732dd9fa3a93c17b28af1e611a99c34feeb911e58",
     "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md": "71625593ca8bc8400ef4575a514a2f3de2a153aa70b460a9781731f57f8f889f",
     "data/campaign/stages.json": "8bb82e61f420056b1a48cccb7d3b99d625cc28394c855fdae646ad70f4ad0007",
-    "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md": "86584882662cdbb257027f9168b3af0e78c1e8b6fa67de6bd83ef685fa980ce6",
-    "src/tutorial/run_checkpoint.gd": "dff485ee60cd58cda5e7c0155b1995ac8bbc6e9f9f34c6706cee73e074020b2d",
+    "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md": "85bfc1bcfbd9b7fac384215440d5ed5e4663012761ba88189fcc2512919bf92e",
+    "src/tutorial/run_checkpoint.gd": "b6412abd3292dc380322149c253bc8a7417983577c22301fe4a6a1192f004346",
     "src/board/cell_games/events.gd": "d1067153d92568af30047a11fb349ae8f4d8ea2711d4aafe3a7fb00575f68f33",
     "assets/requests/approvals/cell_games.json": "acf40afaf006764460bb38c471ae175e8250d8fb43eb639c712b2e584b92e5fe",
     "docs/product/EVENT_CORNER_EXPLORATION.md": "70516c2b7845ca4386b04eb50920fd2c5d5354a5ea53afd01e59e332aab5b66f",
@@ -1355,9 +1359,11 @@
     "export_presets.cfg": "c1cb71c5b6c83aa5d125800b9ef439e8100f4329bbbed9f48d7ff1cec728cc1c",
     "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md": "e228bb3bb71f050805b9bff0cb585d5a2748186e8ea763c1e2edb1b31aae02cf",
     "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md": "233530d098d9f4e318d0600f129b472bc5a868ed4406d9a3222cd7207b4aaa8a",
-    "tests/godot/test_run_force_quit.gd": "e07191a9a3a7be83fb6f9c0ddb71fd10e1e702d4f40372e62febdbf1b0e34502",
+    "tests/godot/test_run_force_quit.gd": "e2e6fe14ca3277ad2e87f7bdb0f15b8fa2ee0b3b21484812989eeb8afff86214",
     "tests/godot/test_campaign_account_flow.gd": "5d2678b966f5de5edf1838efe2d259cd80087ec367aa7009584ad7b23851f0ea",
-    "tests/godot/test_campaign_checkpoint_compatibility.gd": "8e15840862fcc0698bd6d015074d721997a2f2f907d4c0c1dafd6c70a71891bb"
+    "tests/godot/test_campaign_checkpoint_compatibility.gd": "06601d020fcd226537083d1b77a62c8875b87967fc91d72ee43b13ed05592cd5",
+    "data/campaign/checkpoint_compatibility.json": "15b6cfdc46a49b169137bd29cfbf29ee04197ecc6baf8de5c90838857ad0285b",
+    "tests/godot/test_attack_rotation_resume.gd": "7167b4d968f13b3ff5dfd8755bc88acd7729840d7d21696d6b2bc1d2108ce965"
   },
   "launch": {
     "version": 1,
@@ -1382,7 +1388,7 @@
               {
                 "item": "board-save",
                 "scope": "required",
-                "status": "review",
+                "status": "done",
                 "criterion": "같은 발급 규칙으로 중단 복원하고 결과 보상을 중복 지급하지 않는다."
               }
             ]
@@ -1782,5 +1788,5 @@
     ]
   },
   "changed_items": 17,
-  "snapshot_id": "79e745613a51"
+  "snapshot_id": "386bb1298ce6"
 }
