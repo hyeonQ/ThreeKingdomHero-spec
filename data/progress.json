@@ -209,7 +209,7 @@
     }
   ],
   "reviewed_at": "2026-09-27",
-  "basis": "2026-09-27에는 인게임 보드의2종을 관련 코드 수정·실행 검증 후 완료 처리했습니다. 나머지 항목은 기존9/23 점검과9/26 분류 기록이며 게임 전체 재검증이 아닙니다. 작업트리 근거는 원격 미반영으로 원문 링크를 제공하지 않습니다.",
+  "basis": "2026-09-27 보드2종과 자동 전투·다중 적·상태를 관련 수정·검증·구버전 정리 후 완료 처리했습니다. 다른 항목을 이번 전투 검사로 재승인하지 않습니다. 작업트리 근거는 원격 미반영으로 원문 링크를 제공하지 않습니다.",
   "publication_revision": "c2a97c8ed8a7c99ef200b42912f5b44290a35c64",
   "source_publication": {
     "docs/product/PLAYFAB_S2_IMPLEMENTATION_SPEC.md": "same",
@@ -306,7 +306,11 @@
     "tests/godot/test_campaign_account_flow.gd": "unpublished",
     "tests/godot/test_campaign_checkpoint_compatibility.gd": "unpublished",
     "data/campaign/checkpoint_compatibility.json": "unpublished",
-    "tests/godot/test_attack_rotation_resume.gd": "unpublished"
+    "tests/godot/test_attack_rotation_resume.gd": "unpublished",
+    "docs/product/COMBAT_LIFECYCLE.md": "unpublished",
+    "tests/godot/test_combat_integration.gd": "unpublished",
+    "tests/godot/test_combat_integration_view.gd": "unpublished",
+    "tests/godot/test_auto_combat_lifecycle.gd": "unpublished"
   },
   "scope": "본편은 현재 로컬 게임 기준입니다. 실제 운영 서버·최신 실기기 검수·출시는 별도이며, 항목 수는 작업량이나 출시 완성률이 아닙니다.",
   "states": {
@@ -639,20 +643,21 @@
               "id": "battle-core",
               "title": "자동 전투 · 다중 적 · 상태",
               "implementation": "integrated",
-              "validation": "automated",
-              "quality": "review",
+              "validation": "screen",
+              "quality": "na",
               "attention": false,
-              "current": "다중 적·기본 광역·행동 상성4순환과 전장 패턴이 연결되어 있습니다.",
-              "next": "새 계열을 넣은 단독/혼합 편성과 과한 연쇄를 비교합니다.",
+              "current": "2026-09-27 완료. 최신9계열·15인·84삼중의336사례/18,502검사·581복원이 통과했습니다. 실제 혼합 GPU86검사,정지·취소·승패·정확한 소수 저장·오디오 해제를 검증하고 구버전 설명/대기를 정리했습니다.",
+              "next": "기능 완료. 계열 최종 밸런스·미승인 SD·최신 실기기와 실서버 부하는 별도 항목입니다.",
               "sources": [
+                "docs/product/COMBAT_LIFECYCLE.md",
                 "docs/product/CAMPAIGN_ATTACK_ROTATION_IMPLEMENTATION.md",
                 "src/campaign/formation_run.gd",
-                "src/tutorial/faction_skill_runtime.gd"
+                "src/tutorial/faction_skill_runtime.gd",
+                "tests/godot/test_combat_integration.gd",
+                "tests/godot/test_combat_integration_view.gd",
+                "tests/godot/test_auto_combat_lifecycle.gd"
               ],
-              "changed_sources": [
-                "src/campaign/formation_run.gd",
-                "src/tutorial/faction_skill_runtime.gd"
-              ]
+              "changed_sources": []
             },
             {
               "id": "battle-ui",
@@ -1286,8 +1291,8 @@
     "src/tutorial/tutorial_run_model.gd": "9c6313d383f56e23a22b793732dd9fa3a93c17b28af1e611a99c34feeb911e58",
     "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md": "71625593ca8bc8400ef4575a514a2f3de2a153aa70b460a9781731f57f8f889f",
     "data/campaign/stages.json": "8bb82e61f420056b1a48cccb7d3b99d625cc28394c855fdae646ad70f4ad0007",
-    "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md": "65e5e09b05047aa73aa71146e663eeec541c8bd51bb8e0daf7460a5cc669b2bc",
-    "src/tutorial/run_checkpoint.gd": "b6412abd3292dc380322149c253bc8a7417983577c22301fe4a6a1192f004346",
+    "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md": "a6ea89f4b42423cde562c4ae25b059977a8533dcfe27e5ed7c74e1de3d725e88",
+    "src/tutorial/run_checkpoint.gd": "44a5d6b64870d77f8a0233275477fd8e46987c49ad79d669b08d5388a72e1d3f",
     "src/board/cell_games/events.gd": "d1067153d92568af30047a11fb349ae8f4d8ea2711d4aafe3a7fb00575f68f33",
     "assets/requests/approvals/cell_games.json": "acf40afaf006764460bb38c471ae175e8250d8fb43eb639c712b2e584b92e5fe",
     "docs/product/EVENT_CORNER_EXPLORATION.md": "70516c2b7845ca4386b04eb50920fd2c5d5354a5ea53afd01e59e332aab5b66f",
@@ -1295,9 +1300,9 @@
     "src/board/corner_exploration_events.gd": "d4aca98208bb73baebceae05222dbffd36783d6f76a414efce4bc3aa22fdc3f4",
     "docs/product/CELL_EVENT_AUDIT.md": "fd9e2414d3c7d2a78c8e03451a88b23ff3dd54536c6b4ffa10464f62755a71d2",
     "src/tutorial/tutorial_node_choice_view.gd": "ce03f1214a7ec4ef4c0b6cfb75be6743dfc85896f07dd1a5650aaecd9503e928",
-    "docs/product/CAMPAIGN_ATTACK_ROTATION_IMPLEMENTATION.md": "66a005a674d8fd3ee83ab6a461f167f38cf198439a42cd05d5a6de0484f14158",
-    "src/campaign/formation_run.gd": "ccf38ad147d97bb8bae6b56a191948f4f5b28e1a62e8008d1a102209a113ac47",
-    "src/tutorial/faction_skill_runtime.gd": "7e06c3687333d8c16dae8564419276d5c04e9c884cc3d9ea295504090d600d2b",
+    "docs/product/CAMPAIGN_ATTACK_ROTATION_IMPLEMENTATION.md": "ba87780e691baf7a70cb8922e601027c4fae73482b613a036aaa27f60775da92",
+    "src/campaign/formation_run.gd": "2411a6c6fa4020ac5b70f951466021a9532ca98e1acdc444a83736f0344d5efc",
+    "src/tutorial/faction_skill_runtime.gd": "10f172a2cffc69bcaff0d742b9c68da25f687367becd854a879f733e08a43a78",
     "docs/art/APPROVED_BATTLE_UI.md": "f044b8932c6846eb69b4350d45d5ee69312fd9335e6d90e90644f1a55cf472a0",
     "docs/art/BOSS_PLACEMENT_BOX.md": "b7bb7c966bb5bab09a62dfb903fada567c9b9f6198108b4a03926b85d722350c",
     "src/tutorial/tutorial_combat_view.gd": "c870c066fd4ece7273f68d3217fbad7740d9b27405b257d455008560d4708d54",
@@ -1363,7 +1368,11 @@
     "tests/godot/test_campaign_account_flow.gd": "5d2678b966f5de5edf1838efe2d259cd80087ec367aa7009584ad7b23851f0ea",
     "tests/godot/test_campaign_checkpoint_compatibility.gd": "06601d020fcd226537083d1b77a62c8875b87967fc91d72ee43b13ed05592cd5",
     "data/campaign/checkpoint_compatibility.json": "15b6cfdc46a49b169137bd29cfbf29ee04197ecc6baf8de5c90838857ad0285b",
-    "tests/godot/test_attack_rotation_resume.gd": "7167b4d968f13b3ff5dfd8755bc88acd7729840d7d21696d6b2bc1d2108ce965"
+    "tests/godot/test_attack_rotation_resume.gd": "7167b4d968f13b3ff5dfd8755bc88acd7729840d7d21696d6b2bc1d2108ce965",
+    "docs/product/COMBAT_LIFECYCLE.md": "e92246f465536a52cb5d84f39b74c52f0f3f4c05c5093b598373bfda22b4d4f0",
+    "tests/godot/test_combat_integration.gd": "dd6042b112fec404a072527fea48c8b7591de06ca5b0284c300d0cd5f6d90ae5",
+    "tests/godot/test_combat_integration_view.gd": "6451387b0675ec0b4f5bded9c152ceb8b218c1efca0c7b1e60b23915af3d5772",
+    "tests/godot/test_auto_combat_lifecycle.gd": "f2fc09d92c3630371399e2c1b042b551b8eecc56ca05752ddbf0bc286008e4d0"
   },
   "launch": {
     "version": 1,
@@ -1400,8 +1409,8 @@
               {
                 "item": "battle-core",
                 "scope": "required",
-                "status": "review",
-                "criterion": "다중 적·상태·행동 상성과 최신 계열의 전투 연결을 검증한다."
+                "status": "done",
+                "criterion": "최신9계열의 다중 적·상태·행동 상성 연결과 정지·취소·복원·종료를 검증하고,구버전 정리를 마친다."
               },
               {
                 "item": "battle-ui",
@@ -1787,6 +1796,6 @@
       }
     ]
   },
-  "changed_items": 17,
-  "snapshot_id": "3c030c621102"
+  "changed_items": 16,
+  "snapshot_id": "4de2d7b2a2d9"
 }
