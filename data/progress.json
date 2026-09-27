@@ -524,7 +524,7 @@
               "validation": "screen",
               "quality": "approved",
               "attention": false,
-              "current": "2026-09-27 완료 확인. 기존 Modanung 입체 주사위 승인 유지,40칸·30회 이동/착지·정예 전환과123/129칸 진행의 두 원정 검사를 통과했습니다.",
+              "current": "2026-09-27 완료. 승인된 Modanung3D 주사위와40칸·30회 이동/착지를 유지합니다. 교체된2D 경로·등록·생성 도구와 옛 지침/반려 실험을 정리하고 원본·최종 검증 근거를 보존했습니다.",
               "next": "기능 완료. 최신 Android/iOS 이동 속도·터치는 별도 출시 기기 검증에서 확인합니다.",
               "sources": [
                 "docs/product/DICE_PRESENTATION.md",
@@ -555,7 +555,7 @@
               "validation": "automated",
               "quality": "na",
               "attention": false,
-              "current": "2026-09-27 완료. 실제 전투 중 강제 종료·재실행과 결과 중복 정산 방지를 확인했습니다. 전투의 마지막 저장 턴부터 이어집니다. 구스키마 호환을 수정해 등록된3종 규칙의9/9전이,디스크321명령,최신 전투 복원을 통과했습니다. 알 수 없는 규칙/손상 기록은 원본을 보존하고 확인을 요청합니다.",
+              "current": "2026-09-27 완료. 실제 전투 중 강제 종료·재실행,결과 중복 정산 방지,구스키마3종의9/9전이·디스크321명령을 확인했습니다. 옛 실패/대기 기록과 중간 진단을 정리했고 진행 중 원정 복원에 필요한 호환표·회귀 자료는 보존합니다.",
               "next": "기능 완료. 최신 Android/iOS 실기기·운영 서버 부하는 별도 출시 검증에서 확인합니다.",
               "sources": [
                 "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md",
@@ -1281,12 +1281,12 @@
     "docs/product/SERVER_COMPENSATION.md": "82f22b1768e4e9308e04f2692e67d324c5a73618a58cd525c931bccbab841794",
     "docs/product/SERVER_OPERATIONS_OBSERVABILITY.md": "561a80c8278d4c87c50e5849937d0b12e7ad4ec0d944e08dff1a99ef6b8dfe05",
     "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md": "a8f232962768d880c324fd8f6cf06eb8b74380f99aae076f82ba70efbe720503",
-    "docs/product/DICE_PRESENTATION.md": "497cc295607dc91e56a6eced8ff7ad77e070d672bcce71fcdf0e54fa1ce6b15b",
+    "docs/product/DICE_PRESENTATION.md": "74d8aa2b6baf470b74651966e5c91b228921bc231df8a3422a222b5a9fbdc076",
     "src/board/board_world.gd": "dc34347cfa15f00445956905ce6975aa575f470d6bae8c05e6b937ece540854f",
     "src/tutorial/tutorial_run_model.gd": "9c6313d383f56e23a22b793732dd9fa3a93c17b28af1e611a99c34feeb911e58",
     "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md": "71625593ca8bc8400ef4575a514a2f3de2a153aa70b460a9781731f57f8f889f",
     "data/campaign/stages.json": "8bb82e61f420056b1a48cccb7d3b99d625cc28394c855fdae646ad70f4ad0007",
-    "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md": "85bfc1bcfbd9b7fac384215440d5ed5e4663012761ba88189fcc2512919bf92e",
+    "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md": "65e5e09b05047aa73aa71146e663eeec541c8bd51bb8e0daf7460a5cc669b2bc",
     "src/tutorial/run_checkpoint.gd": "b6412abd3292dc380322149c253bc8a7417983577c22301fe4a6a1192f004346",
     "src/board/cell_games/events.gd": "d1067153d92568af30047a11fb349ae8f4d8ea2711d4aafe3a7fb00575f68f33",
     "assets/requests/approvals/cell_games.json": "acf40afaf006764460bb38c471ae175e8250d8fb43eb639c712b2e584b92e5fe",
@@ -1368,7 +1368,7 @@
   "launch": {
     "version": 1,
     "organized_at": "2026-09-26",
-    "basis": "REMAINING_WORK.md의 현행 필수 범위를 기능별로 묶었습니다. 완료는 명시된 세부 조건 기준이며, 최신 실기기·경제·실서비스 검증은 별도 필수 항목으로 남습니다. 전체 항목 수는 작업량이나 출시 확률이 아닙니다.",
+    "basis": "REMAINING_WORK.md의 현행 필수 범위를 기능별로 묶었습니다. 완료 처리 전 해당 구버전 정리와 관련 검증을 먼저 마칩니다. 최신 실기기·경제·실서비스 검증은 별도 필수 항목이며 전체 항목 수는 작업량이나 출시 확률이 아닙니다.",
     "counting": "모든 단계의 큰 분수는 하위 필수 세부 항목의 완료/전체입니다. 작은 분야 수는 바로 아래 묶음의 완료/전체입니다. 조건부·선택 후속은 분모에서 제외합니다.",
     "tree": [
       {
@@ -1383,13 +1383,13 @@
                 "item": "board-loop",
                 "scope": "required",
                 "status": "done",
-                "criterion": "40칸 이동·30회 주사위·착지·정예 전환이 실제 한 판에서 동작한다."
+                "criterion": "40칸 이동·30회 주사위·착지·정예 전환이 실제 한 판에서 동작한다. 대체 코드·등록·문서의 구버전 정리를 마치고 필요한 보존 근거를 남긴다."
               },
               {
                 "item": "board-save",
                 "scope": "required",
                 "status": "done",
-                "criterion": "같은 발급 규칙으로 중단 복원하고 결과 보상을 중복 지급하지 않는다."
+                "criterion": "같은 발급 규칙으로 중단 복원하고 결과 보상을 중복 지급하지 않는다. 대체 코드·등록·문서의 구버전 정리를 마치고 필요한 보존 근거를 남긴다."
               }
             ]
           },
@@ -1788,5 +1788,5 @@
     ]
   },
   "changed_items": 17,
-  "snapshot_id": "386bb1298ce6"
+  "snapshot_id": "3c030c621102"
 }
