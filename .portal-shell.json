@@ -1,1 +1,1 @@
-{"version":1,"purpose":"Preserve the launch dashboard during older documentation-only builds."}
+{"version": 1, "boards_version": 1, "purpose": "Preserve the launch dashboard and current campaign report during older documentation-only builds."}

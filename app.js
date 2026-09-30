@@ -1,11 +1,11 @@
 const state = { catalog: null, activeCategory: null, includeReview: false, previousView: "home", progressRoute: "#progress" };
-const views = ["home-view", "listing-view", "document-view", "search-view", "progress-view"];
+const views = ["home-view", "listing-view", "document-view", "search-view", "progress-view", "boards-view"];
 const marks = { overview: "總", combat: "戰", campaign: "史", collection: "將", territory: "城" };
 
 function showView(id) {
   document.body.classList.toggle("launch-mode", id === "progress-view");
   views.forEach(viewId => document.getElementById(viewId).hidden = viewId !== id);
-  document.getElementById("review-toggle").hidden = id === "progress-view";
+  document.getElementById("review-toggle").hidden = id === "progress-view" || id === "boards-view";
   document.getElementById("search").placeholder = id === "progress-view" ? "스펙 문서 검색" : "스킬, 스테이지, 상점, 영지 검색";
   window.scrollTo({ top: 0, behavior: "instant" });
 }
@@ -28,10 +28,11 @@ function bindDocumentRows(root = document) {
 
 function renderNavigation() {
   const nav = document.getElementById("category-nav");
-  nav.innerHTML = `<button class="nav-button" data-progress>소프트런칭 현황 <small>↗</small></button><button class="nav-button active" data-home>스펙 문서 <small>⌂</small></button>` + state.catalog.categories.map(category => {
+  nav.innerHTML = `<button class="nav-button" data-progress>소프트런칭 현황 <small>↗</small></button><button class="nav-button" data-boards>보드 · 밸런스 <small>30</small></button><button class="nav-button active" data-home>스펙 문서 <small>⌂</small></button>` + state.catalog.categories.map(category => {
     const count = visibleDocuments(category.id).length;
     return `<button class="nav-button" data-category="${category.id}">${category.name}<small>${count}</small></button>`;
   }).join("");
+  nav.querySelector("[data-boards]").addEventListener("click", () => { location.hash = "boards"; });
   nav.querySelector("[data-home]").addEventListener("click", openHome);
   nav.querySelector("[data-progress]").addEventListener("click", openProgress);
   nav.querySelectorAll("[data-category]").forEach(button => button.addEventListener("click", () => openCategory(button.dataset.category)));
@@ -55,11 +56,21 @@ async function openProgress() {
 
 function route() {
   const route = location.hash.slice(1);
-  if (route.startsWith("progress")) openProgress();
+  if (route === "boards" || route.startsWith("boards=")) openBoards(route.startsWith("boards=") ? route.slice(7) : null);
+  else if (route.startsWith("progress")) openProgress();
   else if (route.startsWith("doc=")) openDocument(route.slice(4));
   else if (route.startsWith("category=")) openCategory(route.slice(9));
   else if (route === "specs") openHome();
   else if (!route) openProgress();
+}
+
+async function openBoards(id) {
+  state.activeCategory = null;
+  setActiveNav("__boards__");
+  document.querySelector("[data-boards]").classList.add("active");
+  document.querySelector(".sidebar").classList.remove("open");
+  showView("boards-view");
+  await BoardDashboard.open(id);
 }
 
 function renderHome() {

@@ -8,6 +8,7 @@
   <title>삼국 히어로 · 소프트런칭 현황</title>
   <link rel="stylesheet" href="styles.css?v=launch-tree-1">
   <link rel="stylesheet" href="progress.css?v=launch-tree-2">
+  <link rel="stylesheet" href="boards.css?v=campaign-1">
 </head>
 <body>
   <div class="app-shell">
@@ -36,6 +37,7 @@
       </header>
 
       <section id="home-view" class="home-view">
+        <a class="progress-entry" href="#boards"><span>30개 전장 · 보드/조우/보상 밸런스</span><small>전체 비교 →</small></a>
         <a class="progress-entry" href="#progress"><span>소프트런칭 현황 보기</span><small>인게임 · 메타 · 서버 · 출시 검증 →</small></a>
         <div class="hero">
           <div><span class="kicker">SINGLE SOURCE OF TRUTH</span><h1>게임의 현재를<br>한곳에서 읽습니다.</h1></div>
@@ -69,7 +71,24 @@
         <div id="search-list" class="document-list"></div>
       </section>
 
+      <section id="boards-view" class="boards-view" hidden aria-labelledby="board-title">
+        <div class="boards-heading"><span class="kicker">CAMPAIGN · BALANCE</span><h1 id="board-title">30개 전장 · 보드와 밸런스</h1><p>보드 배정부터 조우, 적군 능력치, 첫 완료 보상까지 비교합니다. 전장 이름을 누르면 상세가 열립니다.</p><p id="board-scope"></p></div>
+        <p id="board-loading" role="status">현재 보드 데이터를 불러오는 중…</p>
+        <div id="board-error" role="alert" hidden>보드 데이터를 불러오지 못했습니다. <button onclick="BoardDashboard.open()">다시 불러오기</button></div>
+        <div id="board-ready" hidden>
+          <div class="board-toolbar"><label>보드 유형<select id="board-type"><option value="">세 유형 전체</option><option value="monopoly">모노폴리</option><option value="pokemon">포켓몬</option><option value="slay">슬레이</option></select></label><label>장<select id="board-chapter"></select></label><label>전장·보스 검색<input id="board-search" type="search" placeholder="예: 관도, 여포"></label><label>증감 비교 기준<select id="board-baseline"></select></label></div>
+          <div class="board-tabs" aria-label="표에 표시할 정보"><button data-board-mode="overview" aria-pressed="true">전체 보드</button><button data-board-mode="rewards" aria-pressed="false">보상 · 증가율</button><button data-board-mode="enemies" aria-pressed="false">적군 · 보스 HP</button><span id="board-count" aria-live="polite"></span></div>
+          <p class="board-note">표는 가로로 스크롤할 수 있습니다. 증가율은 필터에 관계없이 전체 순서의 직전 탄 또는 선택한 기준 탄과 비교합니다. 음수는 실제 감소 구간입니다.</p>
+          <div id="board-table" class="table-scroll" tabindex="0" aria-label="전장 비교 표 · 가로 스크롤"></div>
+          <div class="board-chart-panel"><div class="board-chart-head"><h2>탄별 변화 곡선</h2><label><span class="sr-only">곡선의 비교 항목</span><select id="board-metric"><option value="meta_coins">첫 보상 동전</option><option value="territory_merit">첫 보상 치적</option><option value="premium_gems">첫 보상 보석</option><option value="territory_material">첫 보상 영지 자재</option><option value="boss_hp">보스 페이즈 HP 합계</option><option value="value">사용자 가중 비교값</option></select></label></div><p>각 막대를 누르면 해당 전장 상세가 열립니다. 갈색 모노폴리 · 초록 포켓몬 · 보라 슬레이.</p><div class="board-chart-scroll"><div id="board-chart" class="board-chart"></div></div></div>
+          <details class="board-weights-panel"><summary>보상 밸류 비교 가중치 설정</summary><p>공식 교환가치는 미정입니다. 각 재화1개의 비교 가치를 직접 입력하세요. 기본은 동전1·그 외0이며 카드/휘장은 제외합니다. 이 설정은 표시만 바꾸고 게임 밸런스는 수정하지 않습니다.</p><div id="board-weights" class="board-weights"></div><button id="board-reset-weights">동전 기준으로 초기화</button></details>
+          <div id="board-detail" class="board-detail" hidden></div>
+          <details class="board-method"><summary>수치 읽는 법 · 데이터 출처</summary><ul id="board-notes"></ul><p>아래 해시는 이번 게시에 사용한 현재 저장소 파일의 내용입니다. 공개 사이트는 읽기 전용 비교 자료이며 제품 원본을 대체하지 않습니다.</p><ul id="board-sources"></ul></details>
+        </div>
+      </section>
+
       <section id="progress-view" class="progress-view" aria-labelledby="progress-title" hidden>
+        <a class="progress-entry" href="#boards"><span>30개 전장 · 보드/조우/보상 밸런스</span><small>전체 비교 →</small></a>
         <div class="progress-heading"><div><span class="kicker">SOFT LAUNCH CHECKLIST</span><h1 id="progress-title">소프트런칭까지 남은 일</h1><p>분야를 펼쳐 완료한 기능과 남은 작업을 확인하세요.</p></div><div class="progress-date"><span>체크리스트 정리</span><strong id="progress-date">—</strong><small id="progress-version"></small></div></div>
         <div id="progress-error" class="progress-error" role="alert" hidden><p>현황을 불러오지 못했습니다.</p><button id="progress-retry" type="button">다시 불러오기</button></div>
         <div id="progress-content" hidden>
@@ -90,6 +109,7 @@
   <dialog id="progress-lightbox" class="progress-lightbox" aria-labelledby="progress-lightbox-title" aria-describedby="progress-lightbox-note"><header><div><h2 id="progress-lightbox-title"></h2><p id="progress-lightbox-meta"></p></div><button id="progress-lightbox-close" type="button" autofocus>닫기 ×</button></header><div class="progress-lightbox-image"><img id="progress-lightbox-image" alt=""><p id="progress-lightbox-error" hidden>이미지를 불러오지 못했습니다. 아래 원본 링크를 확인해 주세요.</p></div><p id="progress-lightbox-note"></p><footer><button id="progress-lightbox-prev" type="button">← 이전</button><span id="progress-lightbox-position"></span><button id="progress-lightbox-next" type="button">다음 →</button><a id="progress-lightbox-original" target="_blank" rel="noreferrer">원본 보기 ↗</a></footer></dialog>
   <script src="progress-model.js?v=launch-tree-1"></script>
   <script src="progress.js?v=launch-tree-1"></script>
-  <script src="app.js?v=launch-tree-1"></script>
+  <script src="boards.js?v=campaign-1"></script>
+  <script src="app.js?v=campaign-1"></script>
 </body>
 </html>
