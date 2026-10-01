@@ -82,13 +82,14 @@
     {
       "id": "skill-lightning",
       "category": "combat",
-      "title": "위 · 벼락",
+      "title": "교체 전 계약 · 구 위나라 lightning",
       "path": "docs/product/FACTION_ATTRIBUTE_SKILL_TREES.md",
-      "section": "위 · 벼락",
+      "section": "혈전 교체 전 기존 계약 · 구 위나라 lightning",
       "anchor": "4-위--벼락",
-      "status": "제품 확정",
-      "tone": "approved",
-      "summary": "라운드 시작에 작동하는 위나라 벼락 계열 9개 스킬"
+      "status": "기존 발급 보존",
+      "tone": "review",
+      "review": true,
+      "summary": "혈전 이관 전 기존 판정의 보존 범위. 현재 제품 계열명과 구분"
     },
     {
       "id": "skill-iron-wall",
@@ -184,6 +185,15 @@
       "status": "승인·적용",
       "tone": "approved",
       "summary": "공용 D6 모델과 보드·천체 판정 표시 규칙"
+    },
+    {
+      "id": "combat-lifecycle",
+      "category": "combat",
+      "title": "자동 전투·다중 적·상태",
+      "path": "docs/product/COMBAT_LIFECYCLE.md",
+      "status": "구현·검증 완료",
+      "tone": "active",
+      "summary": "최신9계열 혼합·개체 상태·정지/취소·정확한 저장·종료 자원 검증"
     },
     {
       "id": "campaign-overview",

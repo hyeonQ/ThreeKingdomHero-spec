@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T06:41:47.977158+00:00",
+  "generated_at": "2026-10-01T13:39:20.084870+00:00",
   "scope": "현재 작업 트리 · Easy 신규 로컬 원정 규칙. 기발급 원정/온라인 공개 상태와 구분. 미생성 지도는 등록 수치만 표시.",
   "items": {
     "meta_coins": "동전",
@@ -3000,7 +3000,7 @@
       "title": "2-2 호로관",
       "chapter": "제2장",
       "board_type": "slay",
-      "status": "승인 공통맵 재사용 · 전용 미생성",
+      "status": "지형·먹색 점선 지도 사용자 승인 · 실제 Godot 연결/검증",
       "concept": "호로관 앞에 연합군이 모였습니다. 방천화극을 든 여포가 길을 막습니다. 마지막 준비를 고르고 결전에 나서세요.",
       "objective": "연속되는 작은 공격을 반격으로 돌파하세요.",
       "boss_tips": "여러 번 공격하는 적.\n\n각 공격은 따로 처리됩니다. 반격 기회를 활용하고 회복·방어로 보완하세요.",
@@ -3950,7 +3950,7 @@
       "title": "2-3 불타는 낙양",
       "chapter": "제2장",
       "board_type": "monopoly",
-      "status": "전장 데이터 있음 · 공통 순환형",
+      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
       "concept": "낙양에 불길이 번지고 있습니다. 피난민과 물자를 구하며 서량군을 돌파하세요. 동탁의 호위진을 뚫고 제2장을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
@@ -4863,7 +4863,7 @@
       "title": "3-1 연주",
       "chapter": "제3장",
       "board_type": "pokemon",
-      "status": "전용 지도·군영/성문·도트 군주·돌길·전체 지도 웹 · 외형 재검토",
+      "status": "54×44 도시/담장 · 신규 발급·저장·사건·전투·정산 연결",
       "concept": "연주의 성문마다 서로 다른 부대가 길을 막습니다. 장료의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "함께 등장하는 적을 광역 공격으로 제압하세요.",
       "boss_tips": "동시에 등장하는 적.\n\n각 적은 별도 체력을 갖고 차례로 공격합니다. 기본 광역으로 여러 대상을 함께 공격할 수 있습니다.",
@@ -5783,33 +5783,33 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "field",
-        "map_id": "yanzhou_gates",
+        "map_id": "yanzhou_city_blocks",
         "note": "풀숲 진입/조우 뒤 성공 이동3~5칸 보호, 이후 적8%·사건4%/유효 판정. 연결된 풀숲 하나당 적2·사건1 상한. 수비대1+최종보스1 필수, 지도/도하/화살3개 경계 사건. 선택 이동·되돌아가기 때문에 실플레이 평균은 미측정. 상한은 예상 평균이 아님. 보물 상자마다 원정 금15·체력5(최대HP 내 회복).",
         "chests": 3,
-        "event_limit": 5,
+        "event_limit": 6,
         "gates": 3,
-        "grass_regions": 5,
+        "grass_regions": 6,
         "size": [
-          27,
-          61
+          54,
+          44
         ],
-        "wild_limit": 10,
+        "wild_limit": 12,
         "bounds": {
           "battles": [
             2,
-            12
+            14
           ],
           "events": [
             3,
-            8
+            9
           ],
           "enemies": [
             6,
-            26
+            30
           ],
           "gold": [
             145,
-            345
+            385
           ]
         }
       }
@@ -5820,7 +5820,7 @@
       "title": "3-2 완성",
       "chapter": "제3장",
       "board_type": "slay",
-      "status": "전용 야간 경로·본편 로컬 연결 · 외형 승인과 검수는 별도",
+      "status": "성곽/시가지 지도 사용자 승인 · 시작 카메라 적용",
       "concept": "완성의 밤, 좁은 골목을 돌파해 야습 부대를 추격합니다. 장수의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "공격력과 생존력을 갖추고 정예 지휘부를 돌파하세요.",
       "boss_tips": "정예군의 높은 기본 전력.\n\n특정 계열의 약점보다 전체 공격력·체력·방어력이 중요합니다. 앞 전장의 보상으로 성장을 점검하세요.",
@@ -6698,121 +6698,87 @@
         "steps": 30,
         "nodes": 84,
         "counts": {
-          "recruit": 9,
-          "battle": 23,
-          "mystery": 26,
-          "camp": 7,
-          "shop": 10,
+          "recruit": 10,
+          "battle": 28,
+          "mystery": 6,
           "elite": 6,
+          "event": 13,
+          "camp": 12,
+          "shop": 6,
           "midboss": 2,
           "boss": 1
         },
         "metrics": {
           "battles": {
-            "min": 3,
-            "max": 29,
+            "min": 11,
+            "max": 19,
             "expected": 14.67
           },
           "events": {
-            "min": 0,
-            "max": 26,
-            "expected": 10.0
+            "min": 2,
+            "max": 11,
+            "expected": 5.75
           },
           "support": {
-            "min": 1,
-            "max": 23,
-            "expected": 9.33
+            "min": 7,
+            "max": 15,
+            "expected": 10.17
           },
           "enemies": {
-            "min": 4,
-            "max": 30,
+            "min": 12,
+            "max": 20,
             "expected": 15.67
           },
           "gold": {
-            "min": 190,
-            "max": 846,
-            "expected": 488.67
+            "min": 419,
+            "max": 730,
+            "expected": 546.75
           },
           "xp": {
-            "min": 200,
-            "max": 2800,
+            "min": 1000,
+            "max": 1800,
             "expected": 1366.67
           }
         },
         "lanes": [
           {
-            "id": "flank",
-            "name": "측면로",
-            "hp_percent": 85,
-            "attack_percent": 110
-          },
-          {
             "id": "front",
-            "name": "중앙로",
+            "name": "정문 대로",
             "hp_percent": 100,
             "attack_percent": 100
           },
           {
+            "id": "flank",
+            "name": "성곽 바깥길",
+            "hp_percent": 85,
+            "attack_percent": 110
+          },
+          {
             "id": "supply",
-            "name": "보급로",
+            "name": "시장 보급로",
             "hp_percent": 110,
             "attack_percent": 90
           }
         ],
-        "profile": "data/campaign/wancheng_slay.json",
+        "profile": "data/campaign/wancheng_streets.json",
         "target_seconds": [
           600,
           900
         ],
-        "note": "완주 조건·갈림길마다 연결된 선택지를 같은 확률로 선택한 분석값. 일반 틀은 시드 홀짝을 동등 평균. 적군 수는 페이즈마다 새로 등장하는 개체 합계. 중간보스2·최종보스1 필수. 승률/실제 선택 경향/초당 수익은 미측정. 전투 금·경험치는 사건 보상과 구매를 제외. 미지의 골목은 복병40%·원정 금22(25%)·최대HP20%회복(20%)·다음 적 공격−2(15%). 이 복병을 전투 추정치에 포함."
+        "note": "완주 조건·갈림길마다 연결된 선택지를 같은 확률로 선택한 분석값. 일반 틀은 시드 홀짝을 동등 평균. 적군 수는 페이즈마다 새로 등장하는 개체 합계. 중간보스2·최종보스1 필수. 승률/실제 선택 경향/초당 수익은 미측정. 전투 금·경험치는 사건 보상과 구매를 제외. 새 완성의 미지 사건은 교전25%·정비37.5%·군략37.5%. 이 교전을 전투 추정치에 포함하며 군략 내부 보상은 제외."
       },
       "mystery_outcomes": [
         {
           "id": "ambush",
-          "weight": 40,
-          "title": "골목의 복병",
-          "description": "성벽 너머에서 순찰대가 들이닥칩니다. 수비대를 돌파해야 길이 열립니다.",
-          "label": "복병과 맞선다",
-          "effect": {
-            "start_encounter": "wancheng_soldier"
-          },
-          "image_id": "night_watch"
+          "weight": 2
         },
         {
-          "id": "supplies",
-          "weight": 25,
-          "title": "숨겨진 군량",
-          "description": "담장 안쪽에 남겨진 보급 수레를 발견했습니다. 원정 금22를 챙겨 진군합니다.",
-          "label": "군량을 챙긴다",
-          "effect": {
-            "gold": 22
-          },
-          "image_id": "hidden_storehouse"
+          "id": "camp",
+          "weight": 3
         },
         {
-          "id": "shelter",
-          "weight": 20,
-          "title": "비어 있는 마당",
-          "description": "순찰이 비켜 간 작은 마당에서 숨을 고릅니다. 최대 체력의20%를 회복합니다.",
-          "label": "잠시 정비한다",
-          "effect": {
-            "heal_percent": 20
-          },
-          "image_id": "wounded_scout"
-        },
-        {
-          "id": "scout",
-          "weight": 15,
-          "title": "순찰을 피한 샛길",
-          "description": "담장 사이로 다음 수비대의 동선을 읽었습니다. 다음 전투의 적 공격이2 낮아집니다.",
-          "label": "동선을 기억한다",
-          "effect": {
-            "planned_effect": {
-              "id": "scout",
-              "amount": 2
-            }
-          },
-          "image_id": "night_watch"
+          "id": "event",
+          "weight": 3
         }
       ]
     },
@@ -6822,7 +6788,7 @@
       "title": "3-3 수춘",
       "chapter": "제3장",
       "board_type": "monopoly",
-      "status": "전장 데이터 있음 · 공통 순환형",
+      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
       "concept": "수춘의 성벽을 둘러싼 포위전이 길어집니다. 원술의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "연속되는 작은 공격을 반격으로 돌파하세요.",
       "boss_tips": "여러 번 공격하는 적.\n\n각 공격은 따로 처리됩니다. 반격 기회를 활용하고 회복·방어로 보완하세요.",
@@ -7726,13 +7692,13 @@
       "title": "3-4 소패",
       "chapter": "제3장",
       "board_type": "pokemon",
-      "status": "전용 미생성 · 새 발급 대기",
+      "status": "두 군영/공유 훈련장 · 본편 발급·저장·사건·전투·정산 연결",
       "concept": "소패의 지원대를 끊어 함진영의 진격을 늦추세요. 고순의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
       "combat_concept": "단일 강적 · 벼락 연쇄",
       "chapter_final": false,
-      "new_map_ready": false,
+      "new_map_ready": true,
       "encounters": [
         {
           "id": "xiaopei_soldier",
@@ -8601,8 +8567,35 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "field",
-        "map_id": null,
-        "note": "전용 지도 미생성으로 새 원정 발급 대기. 전투 정의·첫 보상은 등록되어 있으나 지도 조우 수/총 적군 수는 아직 산정할 수 없음."
+        "map_id": "xiaopei_training_rings",
+        "note": "풀숲 진입/조우 뒤 성공 이동3~5칸 보호, 이후 적8%·사건4%/유효 판정. 연결된 풀숲 하나당 적2·사건1 상한. 수비대1+최종보스1 필수, 지도/도하/화살3개 경계 사건. 선택 이동·되돌아가기 때문에 실플레이 평균은 미측정. 상한은 예상 평균이 아님. 보물 상자마다 원정 금15·체력5(최대HP 내 회복).",
+        "chests": 3,
+        "event_limit": 6,
+        "gates": 3,
+        "grass_regions": 6,
+        "size": [
+          54,
+          48
+        ],
+        "wild_limit": 12,
+        "bounds": {
+          "battles": [
+            2,
+            14
+          ],
+          "events": [
+            3,
+            9
+          ],
+          "enemies": [
+            3,
+            15
+          ],
+          "gold": [
+            145,
+            385
+          ]
+        }
       }
     },
     {
@@ -8611,7 +8604,7 @@
       "title": "3-5 하비",
       "chapter": "제3장",
       "board_type": "slay",
-      "status": "승인 공통맵 재사용 · 전용 미생성",
+      "status": "범람 호수/다리/성곽 전용 지도/시작 카메라 제작 · 실제 Godot 검증 · 외형 검토",
       "concept": "물에 잠긴 하비에서 여포의 마지막 진형을 돌파합니다. 여포의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "함께 등장하는 적을 광역 공격으로 제압하세요.",
       "boss_tips": "동시에 등장하는 적.\n\n각 적은 별도 체력을 갖고 차례로 공격합니다. 기본 광역으로 여러 대상을 함께 공격할 수 있습니다.",
@@ -9644,7 +9637,7 @@
       "title": "4-1 백마",
       "chapter": "제4장",
       "board_type": "monopoly",
-      "status": "전장 데이터 있음 · 공통 순환형",
+      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
       "concept": "백마의 선봉을 빠르게 무너뜨려 포위를 풀어주세요. 안량의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "공격력과 생존력을 갖추고 정예 지휘부를 돌파하세요.",
       "boss_tips": "정예군의 높은 기본 전력.\n\n특정 계열의 약점보다 전체 공격력·체력·방어력이 중요합니다. 앞 전장의 보상으로 성장을 점검하세요.",
@@ -10584,13 +10577,13 @@
       "title": "4-2 연진",
       "chapter": "제4장",
       "board_type": "pokemon",
-      "status": "전용 미생성 · 새 발급 대기",
+      "status": "양안/목교/여울 · 본편 발급·저장·사건·전투·정산 연결",
       "concept": "연진의 강가에서 증원군과 추격대가 번갈아 나타납니다. 문추의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "연속되는 작은 공격을 반격으로 돌파하세요.",
       "boss_tips": "여러 번 공격하는 적.\n\n각 공격은 따로 처리됩니다. 반격 기회를 활용하고 회복·방어로 보완하세요.",
       "combat_concept": "연속 공격 · 가시 반격",
       "chapter_final": false,
-      "new_map_ready": false,
+      "new_map_ready": true,
       "encounters": [
         {
           "id": "yanjin_soldier",
@@ -11485,8 +11478,35 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "field",
-        "map_id": null,
-        "note": "전용 지도 미생성으로 새 원정 발급 대기. 전투 정의·첫 보상은 등록되어 있으나 지도 조우 수/총 적군 수는 아직 산정할 수 없음."
+        "map_id": "yanjin_crossings",
+        "note": "풀숲 진입/조우 뒤 성공 이동3~5칸 보호, 이후 적8%·사건4%/유효 판정. 연결된 풀숲 하나당 적2·사건1 상한. 수비대1+최종보스1 필수, 지도/도하/화살3개 경계 사건. 선택 이동·되돌아가기 때문에 실플레이 평균은 미측정. 상한은 예상 평균이 아님. 보물 상자마다 원정 금15·체력5(최대HP 내 회복).",
+        "chests": 3,
+        "event_limit": 8,
+        "gates": 3,
+        "grass_regions": 8,
+        "size": [
+          68,
+          44
+        ],
+        "wild_limit": 16,
+        "bounds": {
+          "battles": [
+            2,
+            18
+          ],
+          "events": [
+            3,
+            11
+          ],
+          "enemies": [
+            3,
+            19
+          ],
+          "gold": [
+            145,
+            465
+          ]
+        }
       }
     },
     {
@@ -11495,7 +11515,7 @@
       "title": "4-3 오소",
       "chapter": "제4장",
       "board_type": "slay",
-      "status": "승인 공통맵 재사용 · 전용 미생성",
+      "status": "숲속 군량창 전용 지도/시작 카메라 제작 · 실제 Godot 검증 · 외형 검토",
       "concept": "오소의 보급 진지에는 튼튼한 호위 전열이 남아 있습니다. 순우경의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
@@ -12474,7 +12494,7 @@
       "title": "4-4 관도",
       "chapter": "제4장",
       "board_type": "monopoly",
-      "status": "전장 데이터 있음 · 공통 순환형",
+      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
       "concept": "관도에서 대군의 연속 공격과 지휘부의 강공격을 견뎌내세요. 원소의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "함께 등장하는 적을 광역 공격으로 제압하세요.",
       "boss_tips": "동시에 등장하는 적.\n\n각 적은 별도 체력을 갖고 차례로 공격합니다. 기본 광역으로 여러 대상을 함께 공격할 수 있습니다.",
@@ -13485,13 +13505,13 @@
       "title": "5-1 신야",
       "chapter": "제5장",
       "board_type": "pokemon",
-      "status": "전용 미생성 · 새 발급 대기",
+      "status": "농지/우물/재선택 연결망 · 본편 발급·저장·사건·전투·정산 연결",
       "concept": "신야의 길목마다 새 방패 부대가 진로를 막습니다. 조인의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "공격력과 생존력을 갖추고 정예 지휘부를 돌파하세요.",
       "boss_tips": "정예군의 높은 기본 전력.\n\n특정 계열의 약점보다 전체 공격력·체력·방어력이 중요합니다. 앞 전장의 보상으로 성장을 점검하세요.",
       "combat_concept": "높은 기본 전력 · 성장 점검",
       "chapter_final": false,
-      "new_map_ready": false,
+      "new_map_ready": true,
       "encounters": [
         {
           "id": "xinye_soldier",
@@ -14396,8 +14416,35 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "field",
-        "map_id": null,
-        "note": "전용 지도 미생성으로 새 원정 발급 대기. 전투 정의·첫 보상은 등록되어 있으나 지도 조우 수/총 적군 수는 아직 산정할 수 없음."
+        "map_id": "xinye_farmland",
+        "note": "풀숲 진입/조우 뒤 성공 이동3~5칸 보호, 이후 적8%·사건4%/유효 판정. 연결된 풀숲 하나당 적2·사건1 상한. 수비대1+최종보스1 필수, 지도/도하/화살3개 경계 사건. 선택 이동·되돌아가기 때문에 실플레이 평균은 미측정. 상한은 예상 평균이 아님. 보물 상자마다 원정 금15·체력5(최대HP 내 회복).",
+        "chests": 3,
+        "event_limit": 6,
+        "gates": 3,
+        "grass_regions": 6,
+        "size": [
+          56,
+          46
+        ],
+        "wild_limit": 12,
+        "bounds": {
+          "battles": [
+            2,
+            14
+          ],
+          "events": [
+            3,
+            9
+          ],
+          "enemies": [
+            3,
+            15
+          ],
+          "gold": [
+            145,
+            385
+          ]
+        }
       }
     },
     {
@@ -14406,7 +14453,7 @@
       "title": "5-2 양양 탈출",
       "chapter": "제5장",
       "board_type": "slay",
-      "status": "승인 공통맵 재사용 · 전용 미생성",
+      "status": "시가지/탈출 나루 전용 지도/시작 카메라 제작 · 실제 Godot 검증 · 외형 검토",
       "concept": "양양에서 빠져나오는 행렬을 지키며 추격대의 강습을 넘기세요. 문빙의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "연속되는 작은 공격을 반격으로 돌파하세요.",
       "boss_tips": "여러 번 공격하는 적.\n\n각 공격은 따로 처리됩니다. 반격 기회를 활용하고 회복·방어로 보완하세요.",
@@ -15385,7 +15432,7 @@
       "title": "5-3 장판",
       "chapter": "제5장",
       "board_type": "monopoly",
-      "status": "전장 데이터 있음 · 공통 순환형",
+      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
       "concept": "장판의 다리까지 이어지는 작은 공격을 버티며 피난 행렬을 지킵니다. 조순의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
@@ -16326,13 +16373,13 @@
       "title": "6-1 장강 수전",
       "chapter": "제6장",
       "board_type": "pokemon",
-      "status": "전용 미생성 · 새 발급 대기",
+      "status": "강변 수군 항구·부두2곳·온전한 정박 전선2척으로 재제작 · 본편 발급·저장·사건·전투·정산 연결",
       "concept": "장강의 나루에서 방패를 세운 수군이 차례로 합류합니다. 채모의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "함께 등장하는 적을 광역 공격으로 제압하세요.",
       "boss_tips": "동시에 등장하는 적.\n\n각 적은 별도 체력을 갖고 차례로 공격합니다. 기본 광역으로 여러 대상을 함께 공격할 수 있습니다.",
       "combat_concept": "다수 적 · 화공 광역",
       "chapter_final": false,
-      "new_map_ready": false,
+      "new_map_ready": true,
       "encounters": [
         {
           "id": "yangtze_soldier",
@@ -17307,8 +17354,35 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "field",
-        "map_id": null,
-        "note": "전용 지도 미생성으로 새 원정 발급 대기. 전투 정의·첫 보상은 등록되어 있으나 지도 조우 수/총 적군 수는 아직 산정할 수 없음."
+        "map_id": "yangtze_harbor",
+        "note": "풀숲 진입/조우 뒤 성공 이동3~5칸 보호, 이후 적8%·사건4%/유효 판정. 연결된 풀숲 하나당 적2·사건1 상한. 수비대1+최종보스1 필수, 지도/도하/화살3개 경계 사건. 선택 이동·되돌아가기 때문에 실플레이 평균은 미측정. 상한은 예상 평균이 아님. 보물 상자마다 원정 금15·체력5(최대HP 내 회복).",
+        "chests": 4,
+        "event_limit": 7,
+        "gates": 3,
+        "grass_regions": 7,
+        "size": [
+          56,
+          56
+        ],
+        "wild_limit": 14,
+        "bounds": {
+          "battles": [
+            2,
+            16
+          ],
+          "events": [
+            3,
+            10
+          ],
+          "enemies": [
+            9,
+            51
+          ],
+          "gold": [
+            145,
+            425
+          ]
+        }
       }
     },
     {
@@ -17317,7 +17391,7 @@
       "title": "6-2 연환선",
       "chapter": "제6장",
       "board_type": "slay",
-      "status": "승인 공통맵 재사용 · 전용 미생성",
+      "status": "선단/해상 항로 전용 지도/시작 카메라 제작 · 실제 Godot 검증 · 외형 검토",
       "concept": "쇠사슬로 이어진 배 위에서 본대와 호위대가 함께 버팁니다. 장윤의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "공격력과 생존력을 갖추고 정예 지휘부를 돌파하세요.",
       "boss_tips": "정예군의 높은 기본 전력.\n\n특정 계열의 약점보다 전체 공격력·체력·방어력이 중요합니다. 앞 전장의 보상으로 성장을 점검하세요.",
@@ -18296,7 +18370,7 @@
       "title": "6-3 적벽 화공",
       "chapter": "제6장",
       "board_type": "monopoly",
-      "status": "전장 데이터 있음 · 공통 순환형",
+      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
       "concept": "화공으로 갈라진 진형 사이에서 이어지는 공격에 맞서 철수로를 돌파하세요. 조조의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "연속되는 작은 공격을 반격으로 돌파하세요.",
       "boss_tips": "여러 번 공격하는 적.\n\n각 공격은 따로 처리됩니다. 반격 기회를 활용하고 회복·방어로 보완하세요.",
@@ -19237,13 +19311,13 @@
       "title": "7-1 남군",
       "chapter": "제7장",
       "board_type": "pokemon",
-      "status": "전용 미생성 · 새 발급 대기",
+      "status": "외성 우회/중앙 내성 · 본편 발급·저장·사건·전투·정산 연결",
       "concept": "남군의 성문에서는 소규모 출격과 증원이 끊이지 않습니다. 조인의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
       "combat_concept": "단일 강적 · 벼락 연쇄",
       "chapter_final": false,
-      "new_map_ready": false,
+      "new_map_ready": true,
       "encounters": [
         {
           "id": "nanjun_soldier",
@@ -20148,8 +20222,35 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "field",
-        "map_id": null,
-        "note": "전용 지도 미생성으로 새 원정 발급 대기. 전투 정의·첫 보상은 등록되어 있으나 지도 조우 수/총 적군 수는 아직 산정할 수 없음."
+        "map_id": "nanjun_inner_city",
+        "note": "풀숲 진입/조우 뒤 성공 이동3~5칸 보호, 이후 적8%·사건4%/유효 판정. 연결된 풀숲 하나당 적2·사건1 상한. 수비대1+최종보스1 필수, 지도/도하/화살3개 경계 사건. 선택 이동·되돌아가기 때문에 실플레이 평균은 미측정. 상한은 예상 평균이 아님. 보물 상자마다 원정 금15·체력5(최대HP 내 회복).",
+        "chests": 4,
+        "event_limit": 6,
+        "gates": 3,
+        "grass_regions": 6,
+        "size": [
+          60,
+          56
+        ],
+        "wild_limit": 12,
+        "bounds": {
+          "battles": [
+            2,
+            14
+          ],
+          "events": [
+            3,
+            9
+          ],
+          "enemies": [
+            3,
+            15
+          ],
+          "gold": [
+            145,
+            385
+          ]
+        }
       }
     },
     {
@@ -20158,7 +20259,7 @@
       "title": "7-2 익주",
       "chapter": "제7장",
       "board_type": "slay",
-      "status": "승인 공통맵 재사용 · 전용 미생성",
+      "status": "산지/고갯길 전용 지도/시작 카메라 제작 · 실제 Godot 검증 · 외형 검토",
       "concept": "익주의 산길에서 약병을 넘어서면 정예 수비대가 나타납니다. 유장의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "함께 등장하는 적을 광역 공격으로 제압하세요.",
       "boss_tips": "동시에 등장하는 적.\n\n각 적은 별도 체력을 갖고 차례로 공격합니다. 기본 광역으로 여러 대상을 함께 공격할 수 있습니다.",
@@ -21207,7 +21308,7 @@
       "title": "7-3 한중",
       "chapter": "제7장",
       "board_type": "monopoly",
-      "status": "전장 데이터 있음 · 공통 순환형",
+      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
       "concept": "한중의 단단한 산성 수비대와 긴 결전을 준비하세요. 하후연의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "공격력과 생존력을 갖추고 정예 지휘부를 돌파하세요.",
       "boss_tips": "정예군의 높은 기본 전력.\n\n특정 계열의 약점보다 전체 공격력·체력·방어력이 중요합니다. 앞 전장의 보상으로 성장을 점검하세요.",
@@ -22137,13 +22238,13 @@
       "title": "7-4 번성·형주",
       "chapter": "제7장",
       "board_type": "pokemon",
-      "status": "전용 미생성 · 새 발급 대기",
+      "status": "범람지/제방/수문 · 본편 발급·저장·사건·전투·정산 연결",
       "concept": "번성의 공방에서 형주의 기습으로 이어지는 전황을 돌파합니다. 여몽의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "연속되는 작은 공격을 반격으로 돌파하세요.",
       "boss_tips": "여러 번 공격하는 적.\n\n각 공격은 따로 처리됩니다. 반격 기회를 활용하고 회복·방어로 보완하세요.",
       "combat_concept": "연속 공격 · 가시 반격",
       "chapter_final": false,
-      "new_map_ready": false,
+      "new_map_ready": true,
       "encounters": [
         {
           "id": "fancheng_jingzhou_soldier",
@@ -23038,8 +23139,35 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "field",
-        "map_id": null,
-        "note": "전용 지도 미생성으로 새 원정 발급 대기. 전투 정의·첫 보상은 등록되어 있으나 지도 조우 수/총 적군 수는 아직 산정할 수 없음."
+        "map_id": "fancheng_floodplain",
+        "note": "풀숲 진입/조우 뒤 성공 이동3~5칸 보호, 이후 적8%·사건4%/유효 판정. 연결된 풀숲 하나당 적2·사건1 상한. 수비대1+최종보스1 필수, 지도/도하/화살3개 경계 사건. 선택 이동·되돌아가기 때문에 실플레이 평균은 미측정. 상한은 예상 평균이 아님. 보물 상자마다 원정 금15·체력5(최대HP 내 회복).",
+        "chests": 4,
+        "event_limit": 6,
+        "gates": 3,
+        "grass_regions": 6,
+        "size": [
+          72,
+          52
+        ],
+        "wild_limit": 12,
+        "bounds": {
+          "battles": [
+            2,
+            14
+          ],
+          "events": [
+            3,
+            9
+          ],
+          "enemies": [
+            3,
+            15
+          ],
+          "gold": [
+            145,
+            385
+          ]
+        }
       }
     },
     {
@@ -23048,7 +23176,7 @@
       "title": "7-5 이릉",
       "chapter": "제7장",
       "board_type": "slay",
-      "status": "승인 공통맵 재사용 · 전용 미생성",
+      "status": "숲/군영/강변 전용 지도/시작 카메라 제작 · 실제 Godot 검증 · 외형 검토",
       "concept": "이릉의 길게 이어진 진영에서 튼튼한 전열이 다시 합류합니다. 육손의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
@@ -24038,7 +24166,7 @@
       "title": "8-1 남중",
       "chapter": "제8장",
       "board_type": "monopoly",
-      "status": "전장 데이터 있음 · 공통 순환형",
+      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
       "concept": "남중의 협곡에서 거듭 교대하는 방패 전열을 뚫으세요. 맹획의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "함께 등장하는 적을 광역 공격으로 제압하세요.",
       "boss_tips": "동시에 등장하는 적.\n\n각 적은 별도 체력을 갖고 차례로 공격합니다. 기본 광역으로 여러 대상을 함께 공격할 수 있습니다.",
@@ -25048,13 +25176,13 @@
       "title": "8-2 가정",
       "chapter": "제8장",
       "board_type": "pokemon",
-      "status": "전용 미생성 · 새 발급 대기",
+      "status": "길 밖2단 암릉/봉수대 · 본편 발급·저장·사건·전투·정산 연결",
       "concept": "가정의 고지에서 보급을 지키며 이어지는 압박을 버텨내세요. 장합의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "공격력과 생존력을 갖추고 정예 지휘부를 돌파하세요.",
       "boss_tips": "정예군의 높은 기본 전력.\n\n특정 계열의 약점보다 전체 공격력·체력·방어력이 중요합니다. 앞 전장의 보상으로 성장을 점검하세요.",
       "combat_concept": "높은 기본 전력 · 성장 점검",
       "chapter_final": false,
-      "new_map_ready": false,
+      "new_map_ready": true,
       "encounters": [
         {
           "id": "jieting_soldier",
@@ -25949,8 +26077,35 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "field",
-        "map_id": null,
-        "note": "전용 지도 미생성으로 새 원정 발급 대기. 전투 정의·첫 보상은 등록되어 있으나 지도 조우 수/총 적군 수는 아직 산정할 수 없음."
+        "map_id": "jieting_ridges",
+        "note": "풀숲 진입/조우 뒤 성공 이동3~5칸 보호, 이후 적8%·사건4%/유효 판정. 연결된 풀숲 하나당 적2·사건1 상한. 수비대1+최종보스1 필수, 지도/도하/화살3개 경계 사건. 선택 이동·되돌아가기 때문에 실플레이 평균은 미측정. 상한은 예상 평균이 아님. 보물 상자마다 원정 금15·체력5(최대HP 내 회복).",
+        "chests": 3,
+        "event_limit": 6,
+        "gates": 3,
+        "grass_regions": 6,
+        "size": [
+          58,
+          58
+        ],
+        "wild_limit": 12,
+        "bounds": {
+          "battles": [
+            2,
+            14
+          ],
+          "events": [
+            3,
+            9
+          ],
+          "enemies": [
+            3,
+            15
+          ],
+          "gold": [
+            145,
+            385
+          ]
+        }
       }
     },
     {
@@ -25959,7 +26114,7 @@
       "title": "8-3 진창",
       "chapter": "제8장",
       "board_type": "slay",
-      "status": "승인 공통맵 재사용 · 전용 미생성",
+      "status": "외성/시가지/내성 전용 지도/시작 카메라 제작 · 실제 Godot 검증 · 외형 검토",
       "concept": "진창의 방어선을 뚫고 위험한 강공격 전에 전력을 모으세요. 학소의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "연속되는 작은 공격을 반격으로 돌파하세요.",
       "boss_tips": "여러 번 공격하는 적.\n\n각 공격은 따로 처리됩니다. 반격 기회를 활용하고 회복·방어로 보완하세요.",
@@ -26938,7 +27093,7 @@
       "title": "8-4 오장원",
       "chapter": "제8장",
       "board_type": "monopoly",
-      "status": "전장 데이터 있음 · 공통 순환형",
+      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
       "concept": "오장원에서 대치와 강공격이 되풀이되는 긴 전투를 마칩니다. 사마의의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
@@ -27879,13 +28034,13 @@
       "title": "8-5 촉 멸망",
       "chapter": "제8장",
       "board_type": "pokemon",
-      "status": "전용 미생성 · 새 발급 대기",
+      "status": "산림 협곡/남쪽 보급 고리 · 본편 발급·저장·사건·전투·정산 연결",
       "concept": "험로를 넘어온 증원과 정예가 이어집니다. 남은 보급을 나누세요. 등애의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "함께 등장하는 적을 광역 공격으로 제압하세요.",
       "boss_tips": "동시에 등장하는 적.\n\n각 적은 별도 체력을 갖고 차례로 공격합니다. 기본 광역으로 여러 대상을 함께 공격할 수 있습니다.",
       "combat_concept": "다수 적 · 화공 광역",
       "chapter_final": false,
-      "new_map_ready": false,
+      "new_map_ready": true,
       "encounters": [
         {
           "id": "shu_fall_soldier",
@@ -28871,8 +29026,35 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "field",
-        "map_id": null,
-        "note": "전용 지도 미생성으로 새 원정 발급 대기. 전투 정의·첫 보상은 등록되어 있으나 지도 조우 수/총 적군 수는 아직 산정할 수 없음."
+        "map_id": "shu_fall_gorges",
+        "note": "풀숲 진입/조우 뒤 성공 이동3~5칸 보호, 이후 적8%·사건4%/유효 판정. 연결된 풀숲 하나당 적2·사건1 상한. 수비대1+최종보스1 필수, 지도/도하/화살3개 경계 사건. 선택 이동·되돌아가기 때문에 실플레이 평균은 미측정. 상한은 예상 평균이 아님. 보물 상자마다 원정 금15·체력5(최대HP 내 회복).",
+        "chests": 4,
+        "event_limit": 6,
+        "gates": 3,
+        "grass_regions": 6,
+        "size": [
+          68,
+          60
+        ],
+        "wild_limit": 12,
+        "bounds": {
+          "battles": [
+            2,
+            14
+          ],
+          "events": [
+            3,
+            9
+          ],
+          "enemies": [
+            9,
+            45
+          ],
+          "gold": [
+            145,
+            385
+          ]
+        }
       }
     },
     {
@@ -28881,7 +29063,7 @@
       "title": "8-6 오 멸망",
       "chapter": "제8장",
       "board_type": "slay",
-      "status": "승인 공통맵 재사용 · 전용 미생성",
+      "status": "상륙지/성곽/선단 전용 지도/시작 카메라 제작 · 실제 Godot 검증 · 외형 검토",
       "concept": "대함대와 전열, 강연격을 차례로 넘어서 삼국의 연대기를 마칩니다. 왕준의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "공격력과 생존력을 갖추고 정예 지휘부를 돌파하세요.",
       "boss_tips": "정예군의 높은 기본 전력.\n\n특정 계열의 약점보다 전체 공격력·체력·방어력이 중요합니다. 앞 전장의 보상으로 성장을 점검하세요.",
@@ -29926,11 +30108,20 @@
     "data/campaign/difficulty.json": "9ab55405106837c481619e5f09babb9b29bd1b4f6de13065ac3836166a13ded9",
     "data/campaign/growth_targets.json": "e8808b2c7e9a8b2e2023de03dddbefe7eeafcd498e043e0517b809cecca82fa7",
     "data/campaign/slay_board.json": "f39dcce87997eaebee2a8ee5de9ebe687d05a2120bc19a1879eb28145a41d719",
-    "data/campaign/stages.json": "44e75a0a6c19cfd9f67c4e5f5277c525496ac490577df65d95a6d094560d2183",
-    "data/campaign/wancheng_slay.json": "eab2ed795a993cb8dc1d9300d91872ac90501d6597e8745c538921e40e5e0c61",
+    "data/campaign/stages.json": "98b3415e0b5de2fe1a52fb79b6a368dca3b725278f1bba36643929b8720a9a85",
+    "data/campaign/wancheng_streets.json": "3ea5adf1521eb3e3e3f4b4f980cb4f5215e30ab47ff37b184238a7d99ff3d863",
     "data/economy/campaign_rewards.json": "d8b74380f2ae7ad887dc5b0eba9d1d371f777e65475e38d5859c54176713fc80",
     "data/economy/ruler_growth.json": "40160ce6b2a52a4482804aa345a81283dc19beba42aca7fd5d72e8e3300e30ed",
+    "data/field_maps/fancheng_floodplain.json": "c9b561ec3447c4ac6319aa2a01b696ecac1464e67037bc18a7a41966209905da",
+    "data/field_maps/jieting_ridges.json": "e53cd025b83c0f03a5894c8ab1b13c264184d5be337bb85181e96949a220c79a",
+    "data/field_maps/nanjun_inner_city.json": "9fef15d5903224c42efd4951eb73e9a68cda5b459bfb2c38b461aa42f0ee7032",
+    "data/field_maps/shu_fall_gorges.json": "a638746bbf4d18533932e4316c48e8f820f20cdda289a08941c20121c2067a73",
+    "data/field_maps/xiaopei_training_rings.json": "3034c7093c22b42c098f7b182b9ecf6bcb99ff39875091e4cde836b95e3b8581",
+    "data/field_maps/xinye_farmland.json": "3a1555ffd94924bc559b5b178a9c08ea57964ddd55d8fcf5342ddbd318d37241",
+    "data/field_maps/yangtze_harbor.json": "c182873c06f5334125467296c910600cc551c7f2d68cf7fbb8a497bbd2dadf42",
+    "data/field_maps/yanjin_crossings.json": "e43a9e4bb9f074c2f20b2fff27f0a1c23650a83b44148d3963c6dfc5990dfaf1",
     "data/field_maps/yanzhou.json": "30cf99feb729d6f3e99a0ae6b477c99264736184606ee3c206cd05391b980714",
+    "data/field_maps/yanzhou_city_blocks.json": "c9c8630f8caa0fd37eaf976066564eeffe84e84cd2705e0bc9e2f3374e691ed4",
     "data/territory/city_policy.json": "e36673f95cd51e7bf73a955eb0d8f97a823e60fb7d4de1717dcccfd2d898ef3b",
     "data/tutorial/attack_rotation/chapter_eight_chencang.json": "8f3b0c1f7319497a22a77714c6e3b9d43198d162410f276c8c06e02927db9b16",
     "data/tutorial/attack_rotation/chapter_eight_jieting.json": "b00f4eb7be97ca47c000383be10b4562e3c13300605327b35ca77b4e056c6d60",
@@ -29964,23 +30155,25 @@
     "data/tutorial/chapter_two_sishui.json": "34e3309ee8ecc92c17e2e2de8069a888df78039b1215195af36981e1cf23480a",
     "data/tutorial/march_interactions.json": "58f0045fe7f3f8c9ba9b7304c0e75cf0f583aae36f604a164a567d18d10e8008",
     "data/tutorial/yellow_turban_march.json": "32525c41cbae97f1ccee5b6e10cb399b67d06dcb5959477af429c64c0cc6d2b2",
-    "docs/product/CAMPAIGN_BOARD_STATUS.md": "3d8b73ee6a081f25cf73785b7be294d2ab268f477a0a75a237afe83703ecf015",
+    "docs/product/CAMPAIGN_BOARD_STATUS.md": "f3833f61f009fbd7167ec02dc6a4f8addb67127c1e67da8143306fde49ea0930",
     "docs/product/reports/campaign_growth_balance.json": "83665d77468fa64b51576fd0cf53e57c62f22c58a2a215b7448d8f90f08921fa",
-    "src/board/field_map_catalog.gd": "3b6cfafda699ebc8832c44421e916aa0e3650467acd0bf5afeb135be5d00f9f7",
+    "src/board/authored_field_definition.gd": "f96e372395c02182091ec2bee2501369ef26a6f278a852a9fd5d319efe6297a2",
+    "src/board/authored_field_map.gd": "e9e9eec215141aa2975de5e7bf590600a8bea99abd6c328f8542dc38c5abce49",
+    "src/board/field_map_catalog.gd": "6424d7e493ac7bcd392446719fb3a7e2728762cb5c8d83478ddc53b26b2fdf20",
     "src/board/field_map_model.gd": "1bc72229259915b2363e7b1e43a024766c15bd71a07f088018d273957419d77f",
     "src/board/grass_encounters.gd": "80e3a9ff7930e62d727dd7c168a98d1bb14b46641d6197fa9ceb5decf0f4fd1a",
     "src/board/pokemon_board_model.gd": "c92405fccfb0da7ee34545834b45ea9e6555510390acc880bf654d904e74be41",
-    "src/board/slay_route_map.gd": "0ad63f38dcb6706c7b344a167ad3d64990624efbd9d62d16d71cf78a24196338",
+    "src/board/slay_route_map.gd": "93d2abf213701ae895cbc613f4f5de40520968a2383799ef9bf69ca54dc99965",
     "src/campaign/campaign_difficulty.gd": "92f4bca2e59f62c43e8bebe0118409582682f3c5a9f5137ae9980825f9f3f396",
-    "src/campaign/field_run.gd": "8ac17f921efbf7e4d0c446d6b0410b1e760956ed249ef2168af263b395be8cf7",
+    "src/campaign/field_run.gd": "2a28273d5100fc1b13465b5243435b0590a91bd28f2ce3fb8d3216b262a945fe",
     "src/campaign/formation_content.gd": "bb2b76c849bfeb8097052ff2cdb028b347b03aa9efdb3f145878fb72c37387b1",
-    "src/campaign/slay_run.gd": "5e7c4a357c5e25da6900b1f75c27ad0e03784fcbe152cae54c5c02d01d50e018",
+    "src/campaign/slay_run.gd": "d2167e4f74745bf3c901b65cf38ff69a5adf1d0177ab0ba1569796196a450b5f",
     "src/meta/playfab/local_campaign_commands.gd": "96947aa0ebfeee559c8330fedecde6ae1f3c101ad6a1bafc4718cad2225aa2a9",
     "src/tutorial/tutorial_march_content.gd": "8001cafbfe2991a0f3299e351d3dc674efa6c46929850a3219ecd08e61b4e31c",
     "src/tutorial/tutorial_march_run.gd": "9fa8d2990f0dd2d0ef924ef7e35b24751f8e1712d50ed7d46a7d5e2b689c024d",
-    "tools/spec_portal/boards.py": "b02cb638601ae7c987f62456a54e217ce35e0a97c581ccdf97d7aebf1d9186f8",
-    "tools/spec_portal/export_field_geometry.gd": "04571a945d40ae2dbbb1949d2f4281fe6792abe4345f6c31d4007fd4cd0b6a7e",
-    "tools/spec_portal/field_geometry.json": "d99ab3a4a963b5fc90eea32fc7835e59a74c19d22ca85b54214a74b2421e0409"
+    "tools/spec_portal/boards.py": "cdeafd44136993336d37660128b7a195b96735a5f702b3bab69bd5ff78db3ed4",
+    "tools/spec_portal/export_field_geometry.gd": "5d296a5295833dfdcee01ec4875c3b2370e6da280e67cda3c05d5b75d475042e",
+    "tools/spec_portal/field_geometry.json": "f852a43db67f3323968a09e05d885fd11f0000d76f9834bb7ad0cf719b1dc99e"
   },
   "notes": [
     "권장 강화는 계정 누적 강화 횟수이며 원정 레벨과 별개. 권장치는 출정 제한이 아님. 무력/통솔/방비와 N 장수 편성·원정 등용을 함께 점검.",

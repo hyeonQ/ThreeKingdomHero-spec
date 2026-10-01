@@ -223,12 +223,12 @@
     "server/playfab/src/operation_journal.mjs": "same",
     "docs/product/SERVER_COMPENSATION.md": "same",
     "docs/product/SERVER_OPERATIONS_OBSERVABILITY.md": "same",
-    "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md": "same",
+    "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md": "changed",
     "docs/product/DICE_PRESENTATION.md": "changed",
     "src/board/board_world.gd": "changed",
     "src/tutorial/tutorial_run_model.gd": "changed",
     "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md": "unpublished",
-    "data/campaign/stages.json": "same",
+    "data/campaign/stages.json": "changed",
     "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md": "changed",
     "src/tutorial/run_checkpoint.gd": "changed",
     "src/board/cell_games/events.gd": "same",
@@ -267,7 +267,7 @@
     "src/meta/settings_dialog.gd": "same",
     "src/meta/player_settings.gd": "same",
     "src/meta/card_shop.gd": "same",
-    "src/meta/recruitment/recruitment_presentation.gd": "same",
+    "src/meta/recruitment/recruitment_presentation.gd": "changed",
     "docs/art/APPROVED_HERO_DETAIL_UI.md": "same",
     "docs/product/MOBILE_QUALITY_IMPROVEMENTS.md": "same",
     "src/meta/general_management.gd": "changed",
@@ -291,7 +291,7 @@
     "docs/product/TERRITORY_SOFT_LAUNCH_READINESS.md": "same",
     "export_presets.cfg": "changed",
     "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md": "same",
-    "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md": "same",
+    "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md": "changed",
     "tests/godot/test_run_force_quit.gd": "unpublished",
     "tests/godot/test_campaign_account_flow.gd": "changed",
     "tests/godot/test_campaign_checkpoint_compatibility.gd": "same",
@@ -454,6 +454,7 @@
                 "tests/server_replay/cell_games.test.mjs"
               ],
               "changed_sources": [
+                "docs/product/CELL_GAMES.md",
                 "server/playfab/src/godot_replay_engine.mjs"
               ]
             }
@@ -494,7 +495,9 @@
                 "docs/product/SERVER_OPERATIONS_OBSERVABILITY.md",
                 "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
+              ]
             },
             {
               "id": "live-backend",
@@ -509,7 +512,9 @@
               "sources": [
                 "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
+              ]
             }
           ]
         }
@@ -539,6 +544,8 @@
                 "src/tutorial/tutorial_run_model.gd"
               ],
               "changed_sources": [
+                "docs/product/DICE_PRESENTATION.md",
+                "src/board/board_world.gd",
                 "src/tutorial/tutorial_run_model.gd"
               ]
             },
@@ -555,7 +562,9 @@
                 "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md",
                 "data/campaign/stages.json"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "data/campaign/stages.json"
+              ]
             },
             {
               "id": "board-save",
@@ -578,7 +587,9 @@
               ],
               "changed_sources": [
                 "docs/product/CAMPAIGN_CHOICE_AND_RECOVERY_CONTRACT.md",
+                "docs/product/CELL_GAMES.md",
                 "src/tutorial/run_checkpoint.gd",
+                "tests/godot/test_campaign_account_flow.gd",
                 "data/campaign/checkpoint_compatibility.json"
               ]
             }
@@ -601,7 +612,9 @@
                 "src/board/cell_games/events.gd",
                 "assets/requests/approvals/cell_games.json"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/CELL_GAMES.md"
+              ]
             },
             {
               "id": "corner-events",
@@ -617,7 +630,9 @@
                 "docs/product/EVENT_EXPEDITION_REFINEMENT.md",
                 "src/board/corner_exploration_events.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/EVENT_CORNER_EXPLORATION.md"
+              ]
             },
             {
               "id": "story-cells",
@@ -633,7 +648,10 @@
                 "docs/product/CELL_GAMES.md",
                 "src/tutorial/tutorial_node_choice_view.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/CELL_GAMES.md",
+                "src/tutorial/tutorial_node_choice_view.gd"
+              ]
             }
           ]
         }
@@ -760,6 +778,7 @@
               ],
               "changed_sources": [
                 "docs/product/CELESTIAL_SKILLS.md",
+                "docs/product/DICE_PRESENTATION.md",
                 "src/tutorial/celestial_skill_runtime.gd"
               ]
             }
@@ -924,6 +943,7 @@
                 "src/meta/meta_shell.gd"
               ],
               "changed_sources": [
+                "src/meta/campaign_hub.gd",
                 "src/meta/meta_shell.gd"
               ]
             },
@@ -940,7 +960,9 @@
                 "docs/product/EARLY_GAME_ONBOARDING.md",
                 "src/meta/advisor_guide.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/EARLY_GAME_ONBOARDING.md"
+              ]
             },
             {
               "id": "bag-settings",
@@ -1009,7 +1031,9 @@
                 "src/meta/recruitment/recruitment_presentation.gd",
                 "src/meta/recruitment/recruitment_batch.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "src/meta/recruitment/recruitment_presentation.gd"
+              ]
             },
             {
               "id": "roster",
@@ -1149,7 +1173,9 @@
                 "src/meta/event_supply_settlement.gd",
                 "src/board/event_supplies.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "src/meta/event_supply_settlement.gd"
+              ]
             }
           ]
         }
@@ -1248,7 +1274,9 @@
                 "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md",
                 "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md"
+              ]
             },
             {
               "id": "release",
@@ -1264,7 +1292,9 @@
                 "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md",
                 "docs/product/REMAINING_WORK.md"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
+              ]
             }
           ]
         }
@@ -1797,6 +1827,6 @@
       }
     ]
   },
-  "changed_items": 12,
+  "changed_items": 23,
   "snapshot_id": "8bdd169e8ff1"
 }
