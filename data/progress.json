@@ -266,7 +266,7 @@
     "src/meta/advisor_guide.gd": "same",
     "src/meta/settings_dialog.gd": "same",
     "src/meta/player_settings.gd": "same",
-    "src/meta/card_shop.gd": "same",
+    "src/meta/card_shop.gd": "changed",
     "src/meta/recruitment/recruitment_presentation.gd": "changed",
     "docs/art/APPROVED_HERO_DETAIL_UI.md": "same",
     "docs/product/MOBILE_QUALITY_IMPROVEMENTS.md": "same",
@@ -1014,7 +1014,9 @@
                 "src/meta/card_shop.gd",
                 "src/meta/recruitment/recruitment_pool_view.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "src/meta/card_shop.gd"
+              ]
             },
             {
               "id": "recruit-reveal",
@@ -1838,6 +1840,6 @@
       }
     ]
   },
-  "changed_items": 27,
+  "changed_items": 28,
   "snapshot_id": "8bdd169e8ff1"
 }
