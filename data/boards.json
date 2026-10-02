@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-01T13:39:20.084870+00:00",
+  "generated_at": "2026-10-02T02:22:54.181862+00:00",
   "scope": "현재 작업 트리 · Easy 신규 로컬 원정 규칙. 기발급 원정/온라인 공개 상태와 구분. 미생성 지도는 등록 수치만 표시.",
   "items": {
     "meta_coins": "동전",
@@ -3950,7 +3950,7 @@
       "title": "2-3 불타는 낙양",
       "chapter": "제2장",
       "board_type": "monopoly",
-      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
+      "status": "전용 지도 · 신규 발급/복원·사건/전투/정산 연결 · 기발급 순환판 보존",
       "concept": "낙양에 불길이 번지고 있습니다. 피난민과 물자를 구하며 서량군을 돌파하세요. 동탁의 호위진을 뚫고 제2장을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
@@ -4834,27 +4834,59 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "monopoly",
-        "cells": 40,
+        "map_id": "luoyang_streets",
+        "cells": 49,
+        "edges": 51,
         "rolls": 30,
         "counts": {
-          "start_rest": 1,
-          "buff": 4,
-          "monster": 6,
-          "unknown": 23,
-          "negative": 3,
-          "enhanced": 2,
-          "shop": 1
+          "camp": 2,
+          "gate": 1,
+          "shop": 1,
+          "battle": 22,
+          "event": 10,
+          "loot": 5,
+          "recruit": 4,
+          "heal": 4
         },
-        "landing_density": {
-          "start_rest": 0.72,
-          "buff": 2.9,
-          "monster": 4.35,
-          "unknown": 16.68,
-          "negative": 2.17,
-          "enhanced": 1.45,
-          "shop": 0.72
-        },
-        "note": "30번째 굴림에 최종보스 강제, 10번째에 중간보스 출현. 착지 밀도 참고치=29×역할 칸수/40(균등 착지 가정). 통과 야영지·상점·중간보스 정지, 사건 분기/추가 전투를 제외하므로 실제 평균이나 총 전투 수로 해석하지 않음."
+        "profile": "data/boards/layouts/luoyang_streets.json",
+        "routes": [
+          {
+            "id": "west_street",
+            "steps": 10,
+            "effect": {}
+          },
+          {
+            "id": "refugee_lane",
+            "steps": 11,
+            "effect": {
+              "heal": 20
+            }
+          },
+          {
+            "id": "north_street",
+            "steps": 9,
+            "effect": {}
+          },
+          {
+            "id": "east_street",
+            "steps": 6,
+            "effect": {}
+          },
+          {
+            "id": "avenue",
+            "steps": 9,
+            "effect": {
+              "elite": 1,
+              "gold": 30
+            }
+          },
+          {
+            "id": "south_street",
+            "steps": 6,
+            "effect": {}
+          }
+        ],
+        "note": "신규 발급 전용 분기 지도. 최대30회 이동 뒤 최종보스, 장판은 출구 도착 시 조기 결전. 10회 이후 첫 관문/진영에서 중간보스. 진영/상점 통과 정지 뒤 남은 눈을 잇고, 통행료·물때·동풍·호송·투자 만기와 일회 완주 효과를 실제 원정에 적용. 경로 선택/보급에 따라 착지 수가 달라 균등 순환판 밀도를 대입하지 않음. 기발급 순환판은 원래 지도 유지."
       }
     },
     {
@@ -6788,7 +6820,7 @@
       "title": "3-3 수춘",
       "chapter": "제3장",
       "board_type": "monopoly",
-      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
+      "status": "전용 지도 · 신규 발급/복원·사건/전투/정산 연결 · 기발급 순환판 보존",
       "concept": "수춘의 성벽을 둘러싼 포위전이 길어집니다. 원술의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "연속되는 작은 공격을 반격으로 돌파하세요.",
       "boss_tips": "여러 번 공격하는 적.\n\n각 공격은 따로 처리됩니다. 반격 기회를 활용하고 회복·방어로 보완하세요.",
@@ -7663,27 +7695,58 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "monopoly",
-        "cells": 40,
+        "map_id": "shouchun_routes",
+        "cells": 65,
+        "edges": 67,
         "rolls": 30,
         "counts": {
-          "start_rest": 1,
-          "buff": 4,
-          "unknown": 23,
-          "monster": 6,
-          "negative": 3,
-          "enhanced": 2,
-          "shop": 1
+          "camp": 2,
+          "gate": 1,
+          "shop": 1,
+          "battle": 27,
+          "event": 15,
+          "loot": 9,
+          "recruit": 8,
+          "heal": 2
         },
-        "landing_density": {
-          "start_rest": 0.72,
-          "buff": 2.9,
-          "unknown": 16.68,
-          "monster": 4.35,
-          "negative": 2.17,
-          "enhanced": 1.45,
-          "shop": 0.72
-        },
-        "note": "30번째 굴림에 최종보스 강제, 10번째에 중간보스 출현. 착지 밀도 참고치=29×역할 칸수/40(균등 착지 가정). 통과 야영지·상점·중간보스 정지, 사건 분기/추가 전투를 제외하므로 실제 평균이나 총 전투 수로 해석하지 않음."
+        "profile": "data/boards/layouts/shouchun_routes.json",
+        "routes": [
+          {
+            "id": "outer_north",
+            "steps": 22,
+            "effect": {}
+          },
+          {
+            "id": "water_gate",
+            "steps": 5,
+            "effect": {
+              "cost": 20
+            }
+          },
+          {
+            "id": "outer_south",
+            "steps": 19,
+            "effect": {}
+          },
+          {
+            "id": "inner_east",
+            "steps": 11,
+            "effect": {}
+          },
+          {
+            "id": "inner_west",
+            "steps": 5,
+            "effect": {
+              "recruit": 1
+            }
+          },
+          {
+            "id": "south_exit",
+            "steps": 5,
+            "effect": {}
+          }
+        ],
+        "note": "신규 발급 전용 분기 지도. 최대30회 이동 뒤 최종보스, 장판은 출구 도착 시 조기 결전. 10회 이후 첫 관문/진영에서 중간보스. 진영/상점 통과 정지 뒤 남은 눈을 잇고, 통행료·물때·동풍·호송·투자 만기와 일회 완주 효과를 실제 원정에 적용. 경로 선택/보급에 따라 착지 수가 달라 균등 순환판 밀도를 대입하지 않음. 기발급 순환판은 원래 지도 유지."
       }
     },
     {
@@ -9637,7 +9700,7 @@
       "title": "4-1 백마",
       "chapter": "제4장",
       "board_type": "monopoly",
-      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
+      "status": "전용 지도 · 신규 발급/복원·사건/전투/정산 연결 · 기발급 순환판 보존",
       "concept": "백마의 선봉을 빠르게 무너뜨려 포위를 풀어주세요. 안량의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "공격력과 생존력을 갖추고 정예 지휘부를 돌파하세요.",
       "boss_tips": "정예군의 높은 기본 전력.\n\n특정 계열의 약점보다 전체 공격력·체력·방어력이 중요합니다. 앞 전장의 보상으로 성장을 점검하세요.",
@@ -10548,27 +10611,50 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "monopoly",
-        "cells": 40,
+        "map_id": "baima_routes",
+        "cells": 44,
+        "edges": 46,
         "rolls": 30,
         "counts": {
-          "start_rest": 1,
-          "monster": 6,
-          "unknown": 23,
-          "negative": 3,
-          "buff": 4,
-          "enhanced": 2,
-          "shop": 1
+          "camp": 1,
+          "gate": 1,
+          "recruit": 3,
+          "heal": 4,
+          "event": 11,
+          "battle": 18,
+          "loot": 6
         },
-        "landing_density": {
-          "start_rest": 0.72,
-          "monster": 4.35,
-          "unknown": 16.68,
-          "negative": 2.17,
-          "buff": 2.9,
-          "enhanced": 1.45,
-          "shop": 0.72
-        },
-        "note": "30번째 굴림에 최종보스 강제, 10번째에 중간보스 출현. 착지 밀도 참고치=29×역할 칸수/40(균등 착지 가정). 통과 야영지·상점·중간보스 정지, 사건 분기/추가 전투를 제외하므로 실제 평균이나 총 전투 수로 해석하지 않음."
+        "profile": "data/boards/layouts/baima_routes.json",
+        "routes": [
+          {
+            "id": "west_patrol",
+            "steps": 16,
+            "effect": {
+              "heal": 15
+            }
+          },
+          {
+            "id": "ferry",
+            "steps": 4,
+            "effect": {
+              "cycle": "tide"
+            }
+          },
+          {
+            "id": "east_patrol",
+            "steps": 18,
+            "effect": {
+              "elite": 1,
+              "gold": 35
+            }
+          },
+          {
+            "id": "stone_bridge",
+            "steps": 8,
+            "effect": {}
+          }
+        ],
+        "note": "신규 발급 전용 분기 지도. 최대30회 이동 뒤 최종보스, 장판은 출구 도착 시 조기 결전. 10회 이후 첫 관문/진영에서 중간보스. 진영/상점 통과 정지 뒤 남은 눈을 잇고, 통행료·물때·동풍·호송·투자 만기와 일회 완주 효과를 실제 원정에 적용. 경로 선택/보급에 따라 착지 수가 달라 균등 순환판 밀도를 대입하지 않음. 기발급 순환판은 원래 지도 유지."
       }
     },
     {
@@ -12494,7 +12580,7 @@
       "title": "4-4 관도",
       "chapter": "제4장",
       "board_type": "monopoly",
-      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
+      "status": "전용 지도 · 신규 발급/복원·사건/전투/정산 연결 · 기발급 순환판 보존",
       "concept": "관도에서 대군의 연속 공격과 지휘부의 강공격을 견뎌내세요. 원소의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "함께 등장하는 적을 광역 공격으로 제압하세요.",
       "boss_tips": "동시에 등장하는 적.\n\n각 적은 별도 체력을 갖고 차례로 공격합니다. 기본 광역으로 여러 대상을 함께 공격할 수 있습니다.",
@@ -13476,27 +13562,74 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "monopoly",
-        "cells": 40,
+        "map_id": "guandu_routes",
+        "cells": 57,
+        "edges": 60,
         "rolls": 30,
         "counts": {
-          "start_rest": 1,
-          "unknown": 23,
-          "monster": 6,
-          "buff": 4,
-          "negative": 3,
-          "enhanced": 2,
-          "shop": 1
+          "camp": 2,
+          "gate": 1,
+          "event": 19,
+          "shop": 1,
+          "battle": 16,
+          "loot": 8,
+          "recruit": 7,
+          "heal": 3
         },
-        "landing_density": {
-          "start_rest": 0.72,
-          "unknown": 16.68,
-          "monster": 4.35,
-          "buff": 2.9,
-          "negative": 2.17,
-          "enhanced": 1.45,
-          "shop": 0.72
-        },
-        "note": "30번째 굴림에 최종보스 강제, 10번째에 중간보스 출현. 착지 밀도 참고치=29×역할 칸수/40(균등 착지 가정). 통과 야영지·상점·중간보스 정지, 사건 분기/추가 전투를 제외하므로 실제 평균이나 총 전투 수로 해석하지 않음."
+        "profile": "data/boards/layouts/guandu_routes.json",
+        "routes": [
+          {
+            "id": "lower_front",
+            "steps": 8,
+            "effect": {}
+          },
+          {
+            "id": "rear_supply",
+            "steps": 8,
+            "effect": {
+              "heal": 20
+            }
+          },
+          {
+            "id": "east_up",
+            "steps": 4,
+            "effect": {}
+          },
+          {
+            "id": "middle_front",
+            "steps": 8,
+            "effect": {}
+          },
+          {
+            "id": "front_depot",
+            "steps": 4,
+            "effect": {
+              "elite": 1,
+              "gold": 40
+            }
+          },
+          {
+            "id": "west_up",
+            "steps": 4,
+            "effect": {}
+          },
+          {
+            "id": "return_south",
+            "steps": 4,
+            "effect": {}
+          },
+          {
+            "id": "upper_front",
+            "steps": 8,
+            "effect": {}
+          },
+          {
+            "id": "return_lane",
+            "steps": 12,
+            "effect": {}
+          }
+        ],
+        "note": "신규 발급 전용 분기 지도. 최대30회 이동 뒤 최종보스, 장판은 출구 도착 시 조기 결전. 10회 이후 첫 관문/진영에서 중간보스. 진영/상점 통과 정지 뒤 남은 눈을 잇고, 통행료·물때·동풍·호송·투자 만기와 일회 완주 효과를 실제 원정에 적용. 경로 선택/보급에 따라 착지 수가 달라 균등 순환판 밀도를 대입하지 않음. 기발급 순환판은 원래 지도 유지."
       }
     },
     {
@@ -15432,7 +15565,7 @@
       "title": "5-3 장판",
       "chapter": "제5장",
       "board_type": "monopoly",
-      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
+      "status": "전용 지도 · 신규 발급/복원·사건/전투/정산 연결 · 기발급 순환판 보존",
       "concept": "장판의 다리까지 이어지는 작은 공격을 버티며 피난 행렬을 지킵니다. 조순의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
@@ -16344,27 +16477,62 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "monopoly",
-        "cells": 40,
+        "map_id": "changban_routes",
+        "cells": 71,
+        "edges": 72,
         "rolls": 30,
         "counts": {
-          "start_rest": 1,
-          "buff": 4,
-          "unknown": 23,
-          "monster": 6,
-          "negative": 3,
-          "enhanced": 2,
-          "shop": 1
+          "camp": 2,
+          "event": 19,
+          "shop": 1,
+          "gate": 1,
+          "recruit": 10,
+          "heal": 8,
+          "battle": 21,
+          "loot": 9
         },
-        "landing_density": {
-          "start_rest": 0.72,
-          "buff": 2.9,
-          "unknown": 16.68,
-          "monster": 4.35,
-          "negative": 2.17,
-          "enhanced": 1.45,
-          "shop": 0.72
-        },
-        "note": "30번째 굴림에 최종보스 강제, 10번째에 중간보스 출현. 착지 밀도 참고치=29×역할 칸수/40(균등 착지 가정). 통과 야영지·상점·중간보스 정지, 사건 분기/추가 전투를 제외하므로 실제 평균이나 총 전투 수로 해석하지 않음."
+        "profile": "data/boards/layouts/changban_routes.json",
+        "routes": [
+          {
+            "id": "evacuation_low",
+            "steps": 16,
+            "effect": {
+              "recruit": 1
+            }
+          },
+          {
+            "id": "military_cut",
+            "steps": 7,
+            "effect": {
+              "elite": 1,
+              "gold": 35
+            }
+          },
+          {
+            "id": "river_bend",
+            "steps": 13,
+            "effect": {}
+          },
+          {
+            "id": "ridge_road",
+            "steps": 12,
+            "effect": {}
+          },
+          {
+            "id": "medical_cut",
+            "steps": 7,
+            "effect": {
+              "heal": 15,
+              "requires": "evacuation_low"
+            }
+          },
+          {
+            "id": "last_bridge",
+            "steps": 17,
+            "effect": {}
+          }
+        ],
+        "note": "신규 발급 전용 분기 지도. 최대30회 이동 뒤 최종보스, 장판은 출구 도착 시 조기 결전. 10회 이후 첫 관문/진영에서 중간보스. 진영/상점 통과 정지 뒤 남은 눈을 잇고, 통행료·물때·동풍·호송·투자 만기와 일회 완주 효과를 실제 원정에 적용. 경로 선택/보급에 따라 착지 수가 달라 균등 순환판 밀도를 대입하지 않음. 기발급 순환판은 원래 지도 유지."
       }
     },
     {
@@ -18370,7 +18538,7 @@
       "title": "6-3 적벽 화공",
       "chapter": "제6장",
       "board_type": "monopoly",
-      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
+      "status": "전용 지도 · 신규 발급/복원·사건/전투/정산 연결 · 기발급 순환판 보존",
       "concept": "화공으로 갈라진 진형 사이에서 이어지는 공격에 맞서 철수로를 돌파하세요. 조조의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "연속되는 작은 공격을 반격으로 돌파하세요.",
       "boss_tips": "여러 번 공격하는 적.\n\n각 공격은 따로 처리됩니다. 반격 기회를 활용하고 회복·방어로 보완하세요.",
@@ -19282,27 +19450,61 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "monopoly",
-        "cells": 40,
+        "map_id": "red_cliffs_routes",
+        "cells": 63,
+        "edges": 66,
         "rolls": 30,
         "counts": {
-          "start_rest": 1,
-          "monster": 6,
-          "unknown": 23,
-          "negative": 3,
-          "buff": 4,
-          "enhanced": 2,
-          "shop": 1
+          "camp": 1,
+          "shop": 1,
+          "gate": 1,
+          "recruit": 5,
+          "heal": 5,
+          "event": 17,
+          "battle": 22,
+          "loot": 11
         },
-        "landing_density": {
-          "start_rest": 0.72,
-          "monster": 4.35,
-          "unknown": 16.68,
-          "negative": 2.17,
-          "buff": 2.9,
-          "enhanced": 1.45,
-          "shop": 0.72
-        },
-        "note": "30번째 굴림에 최종보스 강제, 10번째에 중간보스 출현. 착지 밀도 참고치=29×역할 칸수/40(균등 착지 가정). 통과 야영지·상점·중간보스 정지, 사건 분기/추가 전투를 제외하므로 실제 평균이나 총 전투 수로 해석하지 않음."
+        "profile": "data/boards/layouts/red_cliffs_routes.json",
+        "routes": [
+          {
+            "id": "west_deck_loop",
+            "steps": 10,
+            "effect": {
+              "heal": 15
+            }
+          },
+          {
+            "id": "wind_channel",
+            "steps": 10,
+            "effect": {
+              "cycle": "wind"
+            }
+          },
+          {
+            "id": "north_deck_loop",
+            "steps": 10,
+            "effect": {}
+          },
+          {
+            "id": "north_pontoon",
+            "steps": 10,
+            "effect": {
+              "elite": 1,
+              "gold": 40
+            }
+          },
+          {
+            "id": "east_deck_loop",
+            "steps": 12,
+            "effect": {}
+          },
+          {
+            "id": "south_pontoon",
+            "steps": 14,
+            "effect": {}
+          }
+        ],
+        "note": "신규 발급 전용 분기 지도. 최대30회 이동 뒤 최종보스, 장판은 출구 도착 시 조기 결전. 10회 이후 첫 관문/진영에서 중간보스. 진영/상점 통과 정지 뒤 남은 눈을 잇고, 통행료·물때·동풍·호송·투자 만기와 일회 완주 효과를 실제 원정에 적용. 경로 선택/보급에 따라 착지 수가 달라 균등 순환판 밀도를 대입하지 않음. 기발급 순환판은 원래 지도 유지."
       }
     },
     {
@@ -21308,7 +21510,7 @@
       "title": "7-3 한중",
       "chapter": "제7장",
       "board_type": "monopoly",
-      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
+      "status": "전용 지도 · 신규 발급/복원·사건/전투/정산 연결 · 기발급 순환판 보존",
       "concept": "한중의 단단한 산성 수비대와 긴 결전을 준비하세요. 하후연의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "공격력과 생존력을 갖추고 정예 지휘부를 돌파하세요.",
       "boss_tips": "정예군의 높은 기본 전력.\n\n특정 계열의 약점보다 전체 공격력·체력·방어력이 중요합니다. 앞 전장의 보상으로 성장을 점검하세요.",
@@ -22209,27 +22411,59 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "monopoly",
-        "cells": 40,
+        "map_id": "hanzhong_routes",
+        "cells": 73,
+        "edges": 75,
         "rolls": 30,
         "counts": {
-          "start_rest": 1,
-          "unknown": 23,
-          "monster": 6,
-          "buff": 4,
-          "negative": 3,
-          "enhanced": 2,
-          "shop": 1
+          "camp": 1,
+          "event": 13,
+          "shop": 1,
+          "gate": 1,
+          "battle": 24,
+          "loot": 15,
+          "recruit": 9,
+          "heal": 9
         },
-        "landing_density": {
-          "start_rest": 0.72,
-          "unknown": 16.68,
-          "monster": 4.35,
-          "buff": 2.9,
-          "negative": 2.17,
-          "enhanced": 1.45,
-          "shop": 0.72
-        },
-        "note": "30번째 굴림에 최종보스 강제, 10번째에 중간보스 출현. 착지 밀도 참고치=29×역할 칸수/40(균등 착지 가정). 통과 야영지·상점·중간보스 정지, 사건 분기/추가 전투를 제외하므로 실제 평균이나 총 전투 수로 해석하지 않음."
+        "profile": "data/boards/layouts/hanzhong_routes.json",
+        "routes": [
+          {
+            "id": "lower_switchback",
+            "steps": 7,
+            "effect": {}
+          },
+          {
+            "id": "valley_bypass",
+            "steps": 12,
+            "effect": {
+              "heal": 20
+            }
+          },
+          {
+            "id": "middle_switchback",
+            "steps": 7,
+            "effect": {}
+          },
+          {
+            "id": "ridge_bridge",
+            "steps": 11,
+            "effect": {
+              "elite": 1,
+              "gold": 40
+            }
+          },
+          {
+            "id": "upper_switchback",
+            "steps": 8,
+            "effect": {}
+          },
+          {
+            "id": "supply_descent",
+            "steps": 30,
+            "effect": {}
+          }
+        ],
+        "note": "신규 발급 전용 분기 지도. 최대30회 이동 뒤 최종보스, 장판은 출구 도착 시 조기 결전. 10회 이후 첫 관문/진영에서 중간보스. 진영/상점 통과 정지 뒤 남은 눈을 잇고, 통행료·물때·동풍·호송·투자 만기와 일회 완주 효과를 실제 원정에 적용. 경로 선택/보급에 따라 착지 수가 달라 균등 순환판 밀도를 대입하지 않음. 기발급 순환판은 원래 지도 유지."
       }
     },
     {
@@ -24166,7 +24400,7 @@
       "title": "8-1 남중",
       "chapter": "제8장",
       "board_type": "monopoly",
-      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
+      "status": "전용 지도 · 신규 발급/복원·사건/전투/정산 연결 · 기발급 순환판 보존",
       "concept": "남중의 협곡에서 거듭 교대하는 방패 전열을 뚫으세요. 맹획의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "함께 등장하는 적을 광역 공격으로 제압하세요.",
       "boss_tips": "동시에 등장하는 적.\n\n각 적은 별도 체력을 갖고 차례로 공격합니다. 기본 광역으로 여러 대상을 함께 공격할 수 있습니다.",
@@ -25147,27 +25381,45 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "monopoly",
-        "cells": 40,
+        "map_id": "nanzhong_routes",
+        "cells": 47,
+        "edges": 49,
         "rolls": 30,
         "counts": {
-          "start_rest": 1,
-          "buff": 4,
-          "unknown": 23,
-          "monster": 6,
-          "negative": 3,
-          "enhanced": 2,
-          "shop": 1
+          "camp": 1,
+          "recruit": 8,
+          "heal": 2,
+          "event": 12,
+          "loot": 7,
+          "battle": 17
         },
-        "landing_density": {
-          "start_rest": 0.72,
-          "buff": 2.9,
-          "unknown": 16.68,
-          "monster": 4.35,
-          "negative": 2.17,
-          "enhanced": 1.45,
-          "shop": 0.72
-        },
-        "note": "30번째 굴림에 최종보스 강제, 10번째에 중간보스 출현. 착지 밀도 참고치=29×역할 칸수/40(균등 착지 가정). 통과 야영지·상점·중간보스 정지, 사건 분기/추가 전투를 제외하므로 실제 평균이나 총 전투 수로 해석하지 않음."
+        "profile": "data/boards/layouts/nanzhong_routes.json",
+        "routes": [
+          {
+            "id": "village_loop",
+            "steps": 15,
+            "effect": {
+              "heal": 20
+            }
+          },
+          {
+            "id": "guide_loop",
+            "steps": 16,
+            "effect": {
+              "cost": 20,
+              "recruit": 1
+            }
+          },
+          {
+            "id": "rock_loop",
+            "steps": 18,
+            "effect": {
+              "elite": 1,
+              "gold": 40
+            }
+          }
+        ],
+        "note": "신규 발급 전용 분기 지도. 최대30회 이동 뒤 최종보스, 장판은 출구 도착 시 조기 결전. 10회 이후 첫 관문/진영에서 중간보스. 진영/상점 통과 정지 뒤 남은 눈을 잇고, 통행료·물때·동풍·호송·투자 만기와 일회 완주 효과를 실제 원정에 적용. 경로 선택/보급에 따라 착지 수가 달라 균등 순환판 밀도를 대입하지 않음. 기발급 순환판은 원래 지도 유지."
       }
     },
     {
@@ -27093,7 +27345,7 @@
       "title": "8-4 오장원",
       "chapter": "제8장",
       "board_type": "monopoly",
-      "status": "전용 지도/선택 UI 제작 검토 완료 · 본편은 공통 순환형",
+      "status": "전용 지도 · 신규 발급/복원·사건/전투/정산 연결 · 기발급 순환판 보존",
       "concept": "오장원에서 대치와 강공격이 되풀이되는 긴 전투를 마칩니다. 사마의의 지휘부에서 이번 원정을 마칩니다.",
       "objective": "강한 단발 공격을 마비로 끊고 지휘관을 격파하세요.",
       "boss_tips": "강한 한 번의 공격.\n\n마비가 적의 공격 행동을 취소합니다. 마비가 실패할 때도 버틸 전력을 준비하세요.",
@@ -28005,27 +28257,84 @@
       "study_current": true,
       "encounter_plan": {
         "kind": "monopoly",
-        "cells": 40,
+        "map_id": "wuzhang_routes",
+        "cells": 67,
+        "edges": 72,
         "rolls": 30,
         "counts": {
-          "start_rest": 1,
-          "monster": 6,
-          "unknown": 23,
-          "negative": 3,
-          "buff": 4,
-          "enhanced": 2,
-          "shop": 1
+          "camp": 2,
+          "shop": 1,
+          "event": 20,
+          "gate": 1,
+          "recruit": 6,
+          "battle": 26,
+          "heal": 4,
+          "loot": 7
         },
-        "landing_density": {
-          "start_rest": 0.72,
-          "monster": 4.35,
-          "unknown": 16.68,
-          "negative": 2.17,
-          "buff": 2.9,
-          "enhanced": 1.45,
-          "shop": 0.72
-        },
-        "note": "30번째 굴림에 최종보스 강제, 10번째에 중간보스 출현. 착지 밀도 참고치=29×역할 칸수/40(균등 착지 가정). 통과 야영지·상점·중간보스 정지, 사건 분기/추가 전투를 제외하므로 실제 평균이나 총 전투 수로 해석하지 않음."
+        "profile": "data/boards/layouts/wuzhang_routes.json",
+        "routes": [
+          {
+            "id": "rampart_0",
+            "steps": 10,
+            "effect": {
+              "cost": 25,
+              "maturity": 20,
+              "gold": 35,
+              "deadline": 15
+            }
+          },
+          {
+            "id": "inner_0",
+            "steps": 6,
+            "effect": {}
+          },
+          {
+            "id": "rampart_1",
+            "steps": 8,
+            "effect": {}
+          },
+          {
+            "id": "inner_1",
+            "steps": 4,
+            "effect": {}
+          },
+          {
+            "id": "rampart_2",
+            "steps": 7,
+            "effect": {}
+          },
+          {
+            "id": "inner_2",
+            "steps": 7,
+            "effect": {}
+          },
+          {
+            "id": "rampart_3",
+            "steps": 7,
+            "effect": {
+              "elite": 1,
+              "gold": 40
+            }
+          },
+          {
+            "id": "inner_3",
+            "steps": 3,
+            "effect": {}
+          },
+          {
+            "id": "rampart_4",
+            "steps": 12,
+            "effect": {
+              "heal": 20
+            }
+          },
+          {
+            "id": "inner_4",
+            "steps": 8,
+            "effect": {}
+          }
+        ],
+        "note": "신규 발급 전용 분기 지도. 최대30회 이동 뒤 최종보스, 장판은 출구 도착 시 조기 결전. 10회 이후 첫 관문/진영에서 중간보스. 진영/상점 통과 정지 뒤 남은 눈을 잇고, 통행료·물때·동풍·호송·투자 만기와 일회 완주 효과를 실제 원정에 적용. 경로 선택/보급에 따라 착지 수가 달라 균등 순환판 밀도를 대입하지 않음. 기발급 순환판은 원래 지도 유지."
       }
     },
     {
@@ -30105,10 +30414,19 @@
     "data/boards/chapter_three_yanzhou.json": "140fc4b58c7211b01b82064c0ae3ddc82f75fcb64251413f3e3d0b81e663c1d4",
     "data/boards/chapter_two_burning_luoyang.json": "2eee951696d3112756a7b2f1e9d1c12201e2d72cd3c81ce3dc1e10800dd5348e",
     "data/boards/chapter_two_hulao.json": "4298102770969276d9670cfa9a540fc95bd85dd3af75e8af67a9c410944bf697",
+    "data/boards/layouts/baima_routes.json": "a1742b316e58c116db4af5988b53db036d30231a26e8d1373ec51c1e60270064",
+    "data/boards/layouts/changban_routes.json": "8bc08dc5a879f88244e2cb3fd08dc11bdf2d27b93122c6d0db01d546514a8827",
+    "data/boards/layouts/guandu_routes.json": "d796b1c73d3e67395f9f5e258843760e1fbb5da32f3c7b6a86f84b94de49ddfe",
+    "data/boards/layouts/hanzhong_routes.json": "6845e83f4c8b8688b91519bed7e36e8c0031b336547289935cfe842e527abb0b",
+    "data/boards/layouts/luoyang_streets.json": "a6b52547524b2379c75abc2e23a899b592b78255106935a9039c3c18d07c3eae",
+    "data/boards/layouts/nanzhong_routes.json": "70329d5cdb83e58907b9ecaba3640e6f5a5c6478eb5d8e235549aca12af3a513",
+    "data/boards/layouts/red_cliffs_routes.json": "c1bef1ce89edb6fe6d13842bbf6a3db4e0bb43b607738e9422957f33e9e24260",
+    "data/boards/layouts/shouchun_routes.json": "3194a3e6dc53651c31a91b137c9e56f54daf68446eeb558cb079231332e7460f",
+    "data/boards/layouts/wuzhang_routes.json": "df30fae6064d1330970b3a60dbfe20fb10d469666553c3b1410417fc4931e7ff",
     "data/campaign/difficulty.json": "9ab55405106837c481619e5f09babb9b29bd1b4f6de13065ac3836166a13ded9",
     "data/campaign/growth_targets.json": "e8808b2c7e9a8b2e2023de03dddbefe7eeafcd498e043e0517b809cecca82fa7",
     "data/campaign/slay_board.json": "f39dcce87997eaebee2a8ee5de9ebe687d05a2120bc19a1879eb28145a41d719",
-    "data/campaign/stages.json": "98b3415e0b5de2fe1a52fb79b6a368dca3b725278f1bba36643929b8720a9a85",
+    "data/campaign/stages.json": "46315bc12d73ede45d8acb4834fdbf5e2352cbfd75fd62ddde4d42a934621828",
     "data/campaign/wancheng_streets.json": "3ea5adf1521eb3e3e3f4b4f980cb4f5215e30ab47ff37b184238a7d99ff3d863",
     "data/economy/campaign_rewards.json": "d8b74380f2ae7ad887dc5b0eba9d1d371f777e65475e38d5859c54176713fc80",
     "data/economy/ruler_growth.json": "40160ce6b2a52a4482804aa345a81283dc19beba42aca7fd5d72e8e3300e30ed",
@@ -30155,25 +30473,28 @@
     "data/tutorial/chapter_two_sishui.json": "34e3309ee8ecc92c17e2e2de8069a888df78039b1215195af36981e1cf23480a",
     "data/tutorial/march_interactions.json": "58f0045fe7f3f8c9ba9b7304c0e75cf0f583aae36f604a164a567d18d10e8008",
     "data/tutorial/yellow_turban_march.json": "32525c41cbae97f1ccee5b6e10cb399b67d06dcb5959477af429c64c0cc6d2b2",
-    "docs/product/CAMPAIGN_BOARD_STATUS.md": "f3833f61f009fbd7167ec02dc6a4f8addb67127c1e67da8143306fde49ea0930",
+    "docs/product/CAMPAIGN_BOARD_STATUS.md": "e5eb3511353fbf2a0c15f10778512de1d03b687b890440ed9405c13f96cca3fb",
     "docs/product/reports/campaign_growth_balance.json": "83665d77468fa64b51576fd0cf53e57c62f22c58a2a215b7448d8f90f08921fa",
     "src/board/authored_field_definition.gd": "f96e372395c02182091ec2bee2501369ef26a6f278a852a9fd5d319efe6297a2",
     "src/board/authored_field_map.gd": "e9e9eec215141aa2975de5e7bf590600a8bea99abd6c328f8542dc38c5abce49",
     "src/board/field_map_catalog.gd": "6424d7e493ac7bcd392446719fb3a7e2728762cb5c8d83478ddc53b26b2fdf20",
     "src/board/field_map_model.gd": "1bc72229259915b2363e7b1e43a024766c15bd71a07f088018d273957419d77f",
     "src/board/grass_encounters.gd": "80e3a9ff7930e62d727dd7c168a98d1bb14b46641d6197fa9ceb5decf0f4fd1a",
+    "src/board/monopoly_map_catalog.gd": "5632539ea70c4f1af4c4b659db5be838b134edb1de4fed0b26948eb28269b801",
+    "src/board/monopoly_route_cursor.gd": "b853f6164ef929982311eb21e81edd4651fd52abcdcc05c0f11fd796e1c6ca6c",
     "src/board/pokemon_board_model.gd": "c92405fccfb0da7ee34545834b45ea9e6555510390acc880bf654d904e74be41",
     "src/board/slay_route_map.gd": "93d2abf213701ae895cbc613f4f5de40520968a2383799ef9bf69ca54dc99965",
     "src/campaign/campaign_difficulty.gd": "92f4bca2e59f62c43e8bebe0118409582682f3c5a9f5137ae9980825f9f3f396",
     "src/campaign/field_run.gd": "2a28273d5100fc1b13465b5243435b0590a91bd28f2ce3fb8d3216b262a945fe",
     "src/campaign/formation_content.gd": "bb2b76c849bfeb8097052ff2cdb028b347b03aa9efdb3f145878fb72c37387b1",
+    "src/campaign/monopoly_run.gd": "6534a7ff8fff1c58f2aac369dbd6f64e28824e96e8759cab786c185b284444fb",
     "src/campaign/slay_run.gd": "d2167e4f74745bf3c901b65cf38ff69a5adf1d0177ab0ba1569796196a450b5f",
-    "src/meta/playfab/local_campaign_commands.gd": "96947aa0ebfeee559c8330fedecde6ae1f3c101ad6a1bafc4718cad2225aa2a9",
+    "src/meta/playfab/local_campaign_commands.gd": "4d4b67b37f1eb412f5891c442e166e461fdbd0908582d8c468fedc079ca0358a",
     "src/tutorial/tutorial_march_content.gd": "8001cafbfe2991a0f3299e351d3dc674efa6c46929850a3219ecd08e61b4e31c",
     "src/tutorial/tutorial_march_run.gd": "9fa8d2990f0dd2d0ef924ef7e35b24751f8e1712d50ed7d46a7d5e2b689c024d",
-    "tools/spec_portal/boards.py": "cdeafd44136993336d37660128b7a195b96735a5f702b3bab69bd5ff78db3ed4",
+    "tools/spec_portal/boards.py": "0107859cf9745e20d499bf9089d980e607e638fcf146326ac376cd572c9a5510",
     "tools/spec_portal/export_field_geometry.gd": "5d296a5295833dfdcee01ec4875c3b2370e6da280e67cda3c05d5b75d475042e",
-    "tools/spec_portal/field_geometry.json": "f852a43db67f3323968a09e05d885fd11f0000d76f9834bb7ad0cf719b1dc99e"
+    "tools/spec_portal/field_geometry.json": "4260156de6d34a7889b93faa6a9b79f4c6c283457848c2e0a6faf874dee2c06b"
   },
   "notes": [
     "권장 강화는 계정 누적 강화 횟수이며 원정 레벨과 별개. 권장치는 출정 제한이 아님. 무력/통솔/방비와 N 장수 편성·원정 등용을 함께 점검.",
