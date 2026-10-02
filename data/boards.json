@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-02T02:22:54.181862+00:00",
+  "generated_at": "2026-10-02T02:52:38.172953+00:00",
   "scope": "현재 작업 트리 · Easy 신규 로컬 원정 규칙. 기발급 원정/온라인 공개 상태와 구분. 미생성 지도는 등록 수치만 표시.",
   "items": {
     "meta_coins": "동전",
@@ -30473,7 +30473,7 @@
     "data/tutorial/chapter_two_sishui.json": "34e3309ee8ecc92c17e2e2de8069a888df78039b1215195af36981e1cf23480a",
     "data/tutorial/march_interactions.json": "58f0045fe7f3f8c9ba9b7304c0e75cf0f583aae36f604a164a567d18d10e8008",
     "data/tutorial/yellow_turban_march.json": "32525c41cbae97f1ccee5b6e10cb399b67d06dcb5959477af429c64c0cc6d2b2",
-    "docs/product/CAMPAIGN_BOARD_STATUS.md": "e5eb3511353fbf2a0c15f10778512de1d03b687b890440ed9405c13f96cca3fb",
+    "docs/product/CAMPAIGN_BOARD_STATUS.md": "fa1754ee68e91c6b019643ae9f59b2dc8842d7602372892c0a2dba2561594be2",
     "docs/product/reports/campaign_growth_balance.json": "83665d77468fa64b51576fd0cf53e57c62f22c58a2a215b7448d8f90f08921fa",
     "src/board/authored_field_definition.gd": "f96e372395c02182091ec2bee2501369ef26a6f278a852a9fd5d319efe6297a2",
     "src/board/authored_field_map.gd": "e9e9eec215141aa2975de5e7bf590600a8bea99abd6c328f8542dc38c5abce49",
