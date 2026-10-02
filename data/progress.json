@@ -280,8 +280,8 @@
     "src/territory/presentation/territory_view.gd": "changed",
     "docs/product/TERRITORY_SUPPLY_LOOP.md": "unpublished",
     "src/territory/application/territory_commands.gd": "changed",
-    "src/territory/domain/territory_model.gd": "same",
-    "data/territory/city_policy.json": "same",
+    "src/territory/domain/territory_model.gd": "changed",
+    "data/territory/city_policy.json": "changed",
     "docs/product/TERRITORY_DAILY_QUESTS.md": "same",
     "docs/product/EVENT_SUPPLY_IMPLEMENTATION.md": "unpublished",
     "src/meta/event_supply_settlement.gd": "unpublished",
@@ -1111,7 +1111,9 @@
                 "docs/product/TERRITORY_ROADS_AND_EXPANSION.md",
                 "src/territory/presentation/territory_view.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "src/territory/presentation/territory_view.gd"
+              ]
             },
             {
               "id": "territory-production",
@@ -1127,7 +1129,11 @@
                 "src/territory/application/territory_commands.gd",
                 "src/territory/domain/territory_model.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/TERRITORY_SUPPLY_LOOP.md",
+                "src/territory/application/territory_commands.gd",
+                "src/territory/domain/territory_model.gd"
+              ]
             },
             {
               "id": "territory-staff",
@@ -1142,7 +1148,10 @@
                 "docs/product/TERRITORY_SUPPLY_LOOP.md",
                 "data/territory/city_policy.json"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/TERRITORY_SUPPLY_LOOP.md",
+                "data/territory/city_policy.json"
+              ]
             },
             {
               "id": "territory-quests",
@@ -1157,7 +1166,9 @@
                 "docs/product/TERRITORY_SUPPLY_LOOP.md",
                 "docs/product/TERRITORY_DAILY_QUESTS.md"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/TERRITORY_SUPPLY_LOOP.md"
+              ]
             },
             {
               "id": "territory-supplies",
@@ -1827,6 +1838,6 @@
       }
     ]
   },
-  "changed_items": 23,
+  "changed_items": 27,
   "snapshot_id": "8bdd169e8ff1"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-02T02:52:38.172953+00:00",
+  "generated_at": "2026-10-02T03:45:31.490420+00:00",
   "scope": "현재 작업 트리 · Easy 신규 로컬 원정 규칙. 기발급 원정/온라인 공개 상태와 구분. 미생성 지도는 등록 수치만 표시.",
   "items": {
     "meta_coins": "동전",
@@ -30440,7 +30440,7 @@
     "data/field_maps/yanjin_crossings.json": "e43a9e4bb9f074c2f20b2fff27f0a1c23650a83b44148d3963c6dfc5990dfaf1",
     "data/field_maps/yanzhou.json": "30cf99feb729d6f3e99a0ae6b477c99264736184606ee3c206cd05391b980714",
     "data/field_maps/yanzhou_city_blocks.json": "c9c8630f8caa0fd37eaf976066564eeffe84e84cd2705e0bc9e2f3374e691ed4",
-    "data/territory/city_policy.json": "e36673f95cd51e7bf73a955eb0d8f97a823e60fb7d4de1717dcccfd2d898ef3b",
+    "data/territory/city_policy.json": "adba4cf59e3a5d905f141b9f811be01cf79789b5c3613b0b774721ca81605ab2",
     "data/tutorial/attack_rotation/chapter_eight_chencang.json": "8f3b0c1f7319497a22a77714c6e3b9d43198d162410f276c8c06e02927db9b16",
     "data/tutorial/attack_rotation/chapter_eight_jieting.json": "b00f4eb7be97ca47c000383be10b4562e3c13300605327b35ca77b4e056c6d60",
     "data/tutorial/attack_rotation/chapter_eight_nanzhong.json": "938e8ad1c8400f4f1009346ee0636783a916e3aa2b82c41755af3c5fa73263ce",
