@@ -221,7 +221,7 @@
     "docs/product/SERVER_OPERATION_STORAGE.md": "changed",
     "docs/product/SERVER_ACCESS_POLICY.md": "same",
     "server/playfab/src/operation_journal.mjs": "same",
-    "docs/product/SERVER_COMPENSATION.md": "same",
+    "docs/product/SERVER_COMPENSATION.md": "changed",
     "docs/product/SERVER_OPERATIONS_OBSERVABILITY.md": "same",
     "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md": "changed",
     "docs/product/DICE_PRESENTATION.md": "changed",
@@ -259,19 +259,19 @@
     "assets/requests/approvals/blood_nine_vfx.json": "same",
     "docs/product/WU_WAVE_SKILL_DRAFT.md": "changed",
     "docs/product/REMAINING_WORK.md": "changed",
-    "docs/art/HOME_AND_NAVIGATION_UI.md": "same",
+    "docs/art/HOME_AND_NAVIGATION_UI.md": "changed",
     "src/meta/campaign_hub.gd": "changed",
     "src/meta/meta_shell.gd": "changed",
     "docs/product/EARLY_GAME_ONBOARDING.md": "unpublished",
     "src/meta/advisor_guide.gd": "same",
-    "src/meta/settings_dialog.gd": "same",
-    "src/meta/player_settings.gd": "same",
+    "src/meta/settings_dialog.gd": "changed",
+    "src/meta/player_settings.gd": "changed",
     "src/meta/card_shop.gd": "changed",
     "src/meta/recruitment/recruitment_presentation.gd": "changed",
-    "docs/art/APPROVED_HERO_DETAIL_UI.md": "same",
+    "docs/art/APPROVED_HERO_DETAIL_UI.md": "changed",
     "docs/product/MOBILE_QUALITY_IMPROVEMENTS.md": "same",
     "src/meta/general_management.gd": "changed",
-    "docs/product/CARD_DUPLICATE_ECONOMY_IMPLEMENTATION.md": "same",
+    "docs/product/CARD_DUPLICATE_ECONOMY_IMPLEMENTATION.md": "changed",
     "docs/product/CARD_INSTANCE_COMPARISON_IMPLEMENTATION.md": "same",
     "src/meta/ruler_growth_policy.gd": "same",
     "src/meta/mailbox_screen.gd": "changed",
@@ -287,10 +287,10 @@
     "src/meta/event_supply_settlement.gd": "unpublished",
     "src/board/event_supplies.gd": "same",
     "docs/product/FIRST_DAY_INTEGRATION.md": "same",
-    "docs/product/AUDIO_QUALITY_REVIEW.md": "same",
+    "docs/product/AUDIO_QUALITY_REVIEW.md": "changed",
     "docs/product/TERRITORY_SOFT_LAUNCH_READINESS.md": "same",
     "export_presets.cfg": "changed",
-    "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md": "same",
+    "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md": "changed",
     "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md": "changed",
     "tests/godot/test_run_force_quit.gd": "unpublished",
     "tests/godot/test_campaign_account_flow.gd": "changed",
@@ -308,12 +308,12 @@
     "assets/requests/approvals/wu_wave_tidal_cycle.json": "same",
     "docs/product/WU_GALE_SKILL_IMPLEMENTATION.md": "changed",
     "assets/requests/approvals/wu_gale_nine_vfx.json": "same",
-    "docs/product/SOFT_LAUNCH_ERA_PACKS.md": "same",
+    "docs/product/SOFT_LAUNCH_ERA_PACKS.md": "changed",
     "src/meta/recruitment/recruitment_pool_view.gd": "same",
-    "docs/product/META_RECRUITMENT_AUDIO.md": "same",
+    "docs/product/META_RECRUITMENT_AUDIO.md": "changed",
     "src/meta/recruitment/recruitment_batch.gd": "same",
-    "src/meta/meta_audio.gd": "same",
-    "tests/godot/test_meta_audio.gd": "same"
+    "src/meta/meta_audio.gd": "changed",
+    "tests/godot/test_meta_audio.gd": "changed"
   },
   "scope": "본편은 현재 로컬 게임 기준입니다. 실제 운영 서버·최신 실기기 검수·출시는 별도이며, 항목 수는 작업량이나 출시 완성률이 아닙니다.",
   "states": {
@@ -496,6 +496,7 @@
                 "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
               ],
               "changed_sources": [
+                "docs/product/SERVER_COMPENSATION.md",
                 "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
               ]
             },
@@ -563,6 +564,7 @@
                 "data/campaign/stages.json"
               ],
               "changed_sources": [
+                "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md",
                 "data/campaign/stages.json"
               ]
             },
@@ -590,7 +592,8 @@
                 "docs/product/CELL_GAMES.md",
                 "src/tutorial/run_checkpoint.gd",
                 "tests/godot/test_campaign_account_flow.gd",
-                "data/campaign/checkpoint_compatibility.json"
+                "data/campaign/checkpoint_compatibility.json",
+                "tests/godot/test_attack_rotation_resume.gd"
               ]
             }
           ]
@@ -721,7 +724,9 @@
                 "docs/art/APPROVED_BOSS_REFINEMENT.md",
                 "assets/requests/approvals/campaign_boss_refinement.json"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/CAMPAIGN_FULL_IMPLEMENTATION.md"
+              ]
             }
           ]
         },
@@ -943,6 +948,7 @@
                 "src/meta/meta_shell.gd"
               ],
               "changed_sources": [
+                "docs/art/HOME_AND_NAVIGATION_UI.md",
                 "src/meta/campaign_hub.gd",
                 "src/meta/meta_shell.gd"
               ]
@@ -978,7 +984,11 @@
                 "src/meta/settings_dialog.gd",
                 "src/meta/player_settings.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/art/HOME_AND_NAVIGATION_UI.md",
+                "src/meta/settings_dialog.gd",
+                "src/meta/player_settings.gd"
+              ]
             },
             {
               "id": "meta-placeholders",
@@ -993,7 +1003,10 @@
                 "docs/art/HOME_AND_NAVIGATION_UI.md",
                 "docs/product/REMAINING_WORK.md"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/art/HOME_AND_NAVIGATION_UI.md",
+                "docs/product/REMAINING_WORK.md"
+              ]
             }
           ]
         },
@@ -1015,6 +1028,7 @@
                 "src/meta/recruitment/recruitment_pool_view.gd"
               ],
               "changed_sources": [
+                "docs/product/SOFT_LAUNCH_ERA_PACKS.md",
                 "src/meta/card_shop.gd"
               ]
             },
@@ -1034,6 +1048,8 @@
                 "src/meta/recruitment/recruitment_batch.gd"
               ],
               "changed_sources": [
+                "docs/product/META_RECRUITMENT_AUDIO.md",
+                "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md",
                 "src/meta/recruitment/recruitment_presentation.gd"
               ]
             },
@@ -1052,6 +1068,7 @@
                 "src/meta/general_management.gd"
               ],
               "changed_sources": [
+                "docs/art/APPROVED_HERO_DETAIL_UI.md",
                 "src/meta/general_management.gd"
               ]
             },
@@ -1069,7 +1086,9 @@
                 "docs/product/CARD_INSTANCE_COMPARISON_IMPLEMENTATION.md",
                 "src/meta/ruler_growth_policy.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/CARD_DUPLICATE_ECONOMY_IMPLEMENTATION.md"
+              ]
             },
             {
               "id": "mailbox",
@@ -1084,7 +1103,10 @@
                 "docs/product/SERVER_COMPENSATION.md",
                 "src/meta/mailbox_screen.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/SERVER_COMPENSATION.md",
+                "src/meta/mailbox_screen.gd"
+              ]
             }
           ]
         }
@@ -1215,7 +1237,9 @@
               "sources": [
                 "docs/product/REMAINING_WORK.md"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/REMAINING_WORK.md"
+              ]
             },
             {
               "id": "economy",
@@ -1231,7 +1255,9 @@
                 "docs/product/FIRST_DAY_INTEGRATION.md",
                 "docs/product/CAMPAIGN_ATTACK_ROTATION_IMPLEMENTATION.md"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/REMAINING_WORK.md"
+              ]
             },
             {
               "id": "audio",
@@ -1248,7 +1274,12 @@
                 "src/meta/meta_audio.gd",
                 "tests/godot/test_meta_audio.gd"
               ],
-              "changed_sources": []
+              "changed_sources": [
+                "docs/product/META_RECRUITMENT_AUDIO.md",
+                "docs/product/AUDIO_QUALITY_REVIEW.md",
+                "src/meta/meta_audio.gd",
+                "tests/godot/test_meta_audio.gd"
+              ]
             },
             {
               "id": "mobile",
@@ -1288,6 +1319,7 @@
                 "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md"
               ],
               "changed_sources": [
+                "docs/product/SOFT_LAUNCH_CARD_IMPLEMENTATION.md",
                 "docs/product/META_SHOP_AND_STORY_FLASH_OFFER_SPEC.md"
               ]
             },
@@ -1306,7 +1338,8 @@
                 "docs/product/REMAINING_WORK.md"
               ],
               "changed_sources": [
-                "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md"
+                "docs/product/SERVER_OPERATIONS_RELEASE_GATES.md",
+                "docs/product/REMAINING_WORK.md"
               ]
             }
           ]
@@ -1840,6 +1873,6 @@
       }
     ]
   },
-  "changed_items": 28,
+  "changed_items": 36,
   "snapshot_id": "8bdd169e8ff1"
 }
